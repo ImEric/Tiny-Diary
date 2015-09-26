@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		073FAD321BB7536000DEF3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD311BB7536000DEF3BA /* AppDelegate.swift */; };
+		073FAD341BB7536000DEF3BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD331BB7536000DEF3BA /* ViewController.swift */; };
+		073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD351BB7536000DEF3BA /* Main.storyboard */; };
+		073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD381BB7536000DEF3BA /* Assets.xcassets */; };
+		073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */; };
+		073FAD471BB7536100DEF3BA /* TinyCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD461BB7536100DEF3BA /* TinyCalTests.swift */; };
+		073FAD521BB7536100DEF3BA /* TinyCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD511BB7536100DEF3BA /* TinyCalUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		073FAD431BB7536100DEF3BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 073FAD261BB7536000DEF3BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 073FAD2D1BB7536000DEF3BA;
+			remoteInfo = TinyCal;
+		};
+		073FAD4E1BB7536100DEF3BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 073FAD261BB7536000DEF3BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 073FAD2D1BB7536000DEF3BA;
+			remoteInfo = TinyCal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		073FAD2E1BB7536000DEF3BA /* TinyCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		073FAD311BB7536000DEF3BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		073FAD331BB7536000DEF3BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		073FAD361BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		073FAD381BB7536000DEF3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		073FAD3B1BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		073FAD3D1BB7536000DEF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		073FAD421BB7536100DEF3BA /* TinyCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		073FAD461BB7536100DEF3BA /* TinyCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyCalTests.swift; sourceTree = "<group>"; };
+		073FAD481BB7536100DEF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		073FAD4D1BB7536100DEF3BA /* TinyCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		073FAD511BB7536100DEF3BA /* TinyCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyCalUITests.swift; sourceTree = "<group>"; };
+		073FAD531BB7536100DEF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		073FAD2B1BB7536000DEF3BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073FAD3F1BB7536100DEF3BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073FAD4A1BB7536100DEF3BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		073FAD251BB7536000DEF3BA = {
+			isa = PBXGroup;
+			children = (
+				073FAD301BB7536000DEF3BA /* TinyCal */,
+				073FAD451BB7536100DEF3BA /* TinyCalTests */,
+				073FAD501BB7536100DEF3BA /* TinyCalUITests */,
+				073FAD2F1BB7536000DEF3BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		073FAD2F1BB7536000DEF3BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				073FAD2E1BB7536000DEF3BA /* TinyCal.app */,
+				073FAD421BB7536100DEF3BA /* TinyCalTests.xctest */,
+				073FAD4D1BB7536100DEF3BA /* TinyCalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		073FAD301BB7536000DEF3BA /* TinyCal */ = {
+			isa = PBXGroup;
+			children = (
+				073FAD311BB7536000DEF3BA /* AppDelegate.swift */,
+				073FAD331BB7536000DEF3BA /* ViewController.swift */,
+				073FAD351BB7536000DEF3BA /* Main.storyboard */,
+				073FAD381BB7536000DEF3BA /* Assets.xcassets */,
+				073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */,
+				073FAD3D1BB7536000DEF3BA /* Info.plist */,
+			);
+			path = TinyCal;
+			sourceTree = "<group>";
+		};
+		073FAD451BB7536100DEF3BA /* TinyCalTests */ = {
+			isa = PBXGroup;
+			children = (
+				073FAD461BB7536100DEF3BA /* TinyCalTests.swift */,
+				073FAD481BB7536100DEF3BA /* Info.plist */,
+			);
+			path = TinyCalTests;
+			sourceTree = "<group>";
+		};
+		073FAD501BB7536100DEF3BA /* TinyCalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				073FAD511BB7536100DEF3BA /* TinyCalUITests.swift */,
+				073FAD531BB7536100DEF3BA /* Info.plist */,
+			);
+			path = TinyCalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		073FAD2D1BB7536000DEF3BA /* TinyCal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 073FAD561BB7536100DEF3BA /* Build configuration list for PBXNativeTarget "TinyCal" */;
+			buildPhases = (
+				073FAD2A1BB7536000DEF3BA /* Sources */,
+				073FAD2B1BB7536000DEF3BA /* Frameworks */,
+				073FAD2C1BB7536000DEF3BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyCal;
+			productName = TinyCal;
+			productReference = 073FAD2E1BB7536000DEF3BA /* TinyCal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		073FAD411BB7536100DEF3BA /* TinyCalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 073FAD591BB7536100DEF3BA /* Build configuration list for PBXNativeTarget "TinyCalTests" */;
+			buildPhases = (
+				073FAD3E1BB7536100DEF3BA /* Sources */,
+				073FAD3F1BB7536100DEF3BA /* Frameworks */,
+				073FAD401BB7536100DEF3BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				073FAD441BB7536100DEF3BA /* PBXTargetDependency */,
+			);
+			name = TinyCalTests;
+			productName = TinyCalTests;
+			productReference = 073FAD421BB7536100DEF3BA /* TinyCalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		073FAD4C1BB7536100DEF3BA /* TinyCalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 073FAD5C1BB7536100DEF3BA /* Build configuration list for PBXNativeTarget "TinyCalUITests" */;
+			buildPhases = (
+				073FAD491BB7536100DEF3BA /* Sources */,
+				073FAD4A1BB7536100DEF3BA /* Frameworks */,
+				073FAD4B1BB7536100DEF3BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				073FAD4F1BB7536100DEF3BA /* PBXTargetDependency */,
+			);
+			name = TinyCalUITests;
+			productName = TinyCalUITests;
+			productReference = 073FAD4D1BB7536100DEF3BA /* TinyCalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		073FAD261BB7536000DEF3BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Eric Hu";
+				TargetAttributes = {
+					073FAD2D1BB7536000DEF3BA = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 6QJY338W4J;
+					};
+					073FAD411BB7536100DEF3BA = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 6QJY338W4J;
+						TestTargetID = 073FAD2D1BB7536000DEF3BA;
+					};
+					073FAD4C1BB7536100DEF3BA = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 6QJY338W4J;
+						TestTargetID = 073FAD2D1BB7536000DEF3BA;
+					};
+				};
+			};
+			buildConfigurationList = 073FAD291BB7536000DEF3BA /* Build configuration list for PBXProject "TinyCal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 073FAD251BB7536000DEF3BA;
+			productRefGroup = 073FAD2F1BB7536000DEF3BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				073FAD2D1BB7536000DEF3BA /* TinyCal */,
+				073FAD411BB7536100DEF3BA /* TinyCalTests */,
+				073FAD4C1BB7536100DEF3BA /* TinyCalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		073FAD2C1BB7536000DEF3BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */,
+				073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */,
+				073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073FAD401BB7536100DEF3BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073FAD4B1BB7536100DEF3BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		073FAD2A1BB7536000DEF3BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073FAD341BB7536000DEF3BA /* ViewController.swift in Sources */,
+				073FAD321BB7536000DEF3BA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073FAD3E1BB7536100DEF3BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073FAD471BB7536100DEF3BA /* TinyCalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		073FAD491BB7536100DEF3BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073FAD521BB7536100DEF3BA /* TinyCalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		073FAD441BB7536100DEF3BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 073FAD2D1BB7536000DEF3BA /* TinyCal */;
+			targetProxy = 073FAD431BB7536100DEF3BA /* PBXContainerItemProxy */;
+		};
+		073FAD4F1BB7536100DEF3BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 073FAD2D1BB7536000DEF3BA /* TinyCal */;
+			targetProxy = 073FAD4E1BB7536100DEF3BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		073FAD351BB7536000DEF3BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				073FAD361BB7536000DEF3BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				073FAD3B1BB7536000DEF3BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		073FAD541BB7536100DEF3BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		073FAD551BB7536100DEF3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		073FAD571BB7536100DEF3BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TinyCal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		073FAD581BB7536100DEF3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TinyCal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		073FAD5A1BB7536100DEF3BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TinyCalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyCal.app/TinyCal";
+			};
+			name = Debug;
+		};
+		073FAD5B1BB7536100DEF3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TinyCalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TinyCal.app/TinyCal";
+			};
+			name = Release;
+		};
+		073FAD5D1BB7536100DEF3BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TinyCalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TinyCal;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		073FAD5E1BB7536100DEF3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TinyCalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TinyCal;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		073FAD291BB7536000DEF3BA /* Build configuration list for PBXProject "TinyCal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073FAD541BB7536100DEF3BA /* Debug */,
+				073FAD551BB7536100DEF3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		073FAD561BB7536100DEF3BA /* Build configuration list for PBXNativeTarget "TinyCal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073FAD571BB7536100DEF3BA /* Debug */,
+				073FAD581BB7536100DEF3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		073FAD591BB7536100DEF3BA /* Build configuration list for PBXNativeTarget "TinyCalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073FAD5A1BB7536100DEF3BA /* Debug */,
+				073FAD5B1BB7536100DEF3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		073FAD5C1BB7536100DEF3BA /* Build configuration list for PBXNativeTarget "TinyCalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073FAD5D1BB7536100DEF3BA /* Debug */,
+				073FAD5E1BB7536100DEF3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 073FAD261BB7536000DEF3BA /* Project object */;
+}
