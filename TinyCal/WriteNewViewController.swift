@@ -12,8 +12,8 @@ import UIKit
 class WriteNewViewController: UIViewController {
     
     let emotionButtonSelected = false
-    var emotionType: ChatBubbleEmotionType = ChatBubbleEmotionType.Happy
-    var cellData: ChatBubbleCellData?
+    var emotionString: String = ""
+    var message: ChatBubbleMessage = ChatBubbleMessage(text: "", date: NSDate(), emotion: "")
     
     @IBOutlet var WriteNewEntryView: UIView!
     
@@ -31,14 +31,14 @@ class WriteNewViewController: UIViewController {
     
     @IBAction func happyButtonTouched(sender: AnyObject) {
         buttonSelected(happyButton)
-        emotionType = ChatBubbleEmotionType.Happy
+        emotionString = "Happy"
     }
     
     @IBOutlet weak var sosoButton: UIButton!
     
     @IBAction func sosoButtonTouched(sender: AnyObject) {
         buttonSelected(sosoButton)
-        emotionType = ChatBubbleEmotionType.Soso
+        emotionString = "Soso"
     }
     
     
@@ -46,7 +46,7 @@ class WriteNewViewController: UIViewController {
     
     @IBAction func sadButtonTouched(sender: AnyObject) {
         buttonSelected(sadButton)
-        emotionType = ChatBubbleEmotionType.Sad
+        emotionString = "Sad"
     }
     
     
@@ -54,7 +54,7 @@ class WriteNewViewController: UIViewController {
     
     @IBAction func angryButtonTouched(sender: AnyObject) {
         buttonSelected(angryButton)
-        emotionType = ChatBubbleEmotionType.Angry
+        emotionString = "Angry"
     }
     
     
@@ -79,8 +79,7 @@ class WriteNewViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "saveNewEntry"{
-            let message = ChatBubbleMessage(text: textView.text!, date: NSDate(), type: emotionType)
-            cellData = ChatBubbleCellData(message: message, frameWidth: self.WriteNewEntryView.frame.width - 80)
+            message = ChatBubbleMessage(text: textView.text!, date: NSDate(), emotion: emotionString)
         }
     }
     

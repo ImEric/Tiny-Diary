@@ -28,9 +28,7 @@ class ChatBubbleCellData
     let messageFont: UIFont
     let messageLabelSize: CGSize
     
-    
-    
-    
+        
     private let spacing:CGFloat = 50
     let cellHeight: CGFloat
     

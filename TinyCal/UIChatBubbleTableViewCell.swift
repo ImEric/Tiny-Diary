@@ -134,16 +134,19 @@ class UIChatBubbleTableViewCell: UITableViewCell
             emotionImageView.alpha = 1
             
             
-            switch cellData.message.type
+            switch cellData.message.emotion
             {
-            case .Happy:
+            case "Happy":
                 emotionImageView.image = UIImage(named: "Happy")
-            case .Angry:
+            case "Angry":
                 emotionImageView.image = UIImage(named: "Angry")
-            case .Sad:
+            case "Sad":
                 emotionImageView.image = UIImage(named: "Sad")
-            case .Soso:
+            case "Soso":
                 emotionImageView.image = UIImage(named: "Soso")
+            default:
+                    break
+                
             }
             
             

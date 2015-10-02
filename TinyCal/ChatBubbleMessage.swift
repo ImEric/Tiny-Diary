@@ -9,24 +9,17 @@
 import Foundation
 
 
-enum ChatBubbleEmotionType
-{
-    case Angry
-    case Happy
-    case Sad
-    case Soso
-}
 
 class ChatBubbleMessage
 {
     let date: NSDate
     let text: String
-    let type: ChatBubbleEmotionType
+    let emotion: String
     
-    init(text: String, date: NSDate, type: ChatBubbleEmotionType)
+    init(text: String, date: NSDate, emotion: String)
     {
         self.date = date
         self.text = text
-        self.type = type
+        self.emotion = emotion
     }
 }

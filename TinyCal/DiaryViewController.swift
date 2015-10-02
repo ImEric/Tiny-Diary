@@ -12,8 +12,12 @@ import CoreData
 class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var cellDataArray = [ChatBubbleCellData]()
-    //var cellDataArray = [NSManagedObject]()
+    var messages = [NSManagedObject]()
+    var ifCellRegistered = false
+    
+    let managedContext = DataController().managedObjectContext
 
+    
     @IBOutlet var DiaryView: UIView!
     @IBOutlet weak var DiaryTableView: UITableView!
     @IBOutlet weak var createNewEntryButton: UIButton!
@@ -24,24 +28,25 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let WriteNewViewController = segue.sourceViewController as? WriteNewViewController {
             
             //add the new player to the players array
-            if let cellData = WriteNewViewController.cellData {
-                cellDataArray.append(cellData)
+            if let message:ChatBubbleMessage = WriteNewViewController.message{
                 
+                saveNewEntryToDataModel(message)
+                let cellData = ChatBubbleCellData(message: message, frameWidth: self.DiaryTableView.frame.width)
+                cellDataArray.append(cellData)
                 let indexPath = NSIndexPath(forRow: cellDataArray.count - 1, inSection: 0)
                 self.DiaryTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
                 self.DiaryTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
-                
-            
             }
         }
     }
     
    
-    var ifCellRegistered = false
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadDataFromDataModel()
         updateTableView()
         
         self.DiaryTableView.delegate = self
@@ -52,12 +57,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
      
         
-       
-        // Need editing !!!
-        let bottomOffset = CGPointMake(0, CGFloat.max)
-        self.DiaryTableView.setContentOffset(bottomOffset, animated: false)
-        
-        loadTestData()
+        //loadTestData()
         if cellDataArray.count != 0
         {
             let ip = NSIndexPath(forRow: cellDataArray.count - 1, inSection: 0)
@@ -75,7 +75,59 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.createNewEntryButton.frame = CGRect(x: (self.DiaryView.frame.width - 30) / 2 , y: self.DiaryView.frame.height - 90 , width: 30, height: 30)
     }
     
+    func loadMessageData(){
+        
+        
+        //let cellData = ChatBubbleCellData(message: message, frameWidth: self.DiaryTableView.frame.width)
+        //cellDataArray.append(cellData)
+        
+    }
     
+
+    
+    /********* Core Data **********/
+    
+    func loadDataFromDataModel(){
+        let entryFetch = NSFetchRequest(entityName: "DiaryEntry")
+        do{
+            let fetchedEntry = try managedContext.executeFetchRequest(entryFetch) as? [NSManagedObject]
+            messages = fetchedEntry!
+
+            for var messageAdded = 0;messageAdded < messages.count;++messageAdded
+            {
+                addMessageFromData(messages[messageAdded])
+            }
+        }catch
+        {
+            fatalError("Failure to fetch context: \(error)")
+        }
+    
+    }
+
+    func saveNewEntryToDataModel(message:ChatBubbleMessage) {
+    
+    
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("DiaryEntry", inManagedObjectContext:self.managedContext) as! DiaryEntryMO
+        
+        //let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        let text: String = message.text
+        let date: NSDate  = message.date
+        let emotion: String = message.emotion
+        
+        // add our data
+        entity.setValue(text, forKey: "text")
+        entity.setValue(emotion, forKey: "emotion")
+        entity.setValue(date, forKey: "date")
+        
+        // save it
+        do {
+            try managedContext.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+    }
+
     
     // Number of rows in TableView
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -133,29 +185,37 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     */
     // Use this func to add message
-    func addMessage(text: String, date: NSDate, type: ChatBubbleEmotionType)
+    func addMessage(text: String, date: NSDate, emotion:String)
     {
-        let message = ChatBubbleMessage(text: text, date: date, type: type)
+    
+        let message = ChatBubbleMessage(text: text, date: date, emotion: emotion)
         let cellData = ChatBubbleCellData(message: message, frameWidth: self.DiaryTableView.frame.width)
         cellDataArray.append(cellData)
+    }
+    
+    func addMessageFromData(message:NSManagedObject)
+    {
+        let text =  message.valueForKey("text") as? String
+        let emotion = message.valueForKey("emotion") as? String
+        let date = message.valueForKey("date") as? NSDate
+        let diaryMessage = ChatBubbleMessage(text: text!,date: date!,emotion: emotion!)
+        let cellData = ChatBubbleCellData(message: diaryMessage, frameWidth: self.DiaryTableView.frame.width)
+        cellDataArray.append(cellData)
+        
     }
     
    
     // Add test data here
     func loadTestData()
     {
-        addMessage("Hi!", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Happy)
         
-        addMessage("It is really annoying to hear that my professor keep pronouncing 'factorize' as 'fuck-two-lies'.. Hope math will not fuck me like that.", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Angry)
-        addMessage("我就是想测试一下表情。", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Soso)
-        addMessage("想到还有这么多功能没有实现压力好大 T T ", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Sad)
-        addMessage("我就是随便复制粘贴了一下：啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊！", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Happy)
-        addMessage("Hi!", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Happy)
+
+        addMessage("Hi!", date: NSDate(timeIntervalSinceNow: -24*60*60), emotion: "Happy")
         
-        addMessage("It is really annoying to hear that my professor keep pronouncing 'factorize' as 'fuck-two-lies'.. Hope math will not fuck me like that.", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Angry)
-        addMessage("我就是想测试一下表情。", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Soso)
-        addMessage("想到还有这么多功能没有实现压力好大 T T ", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Sad)
-        addMessage("我就是随便复制粘贴了一下：啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊！", date: NSDate(timeIntervalSinceNow: -24*60*60), type: ChatBubbleEmotionType.Happy)
+        addMessage("It is really annoying to hear that my professor keep pronouncing 'factorize' as 'fuck-two-lies'.. Hope math will not fuck me like that.", date: NSDate(timeIntervalSinceNow: -24*60*60), emotion: "Angry")
+        addMessage("我就是想测试一下表情。", date: NSDate(timeIntervalSinceNow: -24*60*60), emotion: "Soso")
+        addMessage("想到还有这么多功能没有实现压力好大 T T ", date: NSDate(timeIntervalSinceNow: -24*60*60), emotion: "Sad")
+        addMessage("我就是随便复制粘贴了一下：啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊！", date: NSDate(timeIntervalSinceNow: -24*60*60), emotion: "Happy")
 
 
     }
