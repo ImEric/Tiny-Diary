@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0734533F1BB8693A00BC08A4 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		073FAD321BB7536000DEF3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD311BB7536000DEF3BA /* AppDelegate.swift */; };
-		073FAD341BB7536000DEF3BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD331BB7536000DEF3BA /* ViewController.swift */; };
 		073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD351BB7536000DEF3BA /* Main.storyboard */; };
 		073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD381BB7536000DEF3BA /* Assets.xcassets */; };
 		073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */; };
 		073FAD471BB7536100DEF3BA /* TinyCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD461BB7536100DEF3BA /* TinyCalTests.swift */; };
 		073FAD521BB7536100DEF3BA /* TinyCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD511BB7536100DEF3BA /* TinyCalUITests.swift */; };
+		074C4FF51BBCABF3009F1A82 /* xjlFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */; settings = {ASSET_TAGS = (); }; };
+		078755D71BB8739200C4DD6B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078755D61BB8739200C4DD6B /* CalendarViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		079CDD2C1BB7867E0007B7F9 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		079CDD2E1BB786CE0007B7F9 /* WriteNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		079CDD301BB860470007B7F9 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		07AD859E1BBB41DF007F1176 /* ChatBubbleCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD85991BBB41DF007F1176 /* ChatBubbleCellData.swift */; settings = {ASSET_TAGS = (); }; };
+		07AD859F1BBB41DF007F1176 /* ChatBubbleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859A1BBB41DF007F1176 /* ChatBubbleMessage.swift */; settings = {ASSET_TAGS = (); }; };
+		07AD85A01BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859B1BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		07AD85A11BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AD859C1BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		07BD368C1BBCF008008057D4 /* HYChenMeiZiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */; settings = {ASSET_TAGS = (); }; };
+		07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */; settings = {ASSET_TAGS = (); }; };
+		07BD36901BBCF023008057D4 /* HYXiaoMaiTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */; settings = {ASSET_TAGS = (); }; };
+		07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */; settings = {ASSET_TAGS = (); }; };
+		07C79C551BBC7CCA00DC4BF5 /* diaryTableCellDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07C79C531BBC7CCA00DC4BF5 /* diaryTableCellDataModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		DB92245B7EC02BFB4D3F3341 /* Pods_TinyCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72E39C164D444626E6B32E9 /* Pods_TinyCal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		073FAD2E1BB7536000DEF3BA /* TinyCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073FAD311BB7536000DEF3BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		073FAD331BB7536000DEF3BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		073FAD361BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		073FAD381BB7536000DEF3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		073FAD3B1BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +62,23 @@
 		073FAD4D1BB7536100DEF3BA /* TinyCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073FAD511BB7536100DEF3BA /* TinyCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyCalUITests.swift; sourceTree = "<group>"; };
 		073FAD531BB7536100DEF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		078755D61BB8739200C4DD6B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteNewViewController.swift; sourceTree = "<group>"; };
+		079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		07AD85991BBB41DF007F1176 /* ChatBubbleCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleCellData.swift; sourceTree = "<group>"; };
+		07AD859A1BBB41DF007F1176 /* ChatBubbleMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleMessage.swift; sourceTree = "<group>"; };
+		07AD859B1BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIChatBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		07AD859C1BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIChatBubbleTableViewCell.xib; sourceTree = "<group>"; };
+		07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYChenMeiZiJ.ttf; sourceTree = "<group>"; };
+		07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYPPTiJ.ttf; sourceTree = "<group>"; };
+		07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYXiaoMaiTiJ.ttf; sourceTree = "<group>"; };
+		07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZMiaoWu.ttf; sourceTree = "<group>"; };
+		07C79C541BBC7CCA00DC4BF5 /* diaryTableCellDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = diaryTableCellDataModel.xcdatamodel; sourceTree = "<group>"; };
+		07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xjlFont.ttf; sourceTree = "<group>"; };
+		0C5DE0B3E6BE28CD31A380DF /* Pods-TinyCal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinyCal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TinyCal/Pods-TinyCal.release.xcconfig"; sourceTree = "<group>"; };
+		494AA6291C5B85F12D29892A /* Pods-TinyCal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinyCal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TinyCal/Pods-TinyCal.debug.xcconfig"; sourceTree = "<group>"; };
+		E72E39C164D444626E6B32E9 /* Pods_TinyCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinyCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB92245B7EC02BFB4D3F3341 /* Pods_TinyCal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +114,8 @@
 				073FAD451BB7536100DEF3BA /* TinyCalTests */,
 				073FAD501BB7536100DEF3BA /* TinyCalUITests */,
 				073FAD2F1BB7536000DEF3BA /* Products */,
+				CABD6810D6D80EF911FACCCA /* Pods */,
+				45ECB966457EF0F6FA753DA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +132,10 @@
 		073FAD301BB7536000DEF3BA /* TinyCal */ = {
 			isa = PBXGroup;
 			children = (
-				073FAD311BB7536000DEF3BA /* AppDelegate.swift */,
-				073FAD331BB7536000DEF3BA /* ViewController.swift */,
 				073FAD351BB7536000DEF3BA /* Main.storyboard */,
+				07C5FBBA1BB89C7A00BE7A8A /* View Controllers */,
+				073FAD311BB7536000DEF3BA /* AppDelegate.swift */,
+				07BD368A1BBCEFF4008057D4 /* Fonts */,
 				073FAD381BB7536000DEF3BA /* Assets.xcassets */,
 				073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */,
 				073FAD3D1BB7536000DEF3BA /* Info.plist */,
@@ -125,6 +161,60 @@
 			path = TinyCalUITests;
 			sourceTree = "<group>";
 		};
+		07AD85981BBB4187007F1176 /* DiaryCellView */ = {
+			isa = PBXGroup;
+			children = (
+				07AD859A1BBB41DF007F1176 /* ChatBubbleMessage.swift */,
+				07AD85991BBB41DF007F1176 /* ChatBubbleCellData.swift */,
+				07AD859B1BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift */,
+				07AD859C1BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib */,
+			);
+			name = DiaryCellView;
+			sourceTree = "<group>";
+		};
+		07BD368A1BBCEFF4008057D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */,
+				07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */,
+				07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */,
+				07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */,
+				07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		07C5FBBA1BB89C7A00BE7A8A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				078755D61BB8739200C4DD6B /* CalendarViewController.swift */,
+				0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */,
+				079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */,
+				079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */,
+				079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */,
+				07C79C531BBC7CCA00DC4BF5 /* diaryTableCellDataModel.xcdatamodeld */,
+				07AD85981BBB4187007F1176 /* DiaryCellView */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		45ECB966457EF0F6FA753DA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E72E39C164D444626E6B32E9 /* Pods_TinyCal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CABD6810D6D80EF911FACCCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				494AA6291C5B85F12D29892A /* Pods-TinyCal.debug.xcconfig */,
+				0C5DE0B3E6BE28CD31A380DF /* Pods-TinyCal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 073FAD561BB7536100DEF3BA /* Build configuration list for PBXNativeTarget "TinyCal" */;
 			buildPhases = (
+				564972A47B66D9CA7C6EA2EE /* Check Pods Manifest.lock */,
 				073FAD2A1BB7536000DEF3BA /* Sources */,
 				073FAD2B1BB7536000DEF3BA /* Frameworks */,
 				073FAD2C1BB7536000DEF3BA /* Resources */,
+				CDFC027FE65B00239C7C6945 /* Embed Pods Frameworks */,
+				1FF5BDD4B31EB16F08AD68AB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,9 +324,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */,
 				073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */,
+				07BD368C1BBCF008008057D4 /* HYChenMeiZiJ.ttf in Resources */,
+				074C4FF51BBCABF3009F1A82 /* xjlFont.ttf in Resources */,
+				07BD36901BBCF023008057D4 /* HYXiaoMaiTiJ.ttf in Resources */,
 				073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */,
 				073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */,
+				07AD85A11BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib in Resources */,
+				07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,13 +352,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FF5BDD4B31EB16F08AD68AB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TinyCal/Pods-TinyCal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		564972A47B66D9CA7C6EA2EE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CDFC027FE65B00239C7C6945 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TinyCal/Pods-TinyCal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		073FAD2A1BB7536000DEF3BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				073FAD341BB7536000DEF3BA /* ViewController.swift in Sources */,
+				07AD85A01BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift in Sources */,
+				0734533F1BB8693A00BC08A4 /* SettingTableViewController.swift in Sources */,
+				079CDD301BB860470007B7F9 /* ProfileTableViewController.swift in Sources */,
+				079CDD2C1BB7867E0007B7F9 /* DiaryViewController.swift in Sources */,
+				07AD859F1BBB41DF007F1176 /* ChatBubbleMessage.swift in Sources */,
 				073FAD321BB7536000DEF3BA /* AppDelegate.swift in Sources */,
+				078755D71BB8739200C4DD6B /* CalendarViewController.swift in Sources */,
+				079CDD2E1BB786CE0007B7F9 /* WriteNewViewController.swift in Sources */,
+				07C79C551BBC7CCA00DC4BF5 /* diaryTableCellDataModel.xcdatamodeld in Sources */,
+				07AD859E1BBB41DF007F1176 /* ChatBubbleCellData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,9 +552,11 @@
 		};
 		073FAD571BB7536100DEF3BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 494AA6291C5B85F12D29892A /* Pods-TinyCal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TinyCal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,9 +565,11 @@
 		};
 		073FAD581BB7536100DEF3BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C5DE0B3E6BE28CD31A380DF /* Pods-TinyCal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TinyCal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +643,7 @@
 				073FAD581BB7536100DEF3BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		073FAD591BB7536100DEF3BA /* Build configuration list for PBXNativeTarget "TinyCalTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +652,7 @@
 				073FAD5B1BB7536100DEF3BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		073FAD5C1BB7536100DEF3BA /* Build configuration list for PBXNativeTarget "TinyCalUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,8 +661,22 @@
 				073FAD5E1BB7536100DEF3BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		07C79C531BBC7CCA00DC4BF5 /* diaryTableCellDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				07C79C541BBC7CCA00DC4BF5 /* diaryTableCellDataModel.xcdatamodel */,
+			);
+			currentVersion = 07C79C541BBC7CCA00DC4BF5 /* diaryTableCellDataModel.xcdatamodel */;
+			path = diaryTableCellDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 073FAD261BB7536000DEF3BA /* Project object */;
 }
