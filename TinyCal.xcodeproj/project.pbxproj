@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0734533F1BB8693A00BC08A4 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		073FAD321BB7536000DEF3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD311BB7536000DEF3BA /* AppDelegate.swift */; };
 		073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD351BB7536000DEF3BA /* Main.storyboard */; };
 		073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD381BB7536000DEF3BA /* Assets.xcassets */; };
 		073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */; };
 		073FAD471BB7536100DEF3BA /* TinyCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD461BB7536100DEF3BA /* TinyCalTests.swift */; };
 		073FAD521BB7536100DEF3BA /* TinyCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD511BB7536100DEF3BA /* TinyCalUITests.swift */; };
 		074C4FF51BBCABF3009F1A82 /* xjlFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */; settings = {ASSET_TAGS = (); }; };
+		075004051BC10F39004C5A93 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FA1BC10F39004C5A93 /* RAMBounceAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		075004061BC10F39004C5A93 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FC1BC10F39004C5A93 /* RAMFrameItemAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		075004071BC10F39004C5A93 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FE1BC10F39004C5A93 /* RAMFumeAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		075004081BC10F39004C5A93 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004001BC10F39004C5A93 /* RAMRotationAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		075004091BC10F39004C5A93 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004021BC10F39004C5A93 /* RAMTransitionItemAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		0750040A1BC10F39004C5A93 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004031BC10F39004C5A93 /* RAMAnimatedTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
+		0750040B1BC10F39004C5A93 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004041BC10F39004C5A93 /* RAMItemAnimationProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		078755D71BB8739200C4DD6B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078755D61BB8739200C4DD6B /* CalendarViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		079CDD2C1BB7867E0007B7F9 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		079CDD2E1BB786CE0007B7F9 /* WriteNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -27,6 +33,10 @@
 		07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */; settings = {ASSET_TAGS = (); }; };
 		07BD36901BBCF023008057D4 /* HYXiaoMaiTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */; settings = {ASSET_TAGS = (); }; };
 		07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */; settings = {ASSET_TAGS = (); }; };
+		07C58A611BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A601BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		07C58A641BC09BAC00C13D7E /* ZMButtonAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A631BC09BAC00C13D7E /* ZMButtonAppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		07C58A661BC09BB200C13D7E /* AMButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A651BC09BB200C13D7E /* AMButtonViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		07C58A681BC09BB800C13D7E /* ZMaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A671BC09BB800C13D7E /* ZMaterialButton.swift */; settings = {ASSET_TAGS = (); }; };
 		07C79C551BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07C79C531BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		07E282401BBE7840003FB7A5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2823F1BBE7840003FB7A5 /* DataController.swift */; settings = {ASSET_TAGS = (); }; };
 		07E282431BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E282411BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
@@ -54,7 +64,6 @@
 /* Begin PBXFileReference section */
 		0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		073FAD2E1BB7536000DEF3BA /* TinyCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		073FAD311BB7536000DEF3BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		073FAD361BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		073FAD381BB7536000DEF3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		073FAD3B1BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +74,13 @@
 		073FAD4D1BB7536100DEF3BA /* TinyCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinyCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073FAD511BB7536100DEF3BA /* TinyCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyCalUITests.swift; sourceTree = "<group>"; };
 		073FAD531BB7536100DEF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		075003FA1BC10F39004C5A93 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		075003FC1BC10F39004C5A93 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		075003FE1BC10F39004C5A93 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		075004001BC10F39004C5A93 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		075004021BC10F39004C5A93 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
+		075004031BC10F39004C5A93 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		075004041BC10F39004C5A93 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
 		078755D61BB8739200C4DD6B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteNewViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +93,10 @@
 		07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYPPTiJ.ttf; sourceTree = "<group>"; };
 		07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYXiaoMaiTiJ.ttf; sourceTree = "<group>"; };
 		07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZMiaoWu.ttf; sourceTree = "<group>"; };
+		07C58A601BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewNavigationBarViewController.swift; sourceTree = "<group>"; };
+		07C58A631BC09BAC00C13D7E /* ZMButtonAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMButtonAppDelegate.swift; sourceTree = "<group>"; };
+		07C58A651BC09BB200C13D7E /* AMButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMButtonViewController.swift; sourceTree = "<group>"; };
+		07C58A671BC09BB800C13D7E /* ZMaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMaterialButton.swift; sourceTree = "<group>"; };
 		07C79C541BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryDataModel.xcdatamodel; sourceTree = "<group>"; };
 		07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xjlFont.ttf; sourceTree = "<group>"; };
 		07E2823F1BBE7840003FB7A5 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -140,15 +160,8 @@
 			children = (
 				073FAD351BB7536000DEF3BA /* Main.storyboard */,
 				07C5FBBA1BB89C7A00BE7A8A /* View Controllers */,
-				073FAD311BB7536000DEF3BA /* AppDelegate.swift */,
 				07BD368A1BBCEFF4008057D4 /* Fonts */,
-				073FAD381BB7536000DEF3BA /* Assets.xcassets */,
-				07C79C531BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld */,
-				07E2823F1BBE7840003FB7A5 /* DataController.swift */,
-				07E282411BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift */,
-				07E282421BBE8738003FB7A5 /* DiaryEntryMO.swift */,
-				073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */,
-				073FAD3D1BB7536000DEF3BA /* Info.plist */,
+				07DFC63C1BBF0F310072FEFA /* Supporting Document */,
 			);
 			path = TinyCal;
 			sourceTree = "<group>";
@@ -169,6 +182,68 @@
 				073FAD531BB7536100DEF3BA /* Info.plist */,
 			);
 			path = TinyCalUITests;
+			sourceTree = "<group>";
+		};
+		075003F71BC10F39004C5A93 /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				075003F81BC10F39004C5A93 /* Animations */,
+				075004031BC10F39004C5A93 /* RAMAnimatedTabBarController.swift */,
+				075004041BC10F39004C5A93 /* RAMItemAnimationProtocol.swift */,
+			);
+			path = RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		075003F81BC10F39004C5A93 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				075003F91BC10F39004C5A93 /* BounceAnimation */,
+				075003FB1BC10F39004C5A93 /* FrameAnimation */,
+				075003FD1BC10F39004C5A93 /* FumeAnimation */,
+				075003FF1BC10F39004C5A93 /* RotationAnimation */,
+				075004011BC10F39004C5A93 /* TransitionAniamtions */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		075003F91BC10F39004C5A93 /* BounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				075003FA1BC10F39004C5A93 /* RAMBounceAnimation.swift */,
+			);
+			path = BounceAnimation;
+			sourceTree = "<group>";
+		};
+		075003FB1BC10F39004C5A93 /* FrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				075003FC1BC10F39004C5A93 /* RAMFrameItemAnimation.swift */,
+			);
+			path = FrameAnimation;
+			sourceTree = "<group>";
+		};
+		075003FD1BC10F39004C5A93 /* FumeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				075003FE1BC10F39004C5A93 /* RAMFumeAnimation.swift */,
+			);
+			path = FumeAnimation;
+			sourceTree = "<group>";
+		};
+		075003FF1BC10F39004C5A93 /* RotationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				075004001BC10F39004C5A93 /* RAMRotationAnimation.swift */,
+			);
+			path = RotationAnimation;
+			sourceTree = "<group>";
+		};
+		075004011BC10F39004C5A93 /* TransitionAniamtions */ = {
+			isa = PBXGroup;
+			children = (
+				075004021BC10F39004C5A93 /* RAMTransitionItemAnimation.swift */,
+			);
+			path = TransitionAniamtions;
 			sourceTree = "<group>";
 		};
 		07AD85981BBB4187007F1176 /* DiaryCellView */ = {
@@ -194,17 +269,44 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		07C58A621BC0951900C13D7E /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				07C58A631BC09BAC00C13D7E /* ZMButtonAppDelegate.swift */,
+				07C58A651BC09BB200C13D7E /* AMButtonViewController.swift */,
+				07C58A671BC09BB800C13D7E /* ZMaterialButton.swift */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
 		07C5FBBA1BB89C7A00BE7A8A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				07C58A601BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift */,
+				079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */,
 				078755D61BB8739200C4DD6B /* CalendarViewController.swift */,
+				079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */,
 				0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */,
 				079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */,
-				079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */,
-				079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */,
 				07AD85981BBB4187007F1176 /* DiaryCellView */,
+				07C58A621BC0951900C13D7E /* Button */,
+				075003F71BC10F39004C5A93 /* RAMAnimatedTabBarController */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		07DFC63C1BBF0F310072FEFA /* Supporting Document */ = {
+			isa = PBXGroup;
+			children = (
+				073FAD381BB7536000DEF3BA /* Assets.xcassets */,
+				07C79C531BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld */,
+				07E2823F1BBE7840003FB7A5 /* DataController.swift */,
+				07E282411BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift */,
+				07E282421BBE8738003FB7A5 /* DiaryEntryMO.swift */,
+				073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */,
+				073FAD3D1BB7536000DEF3BA /* Info.plist */,
+			);
+			name = "Supporting Document";
 			sourceTree = "<group>";
 		};
 		45ECB966457EF0F6FA753DA1 /* Frameworks */ = {
@@ -415,17 +517,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				07AD85A01BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift in Sources */,
+				07C58A661BC09BB200C13D7E /* AMButtonViewController.swift in Sources */,
 				0734533F1BB8693A00BC08A4 /* SettingTableViewController.swift in Sources */,
 				07E282431BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift in Sources */,
 				079CDD301BB860470007B7F9 /* ProfileTableViewController.swift in Sources */,
+				07C58A681BC09BB800C13D7E /* ZMaterialButton.swift in Sources */,
 				079CDD2C1BB7867E0007B7F9 /* DiaryViewController.swift in Sources */,
+				075004071BC10F39004C5A93 /* RAMFumeAnimation.swift in Sources */,
 				07AD859F1BBB41DF007F1176 /* ChatBubbleMessage.swift in Sources */,
+				075004081BC10F39004C5A93 /* RAMRotationAnimation.swift in Sources */,
+				075004091BC10F39004C5A93 /* RAMTransitionItemAnimation.swift in Sources */,
 				07E282401BBE7840003FB7A5 /* DataController.swift in Sources */,
-				073FAD321BB7536000DEF3BA /* AppDelegate.swift in Sources */,
+				07C58A641BC09BAC00C13D7E /* ZMButtonAppDelegate.swift in Sources */,
+				0750040A1BC10F39004C5A93 /* RAMAnimatedTabBarController.swift in Sources */,
 				078755D71BB8739200C4DD6B /* CalendarViewController.swift in Sources */,
+				07C58A611BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift in Sources */,
 				079CDD2E1BB786CE0007B7F9 /* WriteNewViewController.swift in Sources */,
 				07C79C551BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld in Sources */,
 				07AD859E1BBB41DF007F1176 /* ChatBubbleCellData.swift in Sources */,
+				075004051BC10F39004C5A93 /* RAMBounceAnimation.swift in Sources */,
+				075004061BC10F39004C5A93 /* RAMFrameItemAnimation.swift in Sources */,
+				0750040B1BC10F39004C5A93 /* RAMItemAnimationProtocol.swift in Sources */,
 				07E282441BBE8738003FB7A5 /* DiaryEntryMO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

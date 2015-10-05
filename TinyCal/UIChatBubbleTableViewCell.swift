@@ -43,7 +43,7 @@ class UIChatBubbleTableViewCell: UITableViewCell
         {
             //set dateLabel's format
 
-            dateLabel.frame = CGRect(x: 10, y: 50, width: 80, height: cellData.dateLabelHeight)
+            dateLabel.frame = CGRect(x: 10, y: 70, width: 80, height: cellData.dateLabelHeight)
             dateLabel.textAlignment = NSTextAlignment.Left
             dateLabel.textColor = UIColor.grayColor()
             dateLabel.font = cellData.dateFont
@@ -89,17 +89,28 @@ class UIChatBubbleTableViewCell: UITableViewCell
             
             monthLabel.text = monthInString
             
-            monthLabel.frame = CGRect(x: 10, y:  66, width: 80, height: cellData.monthLabelHeight)
+            monthLabel.frame = CGRect(x: 10, y:  86, width: 80, height: cellData.monthLabelHeight)
             monthLabel.textAlignment = NSTextAlignment.Left
             monthLabel.textColor = UIColor.grayColor()
             monthLabel.font = cellData.monthFont
             
             //set "th" label
         
-            thLabel.frame = CGRect(x: 35, y: 50, width: 20, height: cellData.thLabelHeight)
+            thLabel.frame = CGRect(x: 33, y: 70, width: 20, height: cellData.thLabelHeight)
             thLabel.textAlignment = NSTextAlignment.Left
             thLabel.textColor = UIColor.grayColor()
             thLabel.font = cellData.thFont
+            let dateText = dateLabel.text!
+            switch dateText{
+                case "01":
+                    thLabel.text = "st"
+                case "02":
+                    thLabel.text = "nd"
+                case "03":
+                    thLabel.text = "rd"
+            default:
+                thLabel.text = "th"
+            }
           
             
             //set messageLabel's Format
@@ -114,11 +125,11 @@ class UIChatBubbleTableViewCell: UITableViewCell
             
      
            // let messageLabelSize = CGSize(width: self.frame.width - 90 - 20, height: CGFloat.max)
-             messageLabel.frame = CGRect(origin: CGPoint(x: 80, y: cellOffSet + imageMargin), size:cellData.messageLabelSize)
+             messageLabel.frame = CGRect(origin: CGPoint(x: 80, y: cellOffSet + imageMargin + 20), size:cellData.messageLabelSize)
            
             let bubbleBackgroundImageSize = CGSize(width: self.frame.width - 60 , height: max((cellData.messageLabelSize.height + imageHeightIncrease), 90))
             
-            bubbleImageView.frame = CGRect(origin: CGPoint(x: 60, y: 0), size: bubbleBackgroundImageSize)
+            bubbleImageView.frame = CGRect(origin: CGPoint(x: 60, y: 20), size: bubbleBackgroundImageSize)
             
             
             bubbleImageView.image = UIImage(named: "messageBubble")?.stretchableImageWithLeftCapWidth(15, topCapHeight: 12)
@@ -130,7 +141,7 @@ class UIChatBubbleTableViewCell: UITableViewCell
             //to be done
             
             let emotionImageSize = CGSize(width: 60, height: 60)
-            emotionImageView.frame = CGRect(origin: CGPoint(x: 0, y:0) , size: emotionImageSize)
+            emotionImageView.frame = CGRect(origin: CGPoint(x: 0, y:20) , size: emotionImageSize)
             emotionImageView.alpha = 1
             
             

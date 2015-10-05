@@ -18,12 +18,15 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let managedContext = DataController().managedObjectContext
 
     
+    
     @IBOutlet var DiaryView: UIView!
     @IBOutlet weak var DiaryTableView: UITableView!
-    @IBOutlet weak var createNewEntryButton: UIButton!
+   
+
     @IBAction func cancelToDiaryViewController(segue:UIStoryboardSegue){
     
     }
+    
     @IBAction func saveNewEntry(segue:UIStoryboardSegue){
         if let WriteNewViewController = segue.sourceViewController as? WriteNewViewController {
             
@@ -35,7 +38,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 cellDataArray.append(cellData)
                 let indexPath = NSIndexPath(forRow: cellDataArray.count - 1, inSection: 0)
                 self.DiaryTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-                self.DiaryTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+                self.DiaryTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.None, animated: true)
             }
         }
     }
@@ -46,8 +49,9 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadDataFromDataModel()
         updateTableView()
+        //updateButtonView()
+        loadDataFromDataModel()
         
         self.DiaryTableView.delegate = self
         self.DiaryTableView.dataSource = self
@@ -57,23 +61,28 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
      
         
-        //loadTestData()
-        if cellDataArray.count != 0
-        {
-            let ip = NSIndexPath(forRow: cellDataArray.count - 1, inSection: 0)
-            self.DiaryTableView.scrollToRowAtIndexPath(ip, atScrollPosition: UITableViewScrollPosition.Bottom, animated: false)
-        }
+        //scroll to bottom
+   
         
                // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if cellDataArray.count != 0
+        {
+            let ip = NSIndexPath(forRow: cellDataArray.count - 1, inSection: 0)
+            self.DiaryTableView.scrollToRowAtIndexPath(ip, atScrollPosition: UITableViewScrollPosition.None, animated: false)
+        }
+    }
 
 
     func updateTableView(){
-        self.DiaryTableView.frame = CGRect(x: 40, y: 40, width: self.DiaryView.frame.width - 80, height: self.DiaryView.frame.height - 90)
         
-        self.createNewEntryButton.frame = CGRect(x: (self.DiaryView.frame.width - 30) / 2 , y: self.DiaryView.frame.height - 90 , width: 30, height: 30)
+        self.DiaryTableView.frame = CGRect(x: 40, y: 0, width: self.DiaryView.frame.width - 80, height: self.DiaryView.frame.height - 50)
+
     }
+    
+
     
     func loadMessageData(){
         
@@ -91,7 +100,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let entryFetch = NSFetchRequest(entityName: "DiaryEntry")
         do{
             let fetchedEntry = try managedContext.executeFetchRequest(entryFetch) as? [NSManagedObject]
-            messages = fetchedEntry!
+                messages = fetchedEntry!
 
             for var messageAdded = 0;messageAdded < messages.count;++messageAdded
             {
@@ -103,6 +112,20 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     
     }
+    /*
+    func deleteObjectFromDataMedel(){
+        
+    let person = persons[0]
+    
+    managedObjectContext!.deleteObject(person)
+    
+    if managedObjectContext!.save(&error){
+    println("Person is deleted")
+    }else{
+    println("Could not delete \(error), \(error!.userInfo)")
+    }
+    }
+*/
 
     func saveNewEntryToDataModel(message:ChatBubbleMessage) {
     

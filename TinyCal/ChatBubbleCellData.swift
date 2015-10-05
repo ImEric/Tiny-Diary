@@ -32,7 +32,7 @@ class ChatBubbleCellData
     private let spacing:CGFloat = 50
     let cellHeight: CGFloat
     
-    let messageWidthConstrain: CGFloat = 20
+    let messageWidthConstrain: CGFloat = 90
 
     
     init(message: ChatBubbleMessage, frameWidth: CGFloat)
@@ -50,7 +50,7 @@ class ChatBubbleCellData
         self.thLabelHeight = 20
         
         self.messageFont = UIFont(name: "FZMiaoWuS-GB", size: 20.0)!
-        let messageLabel = UILabel(frame: CGRectMake(90, 0, frameWidth - messageWidthConstrain - 70, CGFloat.max))
+        let messageLabel = UILabel(frame: CGRectMake(90, 0, frameWidth - messageWidthConstrain, CGFloat.max))
         messageLabel.numberOfLines = 0
         messageLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         messageLabel.font = messageFont

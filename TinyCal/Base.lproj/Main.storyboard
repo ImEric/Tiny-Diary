@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="nX2-Vw-SEC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lnN-o5-qoS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -18,7 +18,7 @@
                             <tableViewSection headerTitle="" id="QaO-3D-COf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lJN-dW-Wtv" style="IBUITableViewCellStyleDefault" id="KiH-J4-Kb2">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KiH-J4-Kb2" id="RsC-mo-rf1">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -42,7 +42,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Otc-ad-hPU" style="IBUITableViewCellStyleDefault" id="bVW-9h-4ag">
-                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bVW-9h-4ag" id="YeC-uX-CSw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -66,7 +66,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="rv0-Aj-zVB" style="IBUITableViewCellStyleDefault" id="rkr-U3-yp2">
-                                        <rect key="frame" x="0.0" y="123" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="187" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rkr-U3-yp2" id="NOH-uc-QbO">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -101,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YL3-M4-hrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="255"/>
+            <point key="canvasLocation" x="1555" y="900"/>
         </scene>
         <!--Setting-->
         <scene sceneID="YdF-KK-UbB">
@@ -116,7 +116,7 @@
                             <tableViewSection id="S8L-K0-70e">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jau-bt-rtB" detailTextLabel="FWi-QD-YGG" style="IBUITableViewCellStyleValue1" id="RVQ-zF-Wdg">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RVQ-zF-Wdg" id="dYm-mS-0Y3">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -162,7 +162,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RqI-Gn-KxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KUx-5l-Z5E" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="-621"/>
+            <point key="canvasLocation" x="2152" y="2446"/>
         </scene>
         <!--Calendar Appearance Delegate-->
         <scene sceneID="dPJ-uS-bgh">
@@ -222,51 +222,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ytv-uB-wlk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="-1301"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="vtC-TO-ipk">
-            <objects>
-                <tabBarController id="nX2-Vw-SEC" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="ImT-x4-aTh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="HY7-W8-V9h" kind="relationship" relationship="viewControllers" id="V6D-TV-dyH"/>
-                        <segue destination="sDA-IC-Rbt" kind="relationship" relationship="viewControllers" id="Y67-Mz-LbV"/>
-                        <segue destination="n19-M0-UDz" kind="relationship" relationship="viewControllers" id="Qnu-2F-h4n"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NgN-22-swa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-293" y="255"/>
+            <point key="canvasLocation" x="677" y="175"/>
         </scene>
         <!--Diary-->
         <scene sceneID="WT7-Vz-l9W">
             <objects>
-                <viewController id="fEd-ST-Yph" userLabel="Diary" customClass="DiaryViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiaryViewController" id="fEd-ST-Yph" userLabel="Diary" customClass="DiaryViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIL-n8-6Sc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="0.0" sectionHeaderHeight="28" sectionFooterHeight="28" id="wZd-D9-LOM">
-                                <rect key="frame" x="40" y="64" width="240" height="455"/>
+                                <rect key="frame" x="40" y="44" width="240" height="475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vbl-4B-L21" userLabel="WriteButton">
-                                <rect key="frame" x="137" y="481" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <state key="normal" image="write"/>
-                                <connections>
-                                    <segue destination="iuN-J8-4gX" kind="modal" identifier="saveNewEntry" id="GVz-xu-tlM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -279,13 +250,12 @@
                     <connections>
                         <outlet property="DiaryTableView" destination="wZd-D9-LOM" id="Y3c-Iw-86m"/>
                         <outlet property="DiaryView" destination="BIL-n8-6Sc" id="ICU-83-Nwp"/>
-                        <outlet property="createNewEntryButton" destination="Vbl-4B-L21" id="bXJ-2c-kl7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuL-5M-tXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="mYh-1h-eyc"/>
             </objects>
-            <point key="canvasLocation" x="139" y="1800"/>
+            <point key="canvasLocation" x="123" y="2446"/>
         </scene>
         <!--Review-->
         <scene sceneID="ARc-oo-eBi">
@@ -300,7 +270,7 @@
                             <tableViewSection id="yTW-9p-zhy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="WBq-f0-G8U" detailTextLabel="AXf-sq-Ahw" style="IBUITableViewCellStyleValue1" id="Tdr-pw-fMQ">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tdr-pw-fMQ" id="PS5-dR-G6F">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -346,13 +316,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJ7-s5-aFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1j0-od-QZ3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="1038"/>
+            <point key="canvasLocation" x="970" y="2446"/>
         </scene>
-        <!--Write New View Controller-->
+        <!--Stats-->
+        <scene sceneID="iv3-Js-R0i">
+            <objects>
+                <viewController id="ybi-Tb-dkl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3JX-Di-XFj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stats" id="CEx-5z-cRE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAQ-Ly-Lo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="aZl-i4-cAR" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-470" y="2446"/>
+        </scene>
+        <!--WriteNew-->
         <scene sceneID="U2o-Ct-Pb5">
             <objects>
-                <viewController id="BAW-0Z-btr" customClass="WriteNewViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fDG-0g-QWi">
+                <viewController storyboardIdentifier="WriteNewViewController" id="BAW-0Z-btr" userLabel="WriteNew" customClass="WriteNewViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fDG-0g-QWi" userLabel="view">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -388,6 +375,7 @@
                                 <animations/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="saveButtonPressed:" destination="BAW-0Z-btr" eventType="touchUpInside" id="zyk-Hz-vI0"/>
                                     <segue destination="Gw8-jU-ZZW" kind="unwind" identifier="saveNewEntry" unwindAction="saveNewEntry:" id="WRE-hQ-KWD"/>
                                 </connections>
                             </button>
@@ -444,15 +432,11 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="dq4-HN-WQp"/>
                     <navigationItem key="navigationItem" id="Ddi-Zt-65E">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Am9-JX-nEi">
-                            <connections>
-                                <segue destination="Gw8-jU-ZZW" kind="unwind" unwindAction="cancelToDiaryViewController:" id="1KZ-ev-vr0"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Am9-JX-nEi"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="WriteNewEntryView" destination="fDG-0g-QWi" id="2le-G9-amb"/>
                         <outlet property="angryButton" destination="JeG-YG-5Va" id="qsb-ny-lGs"/>
                         <outlet property="emotionButtonSelectedView" destination="KBs-Jc-8jQ" id="e9I-hy-0Xc"/>
                         <outlet property="happyButton" destination="w85-Ip-Vmp" id="4No-sV-KOX"/>
@@ -469,7 +453,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0z-Po-VfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Gw8-jU-ZZW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="1800"/>
+            <point key="canvasLocation" x="-1030" y="2446"/>
         </scene>
         <!--About-->
         <scene sceneID="7Dj-pV-v7Q">
@@ -485,7 +469,7 @@
                             <tableViewSection id="UeI-Do-pkJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" textLabel="HeP-oe-wbu" detailTextLabel="DNO-0t-rn5" style="IBUITableViewCellStyleValue1" id="MWe-xB-Gun">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MWe-xB-Gun" id="BtK-f6-KrF">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -513,7 +497,7 @@
                                         <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" textLabel="vRK-lf-jJO" detailTextLabel="bG5-Mi-emS" style="IBUITableViewCellStyleValue1" id="4Uf-Qf-TIg">
-                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Uf-Qf-TIg" id="Iv0-lU-lbg">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -559,32 +543,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4H-l4-uk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sxa-21-dvn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="255"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="23q-jd-mFI">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iuN-J8-4gX" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TOr-T7-7Xk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BAW-0Z-btr" kind="relationship" relationship="rootViewController" id="e3q-pr-jxC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fb5-ih-AqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="565" y="1800"/>
+            <point key="canvasLocation" x="1555" y="2446"/>
         </scene>
         <!--Profile-->
         <scene sceneID="QAy-sa-Xvw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n19-M0-UDz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="AYf-SU-IKJ" userLabel="Setting"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="AYf-SU-IKJ" userLabel="Setting" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target">
+                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                        <connections>
+                            <outlet property="animation" destination="XKi-8o-yoU" id="tzv-pd-kT9"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fmy-GY-uL4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -597,34 +567,20 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISZ-8w-bXS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="XKi-8o-yoU" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="139" y="255"/>
-        </scene>
-        <!--Diary-->
-        <scene sceneID="xVU-rt-Dsm">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HY7-W8-V9h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Diary" image="diary" id="DYD-Hh-c5g"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hyb-xh-X3V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fEd-ST-Yph" kind="relationship" relationship="rootViewController" id="Vp6-0r-kcz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B4l-ox-zQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-293" y="1800"/>
+            <point key="canvasLocation" x="123" y="900"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="xgZ-7b-ens">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sDA-IC-Rbt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="gBb-TP-6wv"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="gBb-TP-6wv" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target">
+                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                        <connections>
+                            <outlet property="animation" destination="Nxi-mc-AOd" id="a4N-uU-rVB"/>
+                        </connections>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wUs-mw-3at">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -634,12 +590,13 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Wv5-GM-5RY" kind="relationship" relationship="rootViewController" id="kgI-En-taG"/>
+                        <segue destination="Wv5-GM-5RY" kind="relationship" relationship="rootViewController" id="Olw-lN-Mdb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Djl-WY-h1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Nxi-mc-AOd" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="139" y="-621"/>
+            <point key="canvasLocation" x="123" y="175"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xec-zS-or0">
@@ -658,7 +615,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3w-pL-atz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="-621"/>
+            <point key="canvasLocation" x="2684" y="1758"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ccx-ZL-ahZ">
@@ -677,7 +634,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lG8-Pg-Unf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="255"/>
+            <point key="canvasLocation" x="2087" y="1758"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OTx-q1-Eiw">
@@ -696,13 +653,105 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpu-3K-XdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="1038"/>
+            <point key="canvasLocation" x="1502" y="1758"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="FlO-0p-Eyf">
+            <objects>
+                <tabBarController id="lnN-o5-qoS" customClass="RAMAnimatedTabBarController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="dWo-tO-qBs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5uD-na-78C" kind="relationship" relationship="viewControllers" id="uHz-Gb-XBp"/>
+                        <segue destination="sDA-IC-Rbt" kind="relationship" relationship="viewControllers" id="GwT-rk-kPy"/>
+                        <segue destination="eZx-La-J85" kind="relationship" relationship="viewControllers" id="NQs-Og-MUI"/>
+                        <segue destination="dWt-3Q-5ou" kind="relationship" relationship="viewControllers" id="AAm-dr-GT0"/>
+                        <segue destination="n19-M0-UDz" kind="relationship" relationship="viewControllers" id="KkS-a9-9ns"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1s-Ok-JDw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-461" y="900"/>
+        </scene>
+        <!--Diary-->
+        <scene sceneID="ziA-xo-i8d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5uD-na-78C" customClass="DiaryViewNavigationBarViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diary" image="diary" id="Yid-83-dED" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target">
+                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                        <connections>
+                            <outlet property="animation" destination="xpV-ZS-UvQ" id="S5e-Bb-KuZ"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ObQ-5G-Pcc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fEd-ST-Yph" kind="relationship" relationship="rootViewController" id="qwa-SC-hgn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QN-Vb-ZCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="xpV-ZS-UvQ" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="1716"/>
+        </scene>
+        <!--New Entry Overlay View Controller-->
+        <scene sceneID="ohq-Lo-wtF">
+            <objects>
+                <viewController id="eZx-La-J85" customClass="NewEntryOverlayViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iDj-ii-aoS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="write" id="t83-XM-TDd" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjV-xB-rmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1030" y="1758"/>
+        </scene>
+        <!--Stats-->
+        <scene sceneID="MqK-a0-fMf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dWt-3Q-5ou" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stats" image="stats" id="bLg-ck-PFK" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target">
+                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                        <connections>
+                            <outlet property="animation" destination="7eB-Dq-lYU" id="wOF-6g-PMV"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EHw-XM-xmj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ybi-Tb-dkl" kind="relationship" relationship="rootViewController" id="FPG-fS-M2m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bri-z9-CiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="7eB-Dq-lYU" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-470" y="1758"/>
         </scene>
     </scenes>
     <resources>
         <image name="calendar" width="30" height="30"/>
         <image name="diary" width="30" height="30"/>
         <image name="profile" width="30" height="30"/>
+        <image name="stats" width="30" height="30"/>
         <image name="write" width="30" height="30"/>
     </resources>
 </document>

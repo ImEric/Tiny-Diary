@@ -15,8 +15,9 @@ class WriteNewViewController: UIViewController {
     var emotionString: String = ""
     var message: ChatBubbleMessage = ChatBubbleMessage(text: "", date: NSDate(), emotion: "")
     
-    @IBOutlet var WriteNewEntryView: UIView!
+ 
     
+   
     
     @IBOutlet weak var yourWordsLabel: UILabel!
     
@@ -82,6 +83,12 @@ class WriteNewViewController: UIViewController {
             message = ChatBubbleMessage(text: textView.text!, date: NSDate(), emotion: emotionString)
         }
     }
+        
+    @IBAction func saveButtonPressed(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("remove", object: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
@@ -96,13 +103,15 @@ class WriteNewViewController: UIViewController {
     let navigationBarHeight: CGFloat = 60
     let yourWordsLabelHeight: CGFloat = 20
     let verticalSpacing:CGFloat = 20
-    let horizontalSpacing:CGFloat = 40
+    let horizontalSpacing:CGFloat = 20
     func updateTextfieldHeight(){
         
         
     }
     func updateUI(){
         //set yourWordsLabel
+        let frameWidth = self.view.frame.width - 80
+        
         yourWordsLabel.text = "YOUR WORDS:"
         yourWordsLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
         yourWordsLabel.textAlignment = NSTextAlignment.Left
@@ -112,14 +121,14 @@ class WriteNewViewController: UIViewController {
         
         //set textFieldImage
         let textImageYPos = 2 * verticalSpacing + yourWordsLabelHeight + navigationBarHeight
-        textFieldImageView.frame = CGRect(x: horizontalSpacing, y: textImageYPos, width: self.WriteNewEntryView.frame.width - 80, height: textFieldImageHeight)
+        textFieldImageView.frame = CGRect(x: horizontalSpacing, y: textImageYPos, width: frameWidth - 2 * horizontalSpacing, height: textFieldImageHeight)
         textFieldImageView.image = UIImage(named: "myBubble")?.stretchableImageWithLeftCapWidth(15, topCapHeight: 12)
         
         
         //set textView
         let textFieldYPos: CGFloat =  textImageYPos + 20
         textView.text = ""
-        textView.frame = CGRect(x: horizontalSpacing + 10, y: textFieldYPos , width: self.WriteNewEntryView.frame.width - 100, height: textFieldHeight)
+        textView.frame = CGRect(x: horizontalSpacing + 10, y: textFieldYPos , width: frameWidth - 2 * horizontalSpacing - 20, height: textFieldHeight)
         textView.textAlignment = NSTextAlignment.Left
         textView.textColor = UIColor.blackColor()
         textView.font = UIFont(name: "FZMiaoWuS-GB", size:20.0)
@@ -132,7 +141,7 @@ class WriteNewViewController: UIViewController {
         yourFeelingLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
         yourFeelingLabel.textAlignment = NSTextAlignment.Left
         yourFeelingLabel.textColor = UIColor.blackColor()
-        yourFeelingLabel.frame = CGRect(x: horizontalSpacing, y: yourFeelingLabelYPos, width: 80 , height: 20)
+        yourFeelingLabel.frame = CGRect(x: horizontalSpacing, y: yourFeelingLabelYPos, width: 60 , height: 20)
         yourFeelingLabel.sizeToFit()
         
         // set save button
@@ -140,12 +149,14 @@ class WriteNewViewController: UIViewController {
         saveButton.setTitle("SAVE", forState: .Normal)
         saveButton.titleLabel!.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
         saveButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        saveButton.frame = CGRect(x: (self.WriteNewEntryView.frame.width - 80) / 2, y: 440, width: 80, height: 20)
+        saveButton.frame = CGRect(x: (frameWidth - 60) / 2, y: 440, width: 60, height: 20)
         
         //set saveButtonImageView
         
-        saveButtonImageView.frame = CGRect(x: (self.WriteNewEntryView.frame.width - 80) / 2, y: 420, width: 80, height: 70)
-        saveButtonImageView.image = UIImage(named: "saveButtonImage")
+        saveButtonImageView.frame = CGRect(x: 0, y: 0, width: 80, height: 70)
+        saveButtonImageView.center = saveButton.center
+        saveButtonImageView.image = UIImage(named: "saveButtonImage")?.stretchableImageWithLeftCapWidth(0, topCapHeight: 0)
+        saveButtonImageView.alpha = 0.8
         
         
         saveButton.backgroundImageForState(UIControlState.Normal)
@@ -154,7 +165,7 @@ class WriteNewViewController: UIViewController {
         //let bubbleBackgroundImageSize = CGSize(width: self.frame.width, height: max((cellData.messageLabelSize.height + imageHeightIncrease), 80))
         let emotionImagesYPos = yourFeelingLabelYPos + verticalSpacing*2
         
-        let imageWidth:CGFloat = (self.WriteNewEntryView.frame.width - 80) / 4
+        let imageWidth:CGFloat = (frameWidth - 2 * horizontalSpacing) / 4
         
         happyButton.frame = CGRect(x: horizontalSpacing, y: emotionImagesYPos, width: imageWidth, height: imageWidth)
         happyButton.setBackgroundImage(UIImage(named: "Happy"), forState: .Normal)
