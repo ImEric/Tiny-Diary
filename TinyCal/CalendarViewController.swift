@@ -194,6 +194,33 @@ extension CalenderViewController: CVCalendarViewDelegate {
         }
         return false
     }
+    
+   // Message View 
+    
+    
+    //let DiarySubView = UITableViewController()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
    /* func supplementaryView(viewOnDayView dayView: DayView) -> UIView {
         let π = M_PI

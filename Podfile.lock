@@ -1,10 +1,22 @@
 PODS:
   - CVCalendar (1.1.4)
+  - PNChartSwift (0.0.2)
 
 DEPENDENCIES:
   - CVCalendar (~> 1.1.4)
+  - PNChartSwift (from `https://github.com/kevinzhow/PNChart-Swift.git`)
+
+EXTERNAL SOURCES:
+  PNChartSwift:
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+
+CHECKOUT OPTIONS:
+  PNChartSwift:
+    :commit: 88eb8bcb4cd415d02775b2d355542b8bd338712d
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
 
 SPEC CHECKSUMS:
   CVCalendar: ebeb7b3cb9eaa2c136ed70ce655f07907fc785d7
+  PNChartSwift: bcdfbffd65920072463eff42d0dfb46189bf4495
 
 COCOAPODS: 0.38.2

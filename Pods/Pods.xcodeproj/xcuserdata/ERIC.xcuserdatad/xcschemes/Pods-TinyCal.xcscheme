@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AC030C8D9C289BC0357954A6"
+               BlueprintIdentifier = "B4A1C30F69C00DCF72EF386B"
                BuildableName = "Pods_TinyCal.framework"
                BlueprintName = "Pods-TinyCal"
                ReferencedContainer = "container:Pods.xcodeproj">

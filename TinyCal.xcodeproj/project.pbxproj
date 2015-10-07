@@ -63,7 +63,9 @@
 
 /* Begin PBXFileReference section */
 		0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
-		073FAD2E1BB7536000DEF3BA /* TinyCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07371B8D1BC3A20D007FC3EF /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
+		07371B8F1BC3A2CC007FC3EF /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
+		073FAD2E1BB7536000DEF3BA /* TinyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073FAD361BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		073FAD381BB7536000DEF3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		073FAD3B1BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -148,7 +150,7 @@
 		073FAD2F1BB7536000DEF3BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				073FAD2E1BB7536000DEF3BA /* TinyCal.app */,
+				073FAD2E1BB7536000DEF3BA /* TinyDiary.app */,
 				073FAD421BB7536100DEF3BA /* TinyCalTests.xctest */,
 				073FAD4D1BB7536100DEF3BA /* TinyCalUITests.xctest */,
 			);
@@ -312,6 +314,8 @@
 		45ECB966457EF0F6FA753DA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07371B8F1BC3A2CC007FC3EF /* Charts.framework */,
+				07371B8D1BC3A20D007FC3EF /* Charts.framework */,
 				E72E39C164D444626E6B32E9 /* Pods_TinyCal.framework */,
 			);
 			name = Frameworks;
@@ -346,7 +350,7 @@
 			);
 			name = TinyCal;
 			productName = TinyCal;
-			productReference = 073FAD2E1BB7536000DEF3BA /* TinyCal.app */;
+			productReference = 073FAD2E1BB7536000DEF3BA /* TinyDiary.app */;
 			productType = "com.apple.product-type.application";
 		};
 		073FAD411BB7536100DEF3BA /* TinyCalTests */ = {
@@ -679,11 +683,15 @@
 			baseConfigurationReference = 494AA6291C5B85F12D29892A /* Pods-TinyCal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = TinyCal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyDiary;
+				PRODUCT_NAME = TinyDiary;
 			};
 			name = Debug;
 		};
@@ -692,11 +700,15 @@
 			baseConfigurationReference = 0C5DE0B3E6BE28CD31A380DF /* Pods-TinyCal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = TinyCal/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyCal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyDiary;
+				PRODUCT_NAME = TinyDiary;
 			};
 			name = Release;
 		};

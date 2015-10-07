@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "073FAD2D1BB7536000DEF3BA"
-               BuildableName = "TinyCal.app"
+               BuildableName = "TinyDiary.app"
                BlueprintName = "TinyCal"
                ReferencedContainer = "container:TinyCal.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "073FAD2D1BB7536000DEF3BA"
-            BuildableName = "TinyCal.app"
+            BuildableName = "TinyDiary.app"
             BlueprintName = "TinyCal"
             ReferencedContainer = "container:TinyCal.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "073FAD2D1BB7536000DEF3BA"
-            BuildableName = "TinyCal.app"
+            BuildableName = "TinyDiary.app"
             BlueprintName = "TinyCal"
             ReferencedContainer = "container:TinyCal.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "073FAD2D1BB7536000DEF3BA"
-            BuildableName = "TinyCal.app"
+            BuildableName = "TinyDiary.app"
             BlueprintName = "TinyCal"
             ReferencedContainer = "container:TinyCal.xcodeproj">
          </BuildableReference>

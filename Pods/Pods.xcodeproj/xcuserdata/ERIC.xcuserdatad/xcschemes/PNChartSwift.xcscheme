@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "512E0358736160BC60A9C0AB"
-               BuildableName = "CVCalendar.framework"
-               BlueprintName = "CVCalendar"
+               BlueprintIdentifier = "CF8B9D04C2A790E9FC4ACDB5"
+               BuildableName = "PNChartSwift.framework"
+               BlueprintName = "PNChartSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

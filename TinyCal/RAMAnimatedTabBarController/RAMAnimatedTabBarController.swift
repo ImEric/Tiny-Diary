@@ -49,7 +49,6 @@ class RAMAnimatedTabBarController: UITabBarController {
     
     
     var iconsView: [(icon: UIImageView, textLabel: UILabel)] = []
-    var buttonSelected = false
     let tempButton = UIButton(type:UIButtonType.Custom) as UIButton
 
 
@@ -106,9 +105,8 @@ class RAMAnimatedTabBarController: UITabBarController {
         for sv in self.view.subviews{
             if sv.tag == 100 || sv.tag == 110 || sv.tag == 111
             {
-                
                 sv.removeFromSuperview()
-                buttonSelected = false
+
             }
         }
     }
@@ -118,7 +116,6 @@ class RAMAnimatedTabBarController: UITabBarController {
             if sv.tag == 100 || sv.tag == 110 || sv.tag == 111
             {
                 sv.removeFromSuperview()
-                buttonSelected = false
                 entryAdded()
             }
         }
@@ -134,17 +131,24 @@ class RAMAnimatedTabBarController: UITabBarController {
         let subView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
         let containerView = UIView(frame: CGRect(x: 40, y: 90, width: self.view.frame.width - 80, height: self.view.frame.height - 140))
         
-        if !buttonSelected{
             
             let backButton = UIButton(type:UIButtonType.Custom) as UIButton
             backButton.frame = tempButton.frame
             backButton.setBackgroundImage(UIImage(named: "backButton"), forState:UIControlState.Normal)
             backButton.setBackgroundImage(UIImage(named: "backButton"), forState:UIControlState.Highlighted)
             backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
-            
+            /*
             subView.opaque = true
             subView.backgroundColor = UIColor.grayColor()
             subView.alpha = 0.9
+            */
+        
+            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
+            visualEffectView.alpha = 0.9
+            visualEffectView.tag = 100
+            visualEffectView.frame = subView.bounds
+        
+            self.view.addSubview(visualEffectView)
             //subView.addSubview(backButton)
             
             containerView.center = subView.center
@@ -154,7 +158,7 @@ class RAMAnimatedTabBarController: UITabBarController {
             //animation
             containerView.alpha = 0
             containerView.frame.origin.y = self.view.frame.height
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animateWithDuration(0.3, animations: {
                 containerView.alpha = 1
                 containerView.frame.origin.y = 70
                 })
@@ -172,20 +176,15 @@ class RAMAnimatedTabBarController: UITabBarController {
             containerView.addSubview(VC.view)
             
             
-            subView.tag = 100
+            //subView.tag = 100
             containerView.tag = 110
             backButton.tag = 111
             
-            self.view.addSubview(subView)
+            //self.view.addSubview(subView)
             self.view.addSubview(containerView)
             self.view.addSubview(backButton)
             VC.didMoveToParentViewController(self)
-            buttonSelected = true
-        }else
-        {
-            removeAllSubview()
-        }
-        
+
 
     }
     

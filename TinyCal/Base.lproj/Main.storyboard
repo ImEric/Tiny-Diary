@@ -7,7 +7,7 @@
         <!--Profile-->
         <scene sceneID="Tjg-vp-QQy">
             <objects>
-                <tableViewController id="nVv-74-JgX" customClass="ProfileTableViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="nVv-74-JgX" customClass="ProfileTableViewController" customModule="TinyDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2LC-2E-lSZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -18,7 +18,7 @@
                             <tableViewSection headerTitle="" id="QaO-3D-COf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lJN-dW-Wtv" style="IBUITableViewCellStyleDefault" id="KiH-J4-Kb2">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KiH-J4-Kb2" id="RsC-mo-rf1">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -42,7 +42,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Otc-ad-hPU" style="IBUITableViewCellStyleDefault" id="bVW-9h-4ag">
-                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bVW-9h-4ag" id="YeC-uX-CSw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -66,7 +66,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="rv0-Aj-zVB" style="IBUITableViewCellStyleDefault" id="rkr-U3-yp2">
-                                        <rect key="frame" x="0.0" y="187" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="123" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rkr-U3-yp2" id="NOH-uc-QbO">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -106,7 +106,7 @@
         <!--Setting-->
         <scene sceneID="YdF-KK-UbB">
             <objects>
-                <tableViewController id="jv4-vR-1Jx" customClass="SettingTableViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jv4-vR-1Jx" customClass="SettingTableViewController" customModule="TinyDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="7bw-R9-xcQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
                             <tableViewSection id="S8L-K0-70e">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jau-bt-rtB" detailTextLabel="FWi-QD-YGG" style="IBUITableViewCellStyleValue1" id="RVQ-zF-Wdg">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RVQ-zF-Wdg" id="dYm-mS-0Y3">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -167,13 +167,13 @@
         <!--Calendar Appearance Delegate-->
         <scene sceneID="dPJ-uS-bgh">
             <objects>
-                <viewController id="Wv5-GM-5RY" customClass="CalenderViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wv5-GM-5RY" customClass="CalenderViewController" customModule="TinyDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rs0-Up-YDU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="SHH-iE-Gla">
-                                <rect key="frame" x="20" y="87" width="287" height="259"/>
+                                <rect key="frame" x="20" y="87" width="287" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </imageView>
@@ -186,16 +186,6 @@
                                     <outlet property="menuViewDelegate" destination="Wv5-GM-5RY" id="toI-n2-pVP"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" id="L0L-fj-gS5" userLabel="Calendar View" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="16" y="313" width="288" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="calendarAppearanceDelegate" destination="Wv5-GM-5RY" id="SLf-tp-tsf"/>
-                                    <outlet property="calendarDelegate" destination="Wv5-GM-5RY" id="2Vg-sV-pL5"/>
-                                </connections>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TU5-qa-yXa">
                                 <rect key="frame" x="51" y="121" width="188" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -204,6 +194,22 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" id="Mry-f5-aJb" userLabel="Message View">
+                                <rect key="frame" x="40" y="379" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="L0L-fj-gS5" userLabel="Calendar View" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="16" y="150" width="288" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="calendarAppearanceDelegate" destination="Wv5-GM-5RY" id="SLf-tp-tsf"/>
+                                    <outlet property="calendarDelegate" destination="Wv5-GM-5RY" id="2Vg-sV-pL5"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -227,7 +233,7 @@
         <!--Diary-->
         <scene sceneID="WT7-Vz-l9W">
             <objects>
-                <viewController storyboardIdentifier="DiaryViewController" id="fEd-ST-Yph" userLabel="Diary" customClass="DiaryViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiaryViewController" id="fEd-ST-Yph" userLabel="Diary" customClass="DiaryViewController" customModule="TinyDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIL-n8-6Sc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +276,7 @@
                             <tableViewSection id="yTW-9p-zhy">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="WBq-f0-G8U" detailTextLabel="AXf-sq-Ahw" style="IBUITableViewCellStyleValue1" id="Tdr-pw-fMQ">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tdr-pw-fMQ" id="PS5-dR-G6F">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -331,14 +337,14 @@
                     <navigationItem key="navigationItem" title="Stats" id="CEx-5z-cRE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAQ-Ly-Lo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="aZl-i4-cAR" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
+                <customObject id="aZl-i4-cAR" customClass="RAMBounceAnimation" customModule="TinyDiary" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-470" y="2446"/>
         </scene>
         <!--WriteNew-->
         <scene sceneID="U2o-Ct-Pb5">
             <objects>
-                <viewController storyboardIdentifier="WriteNewViewController" id="BAW-0Z-btr" userLabel="WriteNew" customClass="WriteNewViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteNewViewController" id="BAW-0Z-btr" userLabel="WriteNew" customClass="WriteNewViewController" customModule="TinyDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fDG-0g-QWi" userLabel="view">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -469,7 +475,7 @@
                             <tableViewSection id="UeI-Do-pkJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" textLabel="HeP-oe-wbu" detailTextLabel="DNO-0t-rn5" style="IBUITableViewCellStyleValue1" id="MWe-xB-Gun">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MWe-xB-Gun" id="BtK-f6-KrF">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -497,7 +503,7 @@
                                         <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" textLabel="vRK-lf-jJO" detailTextLabel="bG5-Mi-emS" style="IBUITableViewCellStyleValue1" id="4Uf-Qf-TIg">
-                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Uf-Qf-TIg" id="Iv0-lU-lbg">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -549,7 +555,7 @@
         <scene sceneID="QAy-sa-Xvw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n19-M0-UDz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="AYf-SU-IKJ" userLabel="Setting" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="AYf-SU-IKJ" userLabel="Setting" customClass="RAMAnimatedTabBarItem" customModule="TinyDiary" customModuleProvider="target">
                         <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                         <connections>
                             <outlet property="animation" destination="XKi-8o-yoU" id="tzv-pd-kT9"/>
@@ -567,7 +573,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ISZ-8w-bXS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="XKi-8o-yoU" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
+                <customObject id="XKi-8o-yoU" customClass="RAMBounceAnimation" customModule="TinyDiary" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="123" y="900"/>
         </scene>
@@ -575,7 +581,7 @@
         <scene sceneID="xgZ-7b-ens">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sDA-IC-Rbt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="gBb-TP-6wv" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="gBb-TP-6wv" customClass="RAMAnimatedTabBarItem" customModule="TinyDiary" customModuleProvider="target">
                         <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                         <connections>
                             <outlet property="animation" destination="Nxi-mc-AOd" id="a4N-uU-rVB"/>
@@ -594,7 +600,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Djl-WY-h1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Nxi-mc-AOd" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
+                <customObject id="Nxi-mc-AOd" customClass="RAMBounceAnimation" customModule="TinyDiary" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="123" y="175"/>
         </scene>
@@ -658,7 +664,7 @@
         <!--Animated Tab Bar Controller-->
         <scene sceneID="FlO-0p-Eyf">
             <objects>
-                <tabBarController id="lnN-o5-qoS" customClass="RAMAnimatedTabBarController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="lnN-o5-qoS" customClass="RAMAnimatedTabBarController" customModule="TinyDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="dWo-tO-qBs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -681,8 +687,8 @@
         <!--Diary-->
         <scene sceneID="ziA-xo-i8d">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5uD-na-78C" customClass="DiaryViewNavigationBarViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Diary" image="diary" id="Yid-83-dED" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5uD-na-78C" customClass="DiaryViewNavigationBarViewController" customModule="TinyDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diary" image="diary" id="Yid-83-dED" customClass="RAMAnimatedTabBarItem" customModule="TinyDiary" customModuleProvider="target">
                         <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                         <connections>
                             <outlet property="animation" destination="xpV-ZS-UvQ" id="S5e-Bb-KuZ"/>
@@ -700,21 +706,21 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QN-Vb-ZCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="xpV-ZS-UvQ" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
+                <customObject id="xpV-ZS-UvQ" customClass="RAMBounceAnimation" customModule="TinyDiary" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="123" y="1716"/>
         </scene>
         <!--New Entry Overlay View Controller-->
         <scene sceneID="ohq-Lo-wtF">
             <objects>
-                <viewController id="eZx-La-J85" customClass="NewEntryOverlayViewController" customModule="TinyCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eZx-La-J85" customClass="NewEntryOverlayViewController" customModule="TinyDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iDj-ii-aoS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="write" id="t83-XM-TDd" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target"/>
+                    <tabBarItem key="tabBarItem" title="" image="write" id="t83-XM-TDd" customClass="RAMAnimatedTabBarItem" customModule="TinyDiary" customModuleProvider="target"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjV-xB-rmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -724,7 +730,7 @@
         <scene sceneID="MqK-a0-fMf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dWt-3Q-5ou" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stats" image="stats" id="bLg-ck-PFK" customClass="RAMAnimatedTabBarItem" customModule="TinyCal" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="Stats" image="stats" id="bLg-ck-PFK" customClass="RAMAnimatedTabBarItem" customModule="TinyDiary" customModuleProvider="target">
                         <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
                         <connections>
                             <outlet property="animation" destination="7eB-Dq-lYU" id="wOF-6g-PMV"/>
@@ -742,7 +748,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bri-z9-CiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="7eB-Dq-lYU" customClass="RAMBounceAnimation" customModule="TinyCal" customModuleProvider="target"/>
+                <customObject id="7eB-Dq-lYU" customClass="RAMBounceAnimation" customModule="TinyDiary" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-470" y="1758"/>
         </scene>

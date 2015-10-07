@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PNChartSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TinyCal.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A89177AABE3039F1D46DC11FB62105B7</key>
+		<key>87E68CCE22CA4C927AEA76D4928CC118</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F1C55B13E6D216CEE4F8F4A8D4778A82</key>
+		<key>FAC4F265EF182E46B7D71981CAA0C0CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF2620CE72B02C40722614BE88A7BA00</key>
 		<dict>
 			<key>primary</key>
 			<true/>
