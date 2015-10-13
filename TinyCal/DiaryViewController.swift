@@ -112,20 +112,22 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     
     }
-    /*
+    
     func deleteObjectFromDataMedel(){
         
-    let person = persons[0]
+        managedContext.deleteObject(messages[selectedIndexPath.row] as NSManagedObject)
+        
+        messages.removeAtIndex(selectedIndexPath.row)
+        //var error: NSError?
     
-    managedObjectContext!.deleteObject(person)
-    
-    if managedObjectContext!.save(&error){
-    println("Person is deleted")
-    }else{
-    println("Could not delete \(error), \(error!.userInfo)")
+        do{
+            try managedContext.save()
+        }
+        catch{
+            fatalError("Failure to save context: \(error)")
+        }
     }
-    }
-*/
+
 
     // save new entries to database
     func saveNewEntryToDataModel(message:ChatBubbleMessage) {
@@ -209,15 +211,16 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
             //myData.removeAtIndex(indexPath.row)
             //context.save(nil)
             
-            //tableView.reloadData()
+            
             // remove the deleted item from the `UITableView`
-            self.DiaryTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+      
         default:
             return
             
         }
     }
 */
+
     
     // TableViewCell's height
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
@@ -446,6 +449,10 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func confirmDeleting(sender:UIButton){
         removeSubView()
+        deleteObjectFromDataMedel()
+        cellDataArray.removeAtIndex(selectedIndexPath.row)
+        self.DiaryTableView.deleteRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .Fade)
+        DiaryTableView.reloadData()
         //self.DiaryTableView.deleteRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .Fade)
         //messages.removeAtIndex(selectedIndexPath.row/64)
     }
