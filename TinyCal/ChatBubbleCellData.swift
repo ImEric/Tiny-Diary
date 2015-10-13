@@ -24,13 +24,21 @@ class ChatBubbleCellData
     
     let thFont: UIFont
     let thLabelHeight: CGFloat
+    
+    let textFont: UIFont
 
+    /*
     let messageFont: UIFont
     let messageLabelSize: CGSize
+    */
     
-        
-    private let spacing:CGFloat = 50
+    let titleFont: UIFont
+   //let titleLabelSize: CGSize
+    
     let cellHeight: CGFloat
+    
+    private let spacing:CGFloat = 50
+    
     
     let messageWidthConstrain: CGFloat = 90
 
@@ -49,17 +57,26 @@ class ChatBubbleCellData
         self.thFont = UIFont(name: "Helvetica", size: 10.0)!
         self.thLabelHeight = 20
         
-        self.messageFont = UIFont(name: "FZMiaoWuS-GB", size: 20.0)!
-        let messageLabel = UILabel(frame: CGRectMake(90, 0, frameWidth - messageWidthConstrain, CGFloat.max))
-        messageLabel.numberOfLines = 0
-        messageLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        messageLabel.font = messageFont
-        messageLabel.text = message.text
-        messageLabel.sizeToFit()
+        self.textFont = UIFont(name: "FZMiaoWuS-GB", size: 17.0)!
         
-        self.messageLabelSize = messageLabel.frame.size
-        self.cellHeight = max((self.messageLabelSize.height + spacing), 100)
-    }
-    
+        self.titleFont = UIFont(name: "FZMiaoWuS-GB", size: 20.0)!
+        
+        self.cellHeight = 100
+      
+        /*
+       let titleLabel = UILabel(frame: CGRectMake(90, 0, frameWidth - messageWidthConstrain, CGFloat.max))
+        
+        titleLabel.numberOfLines = 0
+        titleLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        titleLabel.font = titleFont
+        titleLabel.text = message.title
+        titleLabel.sizeToFit()
+        self.titleLabelSize = titleLabel.frame.size
+        
+       */
+       
+        //max((self.titleLabelSize.height + spacing), 100)
 
+
+    }
 }

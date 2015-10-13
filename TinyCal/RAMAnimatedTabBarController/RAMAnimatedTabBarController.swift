@@ -57,15 +57,17 @@ class RAMAnimatedTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //overlayButton()
+        self.tabBar.tintColor = UIColor.blackColor()
 
         let containers = createViewContainers()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "removeSubview:", name:"remove", object: nil)
 
         createCustomIcons(containers)
-    
+        //[[UITabBar appearance] setSelectionIndicatorImage:[[UIImage alloc] init]];
     }
     
     override func viewWillAppear(animated: Bool) {
+        
         overlayButton()
         
     }
@@ -115,12 +117,14 @@ class RAMAnimatedTabBarController: UITabBarController {
         for sv in self.view.subviews{
             if sv.tag == 100 || sv.tag == 110 || sv.tag == 111
             {
-                sv.removeFromSuperview()
                 entryAdded()
+                sv.removeFromSuperview()
+                
             }
         }
     }
     
+
     
 //set button tap action
     
@@ -134,8 +138,8 @@ class RAMAnimatedTabBarController: UITabBarController {
             
             let backButton = UIButton(type:UIButtonType.Custom) as UIButton
             backButton.frame = tempButton.frame
-            backButton.setBackgroundImage(UIImage(named: "backButton"), forState:UIControlState.Normal)
-            backButton.setBackgroundImage(UIImage(named: "backButton"), forState:UIControlState.Highlighted)
+            backButton.setBackgroundImage(UIImage(named: "backButtonRed"), forState:UIControlState.Normal)
+            backButton.setBackgroundImage(UIImage(named: "backButtonRed"), forState:UIControlState.Highlighted)
             backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
             /*
             subView.opaque = true
@@ -158,9 +162,11 @@ class RAMAnimatedTabBarController: UITabBarController {
             //animation
             containerView.alpha = 0
             containerView.frame.origin.y = self.view.frame.height
+            backButton.alpha = 0
             UIView.animateWithDuration(0.3, animations: {
                 containerView.alpha = 1
                 containerView.frame.origin.y = 70
+                backButton.alpha = 1
                 })
             containerView.layer.masksToBounds = true
             containerView.layer.cornerRadius = 15
@@ -197,9 +203,9 @@ class RAMAnimatedTabBarController: UITabBarController {
 
     func createCustomIcons(containers : [String: UIView]) {
 
-        if let items = tabBar.items as? [RAMAnimatedTabBarItem] {
+        if let items = self.tabBar.items as? [RAMAnimatedTabBarItem] {
             
-            let itemsCount = items.count as Int - 1
+            let itemsCount = items.count - 1
             
             for (index, item) in items.enumerate() {
 
@@ -214,7 +220,7 @@ class RAMAnimatedTabBarController: UITabBarController {
 
                 let icon = UIImageView(image: item.image)
                 icon.translatesAutoresizingMaskIntoConstraints = false
-                icon.tintColor = UIColor.clearColor()
+                icon.tintColor = UIColor.blackColor()
 
                 // text
                 let textLabel = UILabel()
@@ -244,6 +250,9 @@ class RAMAnimatedTabBarController: UITabBarController {
 
                 if 0 == index { // selected first elemet
                     item.selectedState(icon, textLabel: textLabel)
+                }else
+                {
+                    item.deselectAnimation(icon, textLabel: textLabel)
                 }
 
                 item.image = nil
@@ -375,7 +384,9 @@ class RAMAnimatedTabBarController: UITabBarController {
             deselectItem.deselectAnimation(deselelectIcon, textLabel: deselelectTextLabel)
 
             selectedIndex = gesture.view!.tag
+           
         }
+        
     }
     
     func setSelectIndex(from from: Int,to: Int) {
@@ -390,22 +401,31 @@ class RAMAnimatedTabBarController: UITabBarController {
     
     func entryAdded() {
         
-        let items = tabBar.items as! [RAMAnimatedTabBarItem]
+        let items = self.tabBar.items as! [RAMAnimatedTabBarItem]
+        
+        for var index = 0;index < items.count;++index
+        {
+            let deselelectIcon = iconsView[index].icon
+            let deselelectTextLabel = iconsView[index].textLabel
+            let deselectItem = items[index]
+            deselectItem.deselectAnimation(deselelectIcon, textLabel: deselelectTextLabel)
+        }
         
         let currentIndex = 0
-        if selectedIndex != currentIndex && selectedIndex != 2 && currentIndex != 2{
+
             let animationItem : RAMAnimatedTabBarItem = items[currentIndex]
             let icon = iconsView[currentIndex].icon
             let textLabel = iconsView[currentIndex].textLabel
             animationItem.playAnimation(icon, textLabel: textLabel)
-            
+            items[currentIndex].selectedState(icon, textLabel: textLabel)
+        
+        /*
             let deselelectIcon = iconsView[selectedIndex].icon
             let deselelectTextLabel = iconsView[selectedIndex].textLabel
             let deselectItem = items[selectedIndex]
             deselectItem.deselectAnimation(deselelectIcon, textLabel: deselelectTextLabel)
-            //setSelectIndex(from: selectedIndex, to: currentIndex)
-            selectedIndex = 0
-        }
+        */
+        self.selectedIndex = 0
     }
     
 

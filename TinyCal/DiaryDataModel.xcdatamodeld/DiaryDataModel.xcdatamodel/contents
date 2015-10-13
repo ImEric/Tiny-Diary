@@ -4,8 +4,9 @@
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="emotion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DiaryEntry" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="DiaryEntry" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

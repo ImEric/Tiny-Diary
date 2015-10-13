@@ -13,11 +13,13 @@ class WriteNewViewController: UIViewController {
     
     let emotionButtonSelected = false
     var emotionString: String = ""
-    var message: ChatBubbleMessage = ChatBubbleMessage(text: "", date: NSDate(), emotion: "")
+    var message: ChatBubbleMessage = ChatBubbleMessage(text: "", title: "", date: NSDate(), emotion: "")
     
  
     
+    @IBOutlet weak var titleLabel: UILabel!
    
+    @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var yourWordsLabel: UILabel!
     
@@ -65,6 +67,7 @@ class WriteNewViewController: UIViewController {
     
     @IBOutlet weak var emotionButtonSelectedView: UIView!
     
+    @IBOutlet weak var titleTextFieldImage: UIImageView!
   
     
     override func viewDidLoad() {
@@ -80,13 +83,20 @@ class WriteNewViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "saveNewEntry"{
-            message = ChatBubbleMessage(text: textView.text!, date: NSDate(), emotion: emotionString)
+            let title1:String
+            if titleTextField.text == ""
+            {
+                title1 = "DEAR DIARY:"
+            }else{
+                title1 = titleTextField.text!
+            }
+            message = ChatBubbleMessage(text: textView.text!, title: title1, date: NSDate(), emotion: emotionString)
         }
     }
         
     @IBAction func saveButtonPressed(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName("remove", object: nil)
-        self.dismissViewControllerAnimated(true, completion: nil)
+        //self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
@@ -108,16 +118,50 @@ class WriteNewViewController: UIViewController {
         
     }
     func updateUI(){
-        //set yourWordsLabel
+        
         let frameWidth = self.view.frame.width - 80
         let frameHeight = self.view.frame.height - 140
+        
+        //set titleLabel
+        titleLabel.text = "TITLE:"
+        titleLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
+        titleLabel.textAlignment = NSTextAlignment.Left
+        titleLabel.textColor = UIColor.blackColor()
+        titleLabel.frame = CGRect(x: horizontalSpacing , y: verticalSpacing + navigationBarHeight - 10, width: 80 , height: 20)
+        titleLabel.sizeToFit()
+        
+        
+        //set title textfield
+        
+        titleTextField.text = ""
+        titleTextField.frame = CGRect(x: horizontalSpacing + 10 , y: titleLabel.frame.maxY + 10, width: frameWidth - 2 * horizontalSpacing - 20, height: 30)
+        titleTextField.textAlignment = NSTextAlignment.Left
+        titleTextField.textColor = UIColor.blackColor()
+        titleTextField.font = UIFont(name: "FZMiaoWuS-GB", size:20.0)
+        titleTextField.tintColor = UIColor.grayColor()
+        titleTextField.borderStyle = UITextBorderStyle.None
+        
+        
+        //set title text field image
+        
+        titleTextFieldImage.frame = CGRect(x: 0, y: 0 , width: frameWidth - 2 * horizontalSpacing - 5, height: titleTextField.frame.height+12)
+        titleTextFieldImage.center = titleTextField.center
+        titleTextFieldImage.image = UIImage(named: "myBubble")?.stretchableImageWithLeftCapWidth(15, topCapHeight: 12)
+        titleTextFieldImage.alpha = 0.5
+        
+        
+        
+        //set yourWordsLabel
+        
         
         yourWordsLabel.text = "YOUR WORDS:"
         yourWordsLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
         yourWordsLabel.textAlignment = NSTextAlignment.Left
         yourWordsLabel.textColor = UIColor.blackColor()
-        yourWordsLabel.frame = CGRect(x: horizontalSpacing, y: verticalSpacing + navigationBarHeight, width: 80 , height: 20)
+        yourWordsLabel.frame = CGRect(x: horizontalSpacing  , y: verticalSpacing + navigationBarHeight + 65, width: 80 , height: 20)
         yourWordsLabel.sizeToFit()
+        
+        
         
         
         // set save button
@@ -186,16 +230,17 @@ class WriteNewViewController: UIViewController {
         
         
         
-        //set textFieldImage
-        let textImageYPos = yourWordsLabel.frame.maxY + 15
-        textFieldImageView.frame = CGRect(x: horizontalSpacing, y: textImageYPos, width: frameWidth - 2 * horizontalSpacing, height: yourFeelingLabel.frame.minY - textImageYPos - verticalSpacing)
+        //set textViewImage
+        let textImageYPos = yourWordsLabel.frame.maxY + 10
+        textFieldImageView.frame = CGRect(x: horizontalSpacing, y: textImageYPos , width: frameWidth - 2 * horizontalSpacing, height: yourFeelingLabel.frame.minY - textImageYPos - verticalSpacing + 10 )
         textFieldImageView.image = UIImage(named: "myBubble")?.stretchableImageWithLeftCapWidth(15, topCapHeight: 12)
+        textFieldImageView.alpha = 0.5
         
         
         //set textView
-        let textFieldYPos: CGFloat =  textImageYPos + 20
+        let textFieldYPos: CGFloat =  textImageYPos + 10
         textView.text = ""
-        textView.frame = CGRect(x: horizontalSpacing + 10, y: textFieldYPos , width: frameWidth - 2 * horizontalSpacing - 20, height: textFieldImageView.frame.height - 10)
+        textView.frame = CGRect(x: horizontalSpacing , y: textFieldYPos, width: frameWidth - 2 * horizontalSpacing - 20, height: textFieldImageView.frame.height - 25)
         textView.textAlignment = NSTextAlignment.Left
         textView.textColor = UIColor.blackColor()
         textView.font = UIFont(name: "FZMiaoWuS-GB", size:20.0)

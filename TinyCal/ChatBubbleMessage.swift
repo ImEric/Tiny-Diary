@@ -14,11 +14,13 @@ class ChatBubbleMessage
 {
     let date: NSDate
     let text: String
+    let title: String
     let emotion: String
     
-    init(text: String, date: NSDate, emotion: String)
+    init(text: String, title: String, date: NSDate, emotion: String)
     {
         self.date = date
+        self.title = title.uppercaseString
         self.text = text
         self.emotion = emotion
     }

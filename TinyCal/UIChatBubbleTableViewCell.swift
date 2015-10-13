@@ -11,13 +11,22 @@ import UIKit
 class UIChatBubbleTableViewCell: UITableViewCell
 {
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
+    
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
     @IBOutlet weak var bubbleImageView: UIImageView!
+    
+    @IBOutlet weak var divider: UIImageView!
+   
+    @IBOutlet weak var messageLabel: UILabel!
 
     @IBOutlet weak var monthLabel: UILabel!
     
     @IBOutlet weak var thLabel: UILabel!
     @IBOutlet weak var emotionImageView: UIImageView!
+    
+    var messageInDetail:String = ""
     
     
     let cellOffSet: CGFloat = 10
@@ -41,6 +50,8 @@ class UIChatBubbleTableViewCell: UITableViewCell
     {
         if let cellData = data
         {
+           
+            
             //set dateLabel's format
 
             dateLabel.frame = CGRect(x: 10, y: 70, width: 80, height: cellData.dateLabelHeight)
@@ -113,21 +124,39 @@ class UIChatBubbleTableViewCell: UITableViewCell
             }
           
             
-            //set messageLabel's Format
+            //set tileLabel's Format
+            
+           
+            //self.titleLabelSize = titleLabel.frame.size
+            
+            titleLabel.frame = CGRect(x: 80, y: 30, width: self.frame.width - 90, height: 30)
+            titleLabel.text = cellData.message.title
+            titleLabel.font = cellData.titleFont
+            titleLabel.textAlignment = NSTextAlignment.Left
+        
+            titleLabel.numberOfLines = 0
+            titleLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            titleLabel.textColor = UIColor.blackColor()
+            
+            
+            //set message Label
+            
+            messageLabel.frame = CGRect(x: 80, y: 55, width: self.frame.width - 90, height: 50)
             
             messageLabel.text = cellData.message.text
-            messageLabel.font = cellData.messageFont
+            messageLabel.font = cellData.textFont
             messageLabel.textAlignment = NSTextAlignment.Left
-        
+            
             messageLabel.numberOfLines = 0
             messageLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
             messageLabel.textColor = UIColor.blackColor()
+            messageInDetail = cellData.message.text
             
      
-           // let messageLabelSize = CGSize(width: self.frame.width - 90 - 20, height: CGFloat.max)
-             messageLabel.frame = CGRect(origin: CGPoint(x: 80, y: cellOffSet + imageMargin + 20), size:cellData.messageLabelSize)
+           // let titleLabelSize = CGSize(width: self.frame.width - 90 - 20, height: CGFloat.max)
+            
            
-            let bubbleBackgroundImageSize = CGSize(width: self.frame.width - 60 , height: max((cellData.messageLabelSize.height + imageHeightIncrease), 90))
+            let bubbleBackgroundImageSize = CGSize(width: self.frame.width - 60 , height: 88)//max((cellData.titleLabelSize.height + imageHeightIncrease), 88))
             
             bubbleImageView.frame = CGRect(origin: CGPoint(x: 60, y: 20), size: bubbleBackgroundImageSize)
             
@@ -160,6 +189,12 @@ class UIChatBubbleTableViewCell: UITableViewCell
                 
             }
             
+            //set divider image
+            
+            divider.frame = CGRect(x: 75, y: 55, width: titleLabel.frame.width, height: 3)
+            divider.image = UIImage(named: "monthLabelViewImage")
+            divider.alpha = 0.5
+
             
             // set the cell unselectable
             

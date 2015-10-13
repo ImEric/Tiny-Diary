@@ -21,10 +21,12 @@
 		075004091BC10F39004C5A93 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004021BC10F39004C5A93 /* RAMTransitionItemAnimation.swift */; settings = {ASSET_TAGS = (); }; };
 		0750040A1BC10F39004C5A93 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004031BC10F39004C5A93 /* RAMAnimatedTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
 		0750040B1BC10F39004C5A93 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004041BC10F39004C5A93 /* RAMItemAnimationProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		077E67181BC5AAF800EEEF87 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077E67171BC5AAF800EEEF87 /* StatsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		078755D71BB8739200C4DD6B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078755D61BB8739200C4DD6B /* CalendarViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		079CDD2C1BB7867E0007B7F9 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		079CDD2E1BB786CE0007B7F9 /* WriteNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		079CDD301BB860470007B7F9 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		07A7B2A61BC84E5700B42CCB /* DiaryDetailCellScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7B2A51BC84E5700B42CCB /* DiaryDetailCellScrollViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		07AD859E1BBB41DF007F1176 /* ChatBubbleCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD85991BBB41DF007F1176 /* ChatBubbleCellData.swift */; settings = {ASSET_TAGS = (); }; };
 		07AD859F1BBB41DF007F1176 /* ChatBubbleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859A1BBB41DF007F1176 /* ChatBubbleMessage.swift */; settings = {ASSET_TAGS = (); }; };
 		07AD85A01BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859B1BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
@@ -33,7 +35,6 @@
 		07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */; settings = {ASSET_TAGS = (); }; };
 		07BD36901BBCF023008057D4 /* HYXiaoMaiTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */; settings = {ASSET_TAGS = (); }; };
 		07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */; settings = {ASSET_TAGS = (); }; };
-		07C58A611BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A601BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		07C58A641BC09BAC00C13D7E /* ZMButtonAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A631BC09BAC00C13D7E /* ZMButtonAppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		07C58A661BC09BB200C13D7E /* AMButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A651BC09BB200C13D7E /* AMButtonViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		07C58A681BC09BB800C13D7E /* ZMaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A671BC09BB800C13D7E /* ZMaterialButton.swift */; settings = {ASSET_TAGS = (); }; };
@@ -83,10 +84,12 @@
 		075004021BC10F39004C5A93 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
 		075004031BC10F39004C5A93 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
 		075004041BC10F39004C5A93 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		077E67171BC5AAF800EEEF87 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		078755D61BB8739200C4DD6B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteNewViewController.swift; sourceTree = "<group>"; };
 		079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		07A7B2A51BC84E5700B42CCB /* DiaryDetailCellScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryDetailCellScrollViewController.swift; sourceTree = "<group>"; };
 		07AD85991BBB41DF007F1176 /* ChatBubbleCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleCellData.swift; sourceTree = "<group>"; };
 		07AD859A1BBB41DF007F1176 /* ChatBubbleMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleMessage.swift; sourceTree = "<group>"; };
 		07AD859B1BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIChatBubbleTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,7 +98,6 @@
 		07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYPPTiJ.ttf; sourceTree = "<group>"; };
 		07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYXiaoMaiTiJ.ttf; sourceTree = "<group>"; };
 		07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZMiaoWu.ttf; sourceTree = "<group>"; };
-		07C58A601BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewNavigationBarViewController.swift; sourceTree = "<group>"; };
 		07C58A631BC09BAC00C13D7E /* ZMButtonAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMButtonAppDelegate.swift; sourceTree = "<group>"; };
 		07C58A651BC09BB200C13D7E /* AMButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMButtonViewController.swift; sourceTree = "<group>"; };
 		07C58A671BC09BB800C13D7E /* ZMaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMaterialButton.swift; sourceTree = "<group>"; };
@@ -284,12 +286,13 @@
 		07C5FBBA1BB89C7A00BE7A8A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				07C58A601BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift */,
 				079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */,
-				078755D61BB8739200C4DD6B /* CalendarViewController.swift */,
+				07A7B2A51BC84E5700B42CCB /* DiaryDetailCellScrollViewController.swift */,
 				079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */,
-				0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */,
+				078755D61BB8739200C4DD6B /* CalendarViewController.swift */,
+				077E67171BC5AAF800EEEF87 /* StatsViewController.swift */,
 				079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */,
+				0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */,
 				07AD85981BBB4187007F1176 /* DiaryCellView */,
 				07C58A621BC0951900C13D7E /* Button */,
 				075003F71BC10F39004C5A93 /* RAMAnimatedTabBarController */,
@@ -530,12 +533,13 @@
 				075004071BC10F39004C5A93 /* RAMFumeAnimation.swift in Sources */,
 				07AD859F1BBB41DF007F1176 /* ChatBubbleMessage.swift in Sources */,
 				075004081BC10F39004C5A93 /* RAMRotationAnimation.swift in Sources */,
+				077E67181BC5AAF800EEEF87 /* StatsViewController.swift in Sources */,
 				075004091BC10F39004C5A93 /* RAMTransitionItemAnimation.swift in Sources */,
 				07E282401BBE7840003FB7A5 /* DataController.swift in Sources */,
 				07C58A641BC09BAC00C13D7E /* ZMButtonAppDelegate.swift in Sources */,
+				07A7B2A61BC84E5700B42CCB /* DiaryDetailCellScrollViewController.swift in Sources */,
 				0750040A1BC10F39004C5A93 /* RAMAnimatedTabBarController.swift in Sources */,
 				078755D71BB8739200C4DD6B /* CalendarViewController.swift in Sources */,
-				07C58A611BC08B7D00C13D7E /* DiaryViewNavigationBarViewController.swift in Sources */,
 				079CDD2E1BB786CE0007B7F9 /* WriteNewViewController.swift in Sources */,
 				07C79C551BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld in Sources */,
 				07AD859E1BBB41DF007F1176 /* ChatBubbleCellData.swift in Sources */,

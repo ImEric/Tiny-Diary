@@ -42,7 +42,7 @@ class CalenderViewController: UIViewController {
     //monthLabel.textAlignment = NSTextAlignment.Center
     monthLabel.text = CVDate(date: NSDate()).globalDescription
     monthLabel.textColor = UIColor.whiteColor()
-    monthLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 22.0)!
+    monthLabel.font = UIFont(name: "HYChenMeiZiJ", size: 22.0)!
     monthLabel.sizeToFit()
         
     menuView.frame = CGRect(x: 20, y: 110, width: frameView.frame.width - 40, height: 30)
