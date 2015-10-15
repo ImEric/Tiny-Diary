@@ -144,7 +144,7 @@ class WriteNewViewController: UIViewController {
         
         //set title text field image
         
-        titleTextFieldImage.frame = CGRect(x: 0, y: 0 , width: frameWidth - 2 * horizontalSpacing - 5, height: titleTextField.frame.height+12)
+        titleTextFieldImage.frame = CGRect(x: 0, y: 0 , width: frameWidth - 2 * horizontalSpacing - 5, height: titleTextField.frame.height + 16)
         titleTextFieldImage.center = titleTextField.center
         titleTextFieldImage.image = UIImage(named: "myBubble")?.stretchableImageWithLeftCapWidth(15, topCapHeight: 12)
         titleTextFieldImage.alpha = 0.5

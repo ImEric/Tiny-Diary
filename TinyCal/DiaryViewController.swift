@@ -37,7 +37,9 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 saveNewEntryToDataModel(message)
                 let cellData = ChatBubbleCellData(message: message, frameWidth: self.DiaryTableView.frame.width)
+                //loadDataFromDataModel()
                 cellDataArray.append(cellData)
+                reloadData()
                 let indexPath = NSIndexPath(forRow: cellDataArray.count - 1, inSection: 0)
                 self.DiaryTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
                 self.DiaryTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.None, animated: true)
@@ -94,6 +96,18 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     /********* Core Data **********/
+    
+    func reloadData(){
+        let entryFetch = NSFetchRequest(entityName: "DiaryEntry")
+        do{
+            let fetchedEntry = try managedContext.executeFetchRequest(entryFetch) as? [NSManagedObject]
+            messages = fetchedEntry!
+        }catch
+        {
+            fatalError("Failure to fetch context: \(error)")
+        }
+        
+    }
     
     // load data from database
     func loadDataFromDataModel(){

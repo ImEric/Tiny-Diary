@@ -83,7 +83,7 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
     }
     
     func didSelectDayView(dayView: CVCalendarDayView) {
-        _ = dayView.date
+        let date = dayView.date
         print("\(calendarView.presentedDate.commonDescription) is selected!")
     }
     
