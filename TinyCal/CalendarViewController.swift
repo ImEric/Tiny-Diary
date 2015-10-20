@@ -8,8 +8,17 @@
 
 import UIKit
 import CVCalendar
+import CoreData
 
-class CalenderViewController: UIViewController {
+class CalenderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var dailyDiaryTableView: UITableView!
+    
+    var ifCellRegistered = false
+    let managedContext = DataController().managedObjectContext
+    var messages = [NSManagedObject]()
+    //var dailyDiary = [NSManagedObject]()
+    var cellDataArray = [ChatBubbleCellData]()
     // MARK: - Properties
     
     
@@ -28,11 +37,31 @@ class CalenderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateTableViewFrame()
         updateCalendarFrame()
+        loadDiaryData()
+        findDiaryOnDate(NSDate())
+        self.dailyDiaryTableView.delegate = self
+        self.dailyDiaryTableView.dataSource = self
+        
+        self.dailyDiaryTableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.dailyDiaryTableView.showsVerticalScrollIndicator = false
         
         
     }
     
+    
+    func updateTableViewFrame(){
+        
+        let verticleOffset = 66 + calendarView.frame.height + menuView.frame.height + monthLabelView.frame.height
+        
+        dailyDiaryTableView.frame = CGRect(x: 40, y: verticleOffset , width: frameView.frame.width - 80, height: frameView.frame.height - verticleOffset - 44 )
+        //self.frameView.addSubview(dailyDiaryTableView)
+        print(dailyDiaryTableView.frame.origin.x, dailyDiaryTableView.frame.origin.y, dailyDiaryTableView.frame.width, dailyDiaryTableView.frame.height)
+        //dailyDiaryTableView.layer.zPosition = 1
+        
+    }
+
     
    func updateCalendarFrame(){
     
@@ -56,6 +85,101 @@ class CalenderViewController: UIViewController {
         calendarView.commitCalendarViewUpdate()
         menuView.commitMenuViewUpdate()
     }
+    
+    
+    
+    //
+    func loadDiaryData(){
+        
+        let entryFetch = NSFetchRequest(entityName: "DiaryEntry")
+        do{
+            let fetchedEntry = try managedContext.executeFetchRequest(entryFetch) as? [NSManagedObject]
+            messages = fetchedEntry!
+            
+        }catch
+        {
+            fatalError("Failure to fetch context: \(error)")
+        }
+    }
+    
+    func findDiaryOnDate(date:NSDate){
+        let selectedDate = date
+        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        for message in messages{
+            let diaryDate = message.valueForKey("date") as? NSDate
+            if (calendar!.isDate(diaryDate!, inSameDayAsDate: selectedDate)){
+                addMessageFromData(message)
+            }
+        }
+    }
+    
+    
+    func addMessageFromData(message:NSManagedObject)
+    {
+        let title = message.valueForKey("title") as? String
+        let text =  message.valueForKey("text") as? String
+        let emotion = message.valueForKey("emotion") as? String
+        let date = message.valueForKey("date") as? NSDate
+        let diaryMessage = ChatBubbleMessage(text: text!, title: title!, date: date!,emotion: emotion!)
+        let cellData = ChatBubbleCellData(message: diaryMessage, frameWidth: self.view.frame.width)
+        cellDataArray.append(cellData)
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return cellDataArray.count
+    }
+    
+    
+    
+    // Get TableViewCell here
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        _ = cellDataArray[indexPath.row]
+        let cell: UIChatBubbleTableViewCell
+        
+        if ifCellRegistered
+        {
+            let reusableCell: AnyObject = tableView.dequeueReusableCellWithIdentifier("UIChatBubbleTableViewCell", forIndexPath: indexPath)
+            cell = reusableCell as! UIChatBubbleTableViewCell
+        }
+        else
+        {
+            let cellArray = NSBundle.mainBundle().loadNibNamed("UIChatBubbleTableViewCell", owner: self, options: nil)
+            cell = cellArray[0] as! UIChatBubbleTableViewCell
+            
+            //register UIChatBubbleTableViewCell
+            let nib = UINib(nibName: "UIChatBubbleTableViewCell", bundle: NSBundle.mainBundle())
+            self.dailyDiaryTableView.registerNib(nib, forCellReuseIdentifier: "UIChatBubbleTableViewCell")
+            ifCellRegistered = true
+        }
+        
+        cell.frame.size.width = self.dailyDiaryTableView.frame.width
+        cell.data = cellDataArray[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        return cellDataArray[indexPath.row].cellHeight
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 // MARK: - CVCalendarViewDelegate & CVCalendarMenuViewDelegate
@@ -83,9 +207,28 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
     }
     
     func didSelectDayView(dayView: CVCalendarDayView) {
-        let date = dayView.date
-        print("\(calendarView.presentedDate.commonDescription) is selected!")
+        loadDiaryData()
+        clearCellData()
+        let date = dayView.date.convertedDate()
+        findDiaryOnDate(date!)
+        dailyDiaryTableView.reloadData()
+        
+        //print(date.getDate())
+
+            
+        //print("\(calendarView.presentedDate.commonDescription) is selected!")
+        
+        
     }
+    
+    
+    func clearCellData(){
+        if cellDataArray.count != 0{
+            cellDataArray.removeAll()
+        }
+    }
+    
+    
     
    
     func presentedDateUpdated(date: CVDate) {
@@ -195,7 +338,7 @@ extension CalenderViewController: CVCalendarViewDelegate {
         return false
     }
     
-   // Message View 
+       // Message View
     
     
     //let DiarySubView = UITableViewController()
@@ -318,7 +461,12 @@ extension CalenderViewController {
     @IBAction func loadNext(sender: AnyObject) {
         calendarView.loadNextView()
     }
+    
 }
+
+
+    
+
 
 // MARK: - Convenience API Demo
 /*

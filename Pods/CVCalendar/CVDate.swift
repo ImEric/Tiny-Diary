@@ -16,6 +16,7 @@ public final class CVDate: NSObject {
     public let week: Int
     public let day: Int
     
+    
    public init(date: NSDate) {
         let dateRange = Manager.dateRange(date)
         
