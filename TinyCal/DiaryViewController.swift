@@ -63,13 +63,6 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.DiaryTableView.separatorStyle = UITableViewCellSeparatorStyle.None
         self.DiaryTableView.showsVerticalScrollIndicator = false
         
-      
-
-     
-        
-       
-   
-        
         
     }
     
@@ -83,6 +76,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
 
+    
     func updateTableView(){
         
         self.DiaryTableView.frame = CGRect(x: 40, y: 0, width: self.DiaryView.frame.width - 80, height: self.DiaryView.frame.height - 50)

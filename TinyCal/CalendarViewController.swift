@@ -14,14 +14,8 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var dailyDiaryTableView: UITableView!
     
-    var ifCellRegistered = false
-    let managedContext = DataController().managedObjectContext
-    var messages = [NSManagedObject]()
-    //var dailyDiary = [NSManagedObject]()
-    var cellDataArray = [ChatBubbleCellData]()
-    // MARK: - Properties
-    
-    
+    @IBOutlet weak var containerView: UIView!
+ 
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var menuView: CVCalendarMenuView!
     @IBOutlet weak var monthLabel: UILabel!
@@ -29,6 +23,20 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
     //@IBOutlet weak var daysOutSwitch: UISwitch!
     
     @IBOutlet var frameView: UIView!
+    
+    var ifCellRegistered = false
+    let managedContext = DataController().managedObjectContext
+    var selectedIndexPath = NSIndexPath()
+    var messages = [NSManagedObject]()
+    //var dailyDiary = [NSManagedObject]()
+    var cellDataArray = [ChatBubbleCellData]()
+    var lastSelectedDate = NSDate()
+    // MARK: - Properties
+    
+    
+    
+    
+    
     
     internal var shouldShowDaysOut = true
     internal var animationFinished = true
@@ -40,7 +48,7 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
         updateTableViewFrame()
         updateCalendarFrame()
         loadDiaryData()
-        findDiaryOnDate(NSDate())
+        findDiaryOnDate(lastSelectedDate)
         self.dailyDiaryTableView.delegate = self
         self.dailyDiaryTableView.dataSource = self
         
@@ -50,12 +58,16 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        reloadTalbeViewCell(lastSelectedDate)
+    }
+    
     
     func updateTableViewFrame(){
         
-        let verticleOffset = 66 + calendarView.frame.height + menuView.frame.height + monthLabelView.frame.height
+        let verticleOffset = 66 +  menuView.frame.height + containerView.frame.height
         
-        dailyDiaryTableView.frame = CGRect(x: 40, y: verticleOffset , width: frameView.frame.width - 80, height: frameView.frame.height - verticleOffset - 44 )
+        dailyDiaryTableView.frame = CGRect(x: 40, y: verticleOffset , width: self.view.frame.width - 80, height: self.view.frame.height - verticleOffset - 50 )
         //self.frameView.addSubview(dailyDiaryTableView)
         print(dailyDiaryTableView.frame.origin.x, dailyDiaryTableView.frame.origin.y, dailyDiaryTableView.frame.width, dailyDiaryTableView.frame.height)
         //dailyDiaryTableView.layer.zPosition = 1
@@ -65,7 +77,10 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
     
    func updateCalendarFrame(){
     
-    monthLabelView.frame = CGRect(x: 0, y: 60, width: frameView.frame.width, height: 60)
+    containerView.frame = CGRect(x: 0, y: 100, width: frameView.frame.width - 0, height: 205)
+    containerView.backgroundColor = UIColor.whiteColor()
+    
+    monthLabelView.frame = CGRect(x: 0, y: 60, width: self.view.frame.width, height: 60)
     monthLabelView.image = UIImage(named: "monthLabelViewImage")?.stretchableImageWithLeftCapWidth(0, topCapHeight: 0)
     monthLabel.frame = CGRect(x: (frameView.frame.width - 100) / 2, y: 75, width: 100, height: 30)
     //monthLabel.textAlignment = NSTextAlignment.Center
@@ -73,9 +88,17 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
     monthLabel.textColor = UIColor.whiteColor()
     monthLabel.font = UIFont(name: "HYChenMeiZiJ", size: 22.0)!
     monthLabel.sizeToFit()
+    monthLabel.center = monthLabelView.center
         
-    menuView.frame = CGRect(x: 20, y: 110, width: frameView.frame.width - 40, height: 30)
-    calendarView.frame = CGRect(x: 20, y: 140, width: frameView.frame.width - 40, height: 180)
+    menuView.frame = CGRect(x: 20, y: 110, width: self.view.frame.width - 40, height: 30)
+    calendarView.frame = CGRect(x: 20, y: 140, width: self.view.frame.width - 40, height: 165)
+
+   
+    let layer = containerView.layer
+    layer.shadowColor = UIColor.blackColor().CGColor
+    layer.shadowOffset = CGSize(width: 0, height: 0)
+    layer.shadowOpacity = 0.5
+    layer.shadowRadius = 5
     
     
     }
@@ -207,11 +230,9 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
     }
     
     func didSelectDayView(dayView: CVCalendarDayView) {
-        loadDiaryData()
-        clearCellData()
         let date = dayView.date.convertedDate()
-        findDiaryOnDate(date!)
-        dailyDiaryTableView.reloadData()
+        reloadTalbeViewCell(date!)
+
         
         //print(date.getDate())
 
@@ -219,6 +240,14 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         //print("\(calendarView.presentedDate.commonDescription) is selected!")
         
         
+    }
+    
+    func reloadTalbeViewCell(date:NSDate){
+        loadDiaryData()
+        clearCellData()
+        findDiaryOnDate(date)
+        dailyDiaryTableView.reloadData()
+        lastSelectedDate = date
     }
     
     
@@ -270,6 +299,264 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         }
     }
   
+    
+    
+    /************** Pop Up View **************/
+    
+    //detailed table view cells
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = dailyDiaryTableView.cellForRowAtIndexPath(indexPath) as! UIChatBubbleTableViewCell
+        selectedIndexPath = indexPath
+        
+        // declare container view and objects contained
+        let detailCellView = UIScrollView()
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
+        
+        
+        let emotionImage = UIImageView()
+        let title = UILabel()
+        let month = UILabel()
+        let date = UILabel()
+        let message = UITextView()
+        let divider = UIImageView()
+        //let deleteButton = UIButton()
+        
+        //set view tags
+        detailCellView.tag = 200
+        visualEffectView.tag = 201
+        
+        //customize blur view
+        visualEffectView.alpha = 0
+        visualEffectView.frame = CGRect(x: 0, y: 64, width: self.view.frame.width, height: self.view.frame.height - (48 + 64))
+        
+        //customize container view
+        detailCellView.frame = CGRect(x: 60, y: 66, width: self.dailyDiaryTableView.frame.width, height: 0)
+        detailCellView.center = visualEffectView.center
+        detailCellView.backgroundColor = UIColor.whiteColor()
+        detailCellView.layer.cornerRadius = 15
+        
+        
+        
+        //set animation
+        UIView.animateWithDuration(0.3, animations: {
+            visualEffectView.alpha = 0.5
+            detailCellView.frame = CGRect(x: 40, y: 106, width: self.dailyDiaryTableView.frame.width, height: self.frameView.frame.height - 180)
+        })
+        
+        
+        
+        
+        // set tap gesture
+        let tapGesture = UITapGestureRecognizer(target: self, action: "removeDetailView:")
+        tapGesture.numberOfTouchesRequired = 1
+        detailCellView.addGestureRecognizer(tapGesture)
+        //cellDetailedViewAdded = true
+        
+        
+        //create diary message views
+        emotionImage.frame = CGRect(origin: CGPoint(x:  30, y:  30
+            ), size: CGSize(width: 60, height: 60))
+        
+        title.frame = CGRect(x: 100, y: 35, width: detailCellView.frame.width - 60 - 40, height: 30)
+        message.frame = CGRect(x: 40, y: 95, width: detailCellView.frame.width - 80, height: 40)
+        month.frame = CGRect(x: 100, y: 60, width: 30, height: 20)
+        date.frame = CGRect(x: 150, y: 58, width: 30, height: 20)
+        
+        //set divider image
+        
+        divider.frame = CGRect(x: 40, y: 90, width: detailCellView.frame.width - 80, height: 3)
+        divider.image = UIImage(named: "monthLabelViewImage")
+        divider.alpha = 0.5
+        
+        /*
+        //set deleteButton
+        
+        deleteButton.frame = CGRect(x: detailCellView.frame.width - 40, y: 5, width: 35, height: 35)
+        deleteButton.setBackgroundImage(UIImage(named: "deleteButton"), forState: .Normal)
+        deleteButton.setBackgroundImage(UIImage(named: "deleteButton"), forState: .Selected)
+        deleteButton.addTarget(self, action: "deleteButtonPressed:", forControlEvents: .TouchUpInside)
+        
+        */
+        
+        
+        emotionImage.image = cell.emotionImageView.image
+        title.text = cell.titleLabel.text
+        month.text = cell.monthLabel.text
+        message.text = cell.messageInDetail
+        date.text = cell.dateLabel.text
+        
+        
+        //message.numberOfLines = 0
+        message.textAlignment = NSTextAlignment.Justified
+        //message.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        
+        
+        
+        title.font = cell.titleLabel.font
+        message.font = UIFont(name: "FZMiaoWuS-GB", size: 18.0)!
+        month.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
+        date.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
+        month.textAlignment = NSTextAlignment.Left
+        date.textAlignment = NSTextAlignment.Left
+        message.sizeToFit()
+        message.frame = CGRect(x: message.frame.origin.x, y: message.frame.origin.y, width: message.frame.width, height: min(message.frame.height, detailCellView.frame.height - message.frame.origin.y - 30))
+        month.sizeToFit()
+        message.showsVerticalScrollIndicator = false
+        message.showsHorizontalScrollIndicator = false
+        message.editable = false
+        
+        
+        month.textColor = UIColor.grayColor()
+        date.textColor = UIColor.grayColor()
+        
+        
+        
+        
+        //add sub view
+        visualEffectView.layer.zPosition = 0
+        detailCellView.layer.zPosition = 1
+        self.view.addSubview(visualEffectView)
+        self.view.addSubview(detailCellView)
+        detailCellView.addSubview(emotionImage)
+        detailCellView.addSubview(title)
+        detailCellView.addSubview(message)
+        detailCellView.addSubview(date)
+        detailCellView.addSubview(month)
+        detailCellView.addSubview(divider)
+        //detailCellView.addSubview(deleteButton)
+        
+        
+        
+        
+    }
+    
+    /*
+    
+    func deleteButtonPressed(Sender: UIButton!){
+        deleteConfirmPopup()
+    }
+    
+    
+    func deleteConfirmPopup(){
+        let popUpView = UIView()
+        let blockView = UIView()
+        let yesButton = UIButton()
+        let noButton = UIButton()
+        let promptLabel = UILabel()
+        
+        blockView.tag = 202
+        popUpView.tag = 203
+        
+        //block view
+        blockView.frame = CGRect(x: 0, y: 64, width: self.frameView.frame.width, height: self.frameView.frame.height - (48 + 64))
+        blockView.backgroundColor = UIColor.clearColor()
+        
+        
+        //pop up view
+        popUpView.frame = CGRect(x: 0, y: 0, width: 200, height: 80)
+        popUpView.center = self.view.center
+        popUpView.backgroundColor = UIColor.whiteColor()
+        popUpView.layer.cornerRadius = 5
+        
+        //shadows
+        let layer = popUpView.layer
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOpacity = 0.5
+        layer.shadowRadius = 5
+        
+        //label and buttons
+        promptLabel.frame = CGRect(x: 0, y: 8, width: popUpView.frame.width, height: 30)
+        promptLabel.text = "CONFIRM DELETING?"
+        promptLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)!
+        promptLabel.textColor = UIColor.blackColor()
+        promptLabel.textAlignment = NSTextAlignment.Center
+        
+        yesButton.setBackgroundImage(UIImage(named: "delete"), forState: .Normal)
+        yesButton.frame = CGRect(x: 15, y: 36, width: 70, height: 35)
+        
+        noButton.setBackgroundImage(UIImage(named: "cancel"), forState: .Normal)
+        noButton.frame = CGRect(x: 110, y: 36, width: 70, height: 35)
+        
+        yesButton.addTarget(self, action: "confirmDeleting:", forControlEvents: .TouchUpInside)
+        
+        noButton.addTarget(self, action: "cancelDeleting:", forControlEvents: .TouchUpInside)
+        
+        
+        
+        blockView.layer.zPosition = 2
+        popUpView.layer.zPosition = 3
+        popUpView.addSubview(promptLabel)
+        popUpView.addSubview(yesButton)
+        popUpView.addSubview(noButton)
+        self.view.addSubview(blockView)
+        self.view.addSubview(popUpView)
+        
+        
+        
+    }
+    
+    
+    func cancelDeleting(sender:UIButton){
+        for view in self.view.subviews{
+            if view.tag == 202 || view.tag == 203{
+                view.removeFromSuperview()
+                //cellDetailedViewAdded = false
+            }
+        }
+    }
+    
+    func confirmDeleting(sender:UIButton){
+        removeSubView()
+        deleteObjectFromDataMedel()
+        cellDataArray.removeAtIndex(selectedIndexPath.row)
+        self.dailyDiaryTableView.deleteRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .Fade)
+        dailyDiaryTableView.reloadData()
+        //self.DiaryTableView.deleteRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .Fade)
+        //messages.removeAtIndex(selectedIndexPath.row/64)
+    }
+    
+    */
+    
+    // use this function to remove detailed cell view
+    
+    func removeDetailView(gesture:UIGestureRecognizer){
+        for view in self.view.subviews{
+            if view.tag >= 200 && view.tag <= 203{
+                view.removeFromSuperview()
+                //cellDetailedViewAdded = false
+            }
+        }
+    }
+    
+    func removeSubView(){
+        for view in self.view.subviews{
+            if view.tag >= 200 && view.tag <= 203{
+                view.removeFromSuperview()
+                //cellDetailedViewAdded = false
+            }
+        }
+    }
+    
+    /*
+    func deleteObjectFromDataMedel(){
+        
+        managedContext.deleteObject(messages[selectedIndexPath.row] as NSManagedObject)
+        
+        messages.removeAtIndex(selectedIndexPath.row)
+        //var error: NSError?
+        
+        do{
+            try managedContext.save()
+        }
+        catch{
+            fatalError("Failure to save context: \(error)")
+        }
+    }
+
+    */
+
+
     /*
     func topMarker(shouldDisplayOnDayView dayView: CVCalendarDayView) -> Bool {
         return true

@@ -10,7 +10,12 @@ import UIKit
 import PNChartSwift
 
 class StatsViewController: UIViewController {
-
+    
+    var happyEmotionCount = 0
+    var sadEmotionCount = 0
+    var angryEmotionCount = 0
+    var sosoEmotionCount = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,14 @@ class StatsViewController: UIViewController {
     }
     
 
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     PNBarChart * barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 135.0, SCREEN_WIDTH, 200.0)];
     [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
