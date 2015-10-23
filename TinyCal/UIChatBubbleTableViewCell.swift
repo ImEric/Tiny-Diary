@@ -204,5 +204,18 @@ class UIChatBubbleTableViewCell: UITableViewCell
             
             }
         }
+    
+    
+    func getYear() -> String{
+       
+        if let cellData = data{
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy"
+            let year = dateFormatter.stringFromDate(cellData.message.date)
+            return year
+        }
+        return ("")
     }
+    
+}
 

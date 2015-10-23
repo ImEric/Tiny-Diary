@@ -133,66 +133,70 @@ class RAMAnimatedTabBarController: UITabBarController {
     func buttonPressed(sender: UIButton!)
     {
         let subView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
-        let containerView = UIView(frame: CGRect(x: 40, y: 90, width: self.view.frame.width - 80, height: self.view.frame.height - 140))
+        let containerView = UIView(frame: CGRect(x: 30, y: 90, width: self.view.frame.width - 60, height: self.view.frame.height - 140))
         
             
-            let backButton = UIButton(type:UIButtonType.Custom) as UIButton
-            backButton.frame = tempButton.frame
-            backButton.setBackgroundImage(UIImage(named: "backButtonRed"), forState:UIControlState.Normal)
-            backButton.setBackgroundImage(UIImage(named: "backButtonRed"), forState:UIControlState.Highlighted)
-            backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
-            /*
-            subView.opaque = true
-            subView.backgroundColor = UIColor.grayColor()
-            subView.alpha = 0.9
-            */
+        let backButton = UIButton(type:UIButtonType.Custom) as UIButton
+        backButton.frame = tempButton.frame
+        backButton.setBackgroundImage(UIImage(named: "backButtonRed"), forState:UIControlState.Normal)
+        backButton.setBackgroundImage(UIImage(named: "backButtonRed"), forState:UIControlState.Highlighted)
+        backButton.addTarget(self, action: "backButtonPressed:", forControlEvents: .TouchUpInside)
+        /*
+        subView.opaque = true
+        subView.backgroundColor = UIColor.grayColor()
+        subView.alpha = 0.9
+        */
         
-            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
-            visualEffectView.alpha = 0.9
-            visualEffectView.tag = 100
-            visualEffectView.frame = subView.bounds
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark)) as UIVisualEffectView
+        visualEffectView.alpha = 0.9
+        visualEffectView.tag = 100
+        visualEffectView.frame = subView.bounds
         
-            self.view.addSubview(visualEffectView)
-            //subView.addSubview(backButton)
-            
-            containerView.center = subView.center
-            //containerView.clipsToBounds = true
-            containerView.opaque = true
-        
-            //animation
-            containerView.alpha = 0
-            containerView.frame.origin.y = self.view.frame.height
-            backButton.alpha = 0
-            UIView.animateWithDuration(0.3, animations: {
-                containerView.alpha = 1
-                containerView.frame.origin.y = 70
-                backButton.alpha = 1
-                })
-            containerView.layer.masksToBounds = true
-            containerView.layer.cornerRadius = 15
-            containerView.layer.shadowColor = UIColor(white: 0, alpha: 0.1).CGColor
-            containerView.layer.shadowPath = UIBezierPath(rect: containerView.bounds).CGPath
-            containerView.layer.shadowOpacity = 1.0;
-            containerView.layer.shadowRadius = 3.0;
-        
-        
-            let VC = storyboard!.instantiateViewControllerWithIdentifier("WriteNewViewController") as! WriteNewViewController
-            VC.view.frame = CGRectMake(0, 0, containerView.frame.size.width, containerView.frame.size.height)
-            self.addChildViewController(VC)
-            containerView.addSubview(VC.view)
-            
-            
-            //subView.tag = 100
-            containerView.tag = 110
-            backButton.tag = 111
-            
-            //self.view.addSubview(subView)
-            self.view.addSubview(containerView)
-            self.view.addSubview(backButton)
-            VC.didMoveToParentViewController(self)
+        self.view.addSubview(visualEffectView)
 
 
+        //subView.addSubview(backButton)
+            
+        containerView.center = subView.center
+        //containerView.clipsToBounds = true
+        containerView.opaque = true
+        
+        //animation
+        containerView.alpha = 0
+        containerView.frame.origin.y = self.view.frame.height
+        backButton.alpha = 0
+        UIView.animateWithDuration(0.3, animations: {
+            containerView.alpha = 1
+            containerView.frame.origin.y = 70
+            backButton.alpha = 1
+            })
+        containerView.layer.masksToBounds = true
+        containerView.layer.cornerRadius = 15
+        containerView.layer.shadowColor = UIColor(white: 0, alpha: 0.1).CGColor
+        containerView.layer.shadowPath = UIBezierPath(rect: containerView.bounds).CGPath
+        containerView.layer.shadowOpacity = 1.0;
+        containerView.layer.shadowRadius = 3.0;
+        
+        
+        let VC = storyboard!.instantiateViewControllerWithIdentifier("WriteNewViewController") as! WriteNewViewController
+        VC.view.frame = CGRectMake(0, 0, containerView.frame.size.width, containerView.frame.size.height)
+        self.addChildViewController(VC)
+        containerView.addSubview(VC.view)
+        
+            
+        //subView.tag = 100
+        containerView.tag = 110
+        backButton.tag = 111
+        
+        //self.view.addSubview(subView)
+        self.view.addSubview(containerView)
+        self.view.addSubview(backButton)
+        VC.didMoveToParentViewController(self)
+        
     }
+    
+
+
     
     
     func backButtonPressed(sender: UIButton!)

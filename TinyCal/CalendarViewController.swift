@@ -315,6 +315,7 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         
         let emotionImage = UIImageView()
         let title = UILabel()
+        let year = UILabel()
         let month = UILabel()
         let date = UILabel()
         let message = UITextView()
@@ -340,7 +341,7 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         //set animation
         UIView.animateWithDuration(0.3, animations: {
             visualEffectView.alpha = 0.5
-            detailCellView.frame = CGRect(x: 40, y: 106, width: self.dailyDiaryTableView.frame.width, height: self.frameView.frame.height - 180)
+            detailCellView.frame = CGRect(x: 40, y: 106, width: self.dailyDiaryTableView.frame.width, height: self.frameView.frame.height - 180 - 66)
         })
         
         
@@ -359,8 +360,9 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         
         title.frame = CGRect(x: 100, y: 35, width: detailCellView.frame.width - 60 - 40, height: 30)
         message.frame = CGRect(x: 40, y: 95, width: detailCellView.frame.width - 80, height: 40)
+        year.frame = CGRect(x: 167, y: 60, width: 30, height: 20)
         month.frame = CGRect(x: 100, y: 60, width: 30, height: 20)
-        date.frame = CGRect(x: 150, y: 58, width: 30, height: 20)
+        date.frame = CGRect(x: 150, y: 60, width: 30, height: 20)
         
         //set divider image
         
@@ -384,6 +386,7 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         month.text = cell.monthLabel.text
         message.text = cell.messageInDetail
         date.text = cell.dateLabel.text
+        year.text = ", \(cell.getYear())"
         
         
         //message.numberOfLines = 0
@@ -396,11 +399,14 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         message.font = UIFont(name: "FZMiaoWuS-GB", size: 18.0)!
         month.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
         date.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
+        year.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
         month.textAlignment = NSTextAlignment.Left
         date.textAlignment = NSTextAlignment.Left
+        year.textAlignment = NSTextAlignment.Left
         message.sizeToFit()
-        message.frame = CGRect(x: message.frame.origin.x, y: message.frame.origin.y, width: message.frame.width, height: min(message.frame.height, detailCellView.frame.height - message.frame.origin.y - 30))
         month.sizeToFit()
+        year.sizeToFit()
+        message.frame = CGRect(x: message.frame.origin.x, y: message.frame.origin.y, width: message.frame.width, height: min(message.frame.height, detailCellView.frame.height - message.frame.origin.y - 30))
         message.showsVerticalScrollIndicator = false
         message.showsHorizontalScrollIndicator = false
         message.editable = false
@@ -408,7 +414,7 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         
         month.textColor = UIColor.grayColor()
         date.textColor = UIColor.grayColor()
-        
+        year.textColor = UIColor.grayColor()
         
         
         
@@ -422,6 +428,7 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         detailCellView.addSubview(message)
         detailCellView.addSubview(date)
         detailCellView.addSubview(month)
+         detailCellView.addSubview(year)
         detailCellView.addSubview(divider)
         //detailCellView.addSubview(deleteButton)
         

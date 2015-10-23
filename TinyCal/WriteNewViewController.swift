@@ -9,15 +9,16 @@
 import UIKit
 
 
-class WriteNewViewController: UIViewController {
+class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate{
     
     let emotionButtonSelected = false
-    var emotionString: String = ""
+    var emotionString: String = "Soso"//default
     var message: ChatBubbleMessage = ChatBubbleMessage(text: "", title: "", date: NSDate(), emotion: "")
+    let emotionButton = UIButton()
     
  
     
-    @IBOutlet weak var titleLabel: UILabel!
+
    
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -25,53 +26,23 @@ class WriteNewViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     
-    @IBOutlet weak var textFieldImageView: UIImageView!
+ 
     
     @IBOutlet weak var yourFeelingLabel: UILabel!
-    
-    @IBOutlet weak var happyButton: UIButton!
-    
-    
-    @IBAction func happyButtonTouched(sender: AnyObject) {
-        buttonSelected(happyButton)
-        emotionString = "Happy"
-    }
-    
-    @IBOutlet weak var sosoButton: UIButton!
-    
-    @IBAction func sosoButtonTouched(sender: AnyObject) {
-        buttonSelected(sosoButton)
-        emotionString = "Soso"
-    }
-    
-    
-    @IBOutlet weak var sadButton: UIButton!
-    
-    @IBAction func sadButtonTouched(sender: AnyObject) {
-        buttonSelected(sadButton)
-        emotionString = "Sad"
-    }
-    
-    
-    @IBOutlet weak var angryButton: UIButton!
-    
-    @IBAction func angryButtonTouched(sender: AnyObject) {
-        buttonSelected(angryButton)
-        emotionString = "Angry"
-    }
     
     
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var saveButtonImageView: UIImageView!
     
-    @IBOutlet weak var emotionButtonSelectedView: UIView!
     
     @IBOutlet weak var titleTextFieldImage: UIImageView!
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleTextField.delegate = self
+        textView.delegate = self
         updateUI()
         // Do any additional setup after loading the view.
     }
@@ -108,61 +79,82 @@ class WriteNewViewController: UIViewController {
     /**************** FORMAT SETTING ****************/
     //declare constants
     
+    
   
-    let navigationBarHeight: CGFloat = 10
-    let yourWordsLabelHeight: CGFloat = 20
-    let verticalSpacing:CGFloat = 20
-    let horizontalSpacing:CGFloat = 20
-    func updateTextfieldHeight(){
-        
-        
-    }
+    let TOP_OFFSET: CGFloat = 10
+    let VERTICAL_SPACING:CGFloat = 20
+    let HORIZONTAL_SPACING:CGFloat = 20
+  
+    
     func updateUI(){
         
-        let frameWidth = self.view.frame.width - 80
+        
+        //declare constants and variables
+        let frameWidth = self.view.frame.width - 60
         let frameHeight = self.view.frame.height - 140
+        let dateLabel = UILabel()
         
-        //set titleLabel
-        titleLabel.text = "TITLE:"
-        titleLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
-        titleLabel.textAlignment = NSTextAlignment.Left
-        titleLabel.textColor = UIColor.blackColor()
-        titleLabel.frame = CGRect(x: horizontalSpacing , y: verticalSpacing + navigationBarHeight - 10, width: 80 , height: 20)
-        titleLabel.sizeToFit()
         
+        //set emotion button
+       
+        emotionButton.setBackgroundImage(UIImage(named: "addEmotionImage"), forState: .Normal)
+        emotionButton.frame = CGRect(x: HORIZONTAL_SPACING , y: VERTICAL_SPACING
+            , width: 60 , height: 60)
+        self.view.addSubview(emotionButton)
+        emotionButton.addTarget(self, action: "emotionButtonTapped:", forControlEvents: .TouchUpInside)
+        
+  
         
         //set title textfield
-        
-        titleTextField.text = ""
-        titleTextField.frame = CGRect(x: horizontalSpacing + 10 , y: titleLabel.frame.maxY + 10, width: frameWidth - 2 * horizontalSpacing - 20, height: 30)
-        titleTextField.textAlignment = NSTextAlignment.Left
+        titleTextField.placeholder = "A SHORT TITLE HERE:"
         titleTextField.textColor = UIColor.blackColor()
-        titleTextField.font = UIFont(name: "FZMiaoWuS-GB", size:20.0)
+        titleTextField.frame = CGRect(x: HORIZONTAL_SPACING + 70 , y: VERTICAL_SPACING + 3, width: frameWidth - 2 * HORIZONTAL_SPACING - 20, height: 30)
+        titleTextField.textAlignment = NSTextAlignment.Left
+        titleTextField.font = UIFont(name: "FZMiaoWuS-GB", size:18.0)
         titleTextField.tintColor = UIColor.grayColor()
         titleTextField.borderStyle = UITextBorderStyle.None
+
+        
+        //set date label
+        dateLabel.text = getDate()
+        dateLabel.frame = CGRect(x: HORIZONTAL_SPACING + 70 , y: VERTICAL_SPACING + TOP_OFFSET + 16, width: frameWidth - 2 * HORIZONTAL_SPACING - 20, height: 30)
+        dateLabel.font = UIFont(name: "HYChenMeiZiJ", size: 18.0)
+        dateLabel.textColor = UIColor.grayColor()
+        self.view.addSubview(dateLabel)
+        
+
+        //set a divider
+        let divider = UIImageView()
+        divider.frame = CGRect(x: 25, y: emotionButton.frame.maxY + 10 , width: frameWidth - 50, height: 3)
+        divider.image = UIImage(named: "monthLabelViewImage")
+        divider.alpha = 0.5
+        self.view.addSubview(divider)
         
         
-        //set title text field image
-        
-        titleTextFieldImage.frame = CGRect(x: 0, y: 0 , width: frameWidth - 2 * horizontalSpacing - 5, height: titleTextField.frame.height + 16)
-        titleTextFieldImage.center = titleTextField.center
-        titleTextFieldImage.image = UIImage(named: "myBubble")?.stretchableImageWithLeftCapWidth(15, topCapHeight: 12)
-        titleTextFieldImage.alpha = 0.5
-        
-        
-        
-        //set yourWordsLabel
+        //set textView
+        let textFieldYPos: CGFloat =  divider.frame.maxY + 10
+        textView.text = "AND A SWEET STORY HERE:"
+        textView.textColor = UIColor.lightGrayColor()
+        //textView.becomeFirstResponder()
+        textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
         
         
-        yourWordsLabel.text = "YOUR WORDS:"
-        yourWordsLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
-        yourWordsLabel.textAlignment = NSTextAlignment.Left
-        yourWordsLabel.textColor = UIColor.blackColor()
-        yourWordsLabel.frame = CGRect(x: horizontalSpacing  , y: verticalSpacing + navigationBarHeight + 65, width: 80 , height: 20)
-        yourWordsLabel.sizeToFit()
+        textView.frame = CGRect(x: HORIZONTAL_SPACING , y: textFieldYPos, width: frameWidth - 2 * HORIZONTAL_SPACING - 20, height: frameHeight - textFieldYPos - 65)
+        textView.textAlignment = NSTextAlignment.Left
+        textView.tintColor = UIColor.grayColor()
+        //textView.textColor = UIColor.blackColor()
+        textView.font = UIFont(name: "FZMiaoWuS-GB", size: 18.0)
+        //textView. = NSLineBreakMode.ByWordWrapping
         
+        if (textView.text == "") {
+            textViewDidEndEditing(textView)
+        }
+        //let tapDismiss = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        //self.view.addGestureRecognizer(tapDismiss)
+        textView.keyboardDismissMode = .Interactive
+
         
-        
+
         
         // set save button
         
@@ -170,7 +162,7 @@ class WriteNewViewController: UIViewController {
         saveButton.titleLabel!.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
         saveButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         saveButton.frame = CGRect(x: (frameWidth - 60) / 2, y: frameHeight - 50, width: 60, height: 20)
-
+        
         
         
         //set saveButtonImageView
@@ -182,105 +174,154 @@ class WriteNewViewController: UIViewController {
         
         
         saveButton.backgroundImageForState(UIControlState.Normal)
+
+    }
+    
+    func emotionButtonTapped(sender: UIButton)
+    {
+        let popUpView = UIView()
+        popUpView.backgroundColor = UIColor.whiteColor()
+        popUpView.frame = CGRect(x: HORIZONTAL_SPACING , y: VERTICAL_SPACING - 5, width: 0, height: 65)
+        popUpView.layer.cornerRadius = 10
         
+        let layer = popUpView.layer
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOpacity = 0.3
+        layer.shadowRadius = 3
         
+        // animation
+        UIView.animateWithDuration(0.3, animations: {
+            popUpView.frame = CGRect(x: self.HORIZONTAL_SPACING , y: self.VERTICAL_SPACING - 5, width: self.view.frame.width - 40, height: 65)
+
+
+        })
         
+        //emotion buttons
+        let happyButton = UIButton()
+        let angryButton = UIButton()
+        let sadButton = UIButton()
+        let sosoButton = UIButton()
         
-        // set emotionImages
-        //let bubbleBackgroundImageSize = CGSize(width: self.frame.width, height: max((cellData.messageLabelSize.height + imageHeightIncrease), 80))
+        let BUTTON_WIDTH:CGFloat = 60
+        let PADDING = (popUpView.frame.width - (4 * BUTTON_WIDTH)) / 5
         
+        happyButton.frame = CGRect(x: PADDING, y: 5 , width: BUTTON_WIDTH, height: BUTTON_WIDTH)
+        angryButton.frame = CGRect(x: 2 * PADDING + BUTTON_WIDTH, y: 5, width: BUTTON_WIDTH, height: BUTTON_WIDTH)
+        sadButton.frame = CGRect(x: 3 * PADDING + 2 * BUTTON_WIDTH, y: 5 , width: BUTTON_WIDTH, height: BUTTON_WIDTH)
+        sosoButton.frame = CGRect(x: 4 * PADDING + 3 * BUTTON_WIDTH, y: 5 , width: BUTTON_WIDTH, height: BUTTON_WIDTH)
         
-        let imageWidth:CGFloat = (frameWidth - 2 * horizontalSpacing) / 4
-        let emotionImagesYPos = saveButton.frame.maxY - 2 * verticalSpacing - imageWidth
-        
-        happyButton.frame = CGRect(x: horizontalSpacing, y: emotionImagesYPos, width: imageWidth, height: imageWidth)
         happyButton.setBackgroundImage(UIImage(named: "Happy"), forState: .Normal)
-        
-        
-        angryButton.frame = CGRect(x: horizontalSpacing + imageWidth, y: emotionImagesYPos, width: imageWidth, height: imageWidth)
         angryButton.setBackgroundImage(UIImage(named: "Angry"), forState: .Normal)
-        
-        
-        sadButton.frame = CGRect(x: horizontalSpacing + 2*imageWidth, y: emotionImagesYPos, width: imageWidth, height: imageWidth)
         sadButton.setBackgroundImage(UIImage(named: "Sad"), forState: .Normal)
-        
-        
-        sosoButton.frame = CGRect(x: horizontalSpacing + 3*imageWidth, y: emotionImagesYPos, width: imageWidth, height: imageWidth)
         sosoButton.setBackgroundImage(UIImage(named: "Soso"), forState: .Normal)
         
+        popUpView.addSubview(happyButton)
+        popUpView.addSubview(angryButton)
+        popUpView.addSubview(sadButton)
+        popUpView.addSubview(sosoButton)
+        happyButton.alpha = 0
+        angryButton.alpha = 0
+        sadButton.alpha = 0
+        sosoButton.alpha = 0
+        popUpView.tag = 909
         
-        happyButton.setTitle("", forState: .Normal)
-        angryButton.setTitle("", forState: .Normal)
-        sadButton.setTitle("", forState: .Normal)
-        sosoButton.setTitle("", forState: .Normal)
-        
-        emotionButtonSelectedView.frame = CGRect(x: 0, y: 0, width: 6, height: 6)
-        emotionButtonSelectedView.layer.cornerRadius = 3
-        emotionButtonSelectedView.backgroundColor = UIColor.grayColor()
-        emotionButtonSelectedView.alpha = 0
-        
-        //set yourFeelingLabel
-        let yourFeelingLabelYPos = emotionImagesYPos - 35
-        yourFeelingLabel.text = "YOUR FEELING:"
-        yourFeelingLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
-        yourFeelingLabel.textAlignment = NSTextAlignment.Left
-        yourFeelingLabel.textColor = UIColor.blackColor()
-        yourFeelingLabel.frame = CGRect(x: horizontalSpacing, y: yourFeelingLabelYPos, width: 60 , height: 20)
-        yourFeelingLabel.sizeToFit()
-        
-        
-        
-        //set textViewImage
-        let textImageYPos = yourWordsLabel.frame.maxY + 10
-        textFieldImageView.frame = CGRect(x: horizontalSpacing, y: textImageYPos , width: frameWidth - 2 * horizontalSpacing, height: yourFeelingLabel.frame.minY - textImageYPos - verticalSpacing + 10 )
-        textFieldImageView.image = UIImage(named: "myBubble")?.stretchableImageWithLeftCapWidth(15, topCapHeight: 12)
-        textFieldImageView.alpha = 0.5
+        self.view.addSubview(popUpView)
+        UIView.animateWithDuration(0.5, animations: {
+            happyButton.alpha = 1.0
+            angryButton.alpha = 1.0
+            sadButton.alpha = 1.0
+            sosoButton.alpha = 1.0
+            
+            
+        })
         
         
-        //set textView
-        let textFieldYPos: CGFloat =  textImageYPos + 10
-        textView.text = ""
-        textView.frame = CGRect(x: horizontalSpacing , y: textFieldYPos, width: frameWidth - 2 * horizontalSpacing - 20, height: textFieldImageView.frame.height - 25)
-        textView.textAlignment = NSTextAlignment.Left
-        textView.textColor = UIColor.blackColor()
-        textView.font = UIFont(name: "FZMiaoWuS-GB", size:20.0)
-        textView.tintColor = UIColor.grayColor()
-        //textView. = NSLineBreakMode.ByWordWrapping
-        
-   
-        // set emotionImages
-        //let bubbleBackgroundImageSize = CGSize(width: self.frame.width, height: max((cellData.messageLabelSize.height + imageHeightIncrease), 80))
-        
-        
-        
+        happyButton.addTarget(self, action: "happyButtonTapped:", forControlEvents: .TouchUpInside)
+        angryButton.addTarget(self, action: "angryButtonTapped:", forControlEvents: .TouchUpInside)
+        sadButton.addTarget(self, action: "sadButtonTapped:", forControlEvents: .TouchUpInside)
+        sosoButton.addTarget(self, action: "sosoButtonTapped:", forControlEvents: .TouchUpInside)
+ 
     }
     
-
+    func happyButtonTapped(sender:UIButton){
+        emotionString = "Happy"
+        emotionButton.setBackgroundImage(UIImage(named: "Happy"), forState: .Normal)
+        dismissEmotionPopUp()
+    }
     
-    func buttonSelected(button:UIButton) {
-        if !emotionButtonSelected{
-            emotionButtonSelectedView.alpha = 1
+    func angryButtonTapped(sender:UIButton){
+        emotionString = "Angry"
+        emotionButton.setBackgroundImage(UIImage(named: "Angry"), forState: .Normal)
+        dismissEmotionPopUp()
+    }
+    
+    func sadButtonTapped(sender:UIButton){
+        emotionString = "Sad"
+        emotionButton.setBackgroundImage(UIImage(named: "Sad"), forState: .Normal)
+        dismissEmotionPopUp()
+    }
+    
+    func sosoButtonTapped(sender:UIButton){
+        emotionString = "Soso"
+        emotionButton.setBackgroundImage(UIImage(named: "Soso"), forState: .Normal)
+        dismissEmotionPopUp()
+    }
+    
+    
+    func dismissEmotionPopUp(){
+        for views in self.view.subviews{
+            if views.tag == 909{
+                views.removeFromSuperview()
+            }
         }
-        
-        emotionButtonSelectedView.frame = CGRect(x: (button.center.x - 3), y: (button.frame.maxY), width: 6, height: 6)
     }
+    
     
     @IBAction func saveButtonCliked(sender: AnyObject) {
-        emotionButtonSelectedView.alpha = 0
+       // emotionButtonSelectedView.alpha = 0
     }
     
-    //Set your words label
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
 
+    func getDate() -> String{
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "MMM dd, yyyy"
+            let date = dateFormatter.stringFromDate(NSDate())
+            return date
+    }
+
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,
+        replacementString string: String) -> Bool
+    {
+        let maxLength = 16
+        let currentString: NSString = textField.text!
+        let newString: NSString = currentString.stringByReplacingCharactersInRange(range, withString: string.uppercaseString)
+        return newString.length <= maxLength
+    }
+    
+    
+    // text view
+    
+    func dismissKeyboard(){
+        textView.resignFirstResponder()
+    }
+    
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if (textView.text == "") {
+            textView.text = "AND A SWEET STORY HERE:"
+            textView.textColor = UIColor.lightGrayColor()
+        }
+        textView.resignFirstResponder()
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView){
+        if (textView.text == "AND A SWEET STORY HERE:"){
+            textView.text = ""
+            textView.textColor = UIColor.blackColor()
+        }
+        textView.becomeFirstResponder()
+    }
   
 }

@@ -24,6 +24,10 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>iWaWa.ttf</string>
+		<string>HelveticaNeue.ttc</string>
+		<string>DFPYun.ttc</string>
+		<string>HanziPen SC.ttf</string>
 		<string>xjlFont.ttf</string>
 		<string>HYChenMeiZiJ.ttf</string>
 		<string>HYPPTiJ.ttf</string>

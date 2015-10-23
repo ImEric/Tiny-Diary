@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0734533F1BB8693A00BC08A4 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		073BAFDA1BD8E18A006BF4DC /* HanziPen SC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */; settings = {ASSET_TAGS = (); }; };
+		073BAFDC1BD8E461006BF4DC /* DFPYun.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFDB1BD8E461006BF4DC /* DFPYun.ttc */; settings = {ASSET_TAGS = (); }; };
 		073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD351BB7536000DEF3BA /* Main.storyboard */; };
 		073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD381BB7536000DEF3BA /* Assets.xcassets */; };
 		073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */; };
@@ -66,6 +68,10 @@
 		0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		07371B8D1BC3A20D007FC3EF /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
 		07371B8F1BC3A2CC007FC3EF /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
+		073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HanziPen SC.ttf"; sourceTree = "<group>"; };
+		073BAFDB1BD8E461006BF4DC /* DFPYun.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = DFPYun.ttc; sourceTree = "<group>"; };
+		073BAFDD1BD8E5A5006BF4DC /* HelveticaNeue.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeue.ttc; sourceTree = "<group>"; };
+		073BAFDE1BD8EE4C006BF4DC /* iWaWa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iWaWa.ttf; sourceTree = "<group>"; };
 		073FAD2E1BB7536000DEF3BA /* TinyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073FAD361BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		073FAD381BB7536000DEF3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,7 +170,6 @@
 			children = (
 				073FAD351BB7536000DEF3BA /* Main.storyboard */,
 				07C5FBBA1BB89C7A00BE7A8A /* View Controllers */,
-				07BD368A1BBCEFF4008057D4 /* Fonts */,
 				07DFC63C1BBF0F310072FEFA /* Supporting Document */,
 			);
 			path = TinyCal;
@@ -264,7 +269,11 @@
 		07BD368A1BBCEFF4008057D4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				073BAFDD1BD8E5A5006BF4DC /* HelveticaNeue.ttc */,
+				073BAFDB1BD8E461006BF4DC /* DFPYun.ttc */,
+				073BAFDE1BD8EE4C006BF4DC /* iWaWa.ttf */,
 				07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */,
+				073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */,
 				07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */,
 				07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */,
 				07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */,
@@ -303,6 +312,7 @@
 		07DFC63C1BBF0F310072FEFA /* Supporting Document */ = {
 			isa = PBXGroup;
 			children = (
+				07BD368A1BBCEFF4008057D4 /* Fonts */,
 				073FAD381BB7536000DEF3BA /* Assets.xcassets */,
 				07C79C531BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld */,
 				07E2823F1BBE7840003FB7A5 /* DataController.swift */,
@@ -450,7 +460,9 @@
 				073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */,
 				073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */,
 				07AD85A11BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib in Resources */,
+				073BAFDA1BD8E18A006BF4DC /* HanziPen SC.ttf in Resources */,
 				07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */,
+				073BAFDC1BD8E461006BF4DC /* DFPYun.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
