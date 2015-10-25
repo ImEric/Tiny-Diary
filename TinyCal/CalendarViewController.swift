@@ -26,11 +26,11 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
     
     var ifCellRegistered = false
     let managedContext = DataController().managedObjectContext
-    var selectedIndexPath = NSIndexPath()
-    var messages = [NSManagedObject]()
-    //var dailyDiary = [NSManagedObject]()
     var cellDataArray = [ChatBubbleCellData]()
+    var messages = [NSManagedObject]()
+    var selectedIndexPath = NSIndexPath()
     var lastSelectedDate = NSDate()
+    
     // MARK: - Properties
     
     
@@ -111,7 +111,7 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     
-    //
+    //load data
     func loadDiaryData(){
         
         let entryFetch = NSFetchRequest(entityName: "DiaryEntry")

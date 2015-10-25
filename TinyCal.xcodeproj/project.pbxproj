@@ -7,43 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0734533F1BB8693A00BC08A4 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		073BAFDA1BD8E18A006BF4DC /* HanziPen SC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */; settings = {ASSET_TAGS = (); }; };
-		073BAFDC1BD8E461006BF4DC /* DFPYun.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFDB1BD8E461006BF4DC /* DFPYun.ttc */; settings = {ASSET_TAGS = (); }; };
+		0734533F1BB8693A00BC08A4 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */; };
+		073BAFDA1BD8E18A006BF4DC /* HanziPen SC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */; };
+		073BAFDC1BD8E461006BF4DC /* DFPYun.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFDB1BD8E461006BF4DC /* DFPYun.ttc */; };
 		073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD351BB7536000DEF3BA /* Main.storyboard */; };
 		073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD381BB7536000DEF3BA /* Assets.xcassets */; };
 		073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */; };
 		073FAD471BB7536100DEF3BA /* TinyCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD461BB7536100DEF3BA /* TinyCalTests.swift */; };
 		073FAD521BB7536100DEF3BA /* TinyCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD511BB7536100DEF3BA /* TinyCalUITests.swift */; };
-		074C4FF51BBCABF3009F1A82 /* xjlFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */; settings = {ASSET_TAGS = (); }; };
-		075004051BC10F39004C5A93 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FA1BC10F39004C5A93 /* RAMBounceAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		075004061BC10F39004C5A93 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FC1BC10F39004C5A93 /* RAMFrameItemAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		075004071BC10F39004C5A93 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FE1BC10F39004C5A93 /* RAMFumeAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		075004081BC10F39004C5A93 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004001BC10F39004C5A93 /* RAMRotationAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		075004091BC10F39004C5A93 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004021BC10F39004C5A93 /* RAMTransitionItemAnimation.swift */; settings = {ASSET_TAGS = (); }; };
-		0750040A1BC10F39004C5A93 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004031BC10F39004C5A93 /* RAMAnimatedTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
-		0750040B1BC10F39004C5A93 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004041BC10F39004C5A93 /* RAMItemAnimationProtocol.swift */; settings = {ASSET_TAGS = (); }; };
-		077E67181BC5AAF800EEEF87 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077E67171BC5AAF800EEEF87 /* StatsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		078755D71BB8739200C4DD6B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078755D61BB8739200C4DD6B /* CalendarViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		079CDD2C1BB7867E0007B7F9 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		079CDD2E1BB786CE0007B7F9 /* WriteNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		079CDD301BB860470007B7F9 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		07A7B2A61BC84E5700B42CCB /* DiaryDetailCellScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7B2A51BC84E5700B42CCB /* DiaryDetailCellScrollViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		07AD859E1BBB41DF007F1176 /* ChatBubbleCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD85991BBB41DF007F1176 /* ChatBubbleCellData.swift */; settings = {ASSET_TAGS = (); }; };
-		07AD859F1BBB41DF007F1176 /* ChatBubbleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859A1BBB41DF007F1176 /* ChatBubbleMessage.swift */; settings = {ASSET_TAGS = (); }; };
-		07AD85A01BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859B1BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		07AD85A11BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AD859C1BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		07BD368C1BBCF008008057D4 /* HYChenMeiZiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */; settings = {ASSET_TAGS = (); }; };
-		07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */; settings = {ASSET_TAGS = (); }; };
-		07BD36901BBCF023008057D4 /* HYXiaoMaiTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */; settings = {ASSET_TAGS = (); }; };
-		07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */; settings = {ASSET_TAGS = (); }; };
-		07C58A641BC09BAC00C13D7E /* ZMButtonAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A631BC09BAC00C13D7E /* ZMButtonAppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		07C58A661BC09BB200C13D7E /* AMButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A651BC09BB200C13D7E /* AMButtonViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		07C58A681BC09BB800C13D7E /* ZMaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A671BC09BB800C13D7E /* ZMaterialButton.swift */; settings = {ASSET_TAGS = (); }; };
-		07C79C551BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07C79C531BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		07E282401BBE7840003FB7A5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2823F1BBE7840003FB7A5 /* DataController.swift */; settings = {ASSET_TAGS = (); }; };
-		07E282431BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E282411BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		07E282441BBE8738003FB7A5 /* DiaryEntryMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E282421BBE8738003FB7A5 /* DiaryEntryMO.swift */; settings = {ASSET_TAGS = (); }; };
+		074C4FF51BBCABF3009F1A82 /* xjlFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */; };
+		075004051BC10F39004C5A93 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FA1BC10F39004C5A93 /* RAMBounceAnimation.swift */; };
+		075004061BC10F39004C5A93 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FC1BC10F39004C5A93 /* RAMFrameItemAnimation.swift */; };
+		075004071BC10F39004C5A93 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FE1BC10F39004C5A93 /* RAMFumeAnimation.swift */; };
+		075004081BC10F39004C5A93 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004001BC10F39004C5A93 /* RAMRotationAnimation.swift */; };
+		075004091BC10F39004C5A93 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004021BC10F39004C5A93 /* RAMTransitionItemAnimation.swift */; };
+		0750040A1BC10F39004C5A93 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004031BC10F39004C5A93 /* RAMAnimatedTabBarController.swift */; };
+		0750040B1BC10F39004C5A93 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004041BC10F39004C5A93 /* RAMItemAnimationProtocol.swift */; };
+		077E67181BC5AAF800EEEF87 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077E67171BC5AAF800EEEF87 /* StatsViewController.swift */; };
+		078755D71BB8739200C4DD6B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078755D61BB8739200C4DD6B /* CalendarViewController.swift */; };
+		079CDD2C1BB7867E0007B7F9 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */; };
+		079CDD2E1BB786CE0007B7F9 /* WriteNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */; };
+		079CDD301BB860470007B7F9 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */; };
+		07A7B2A61BC84E5700B42CCB /* DiaryDetailCellScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7B2A51BC84E5700B42CCB /* DiaryDetailCellScrollViewController.swift */; };
+		07AD859E1BBB41DF007F1176 /* ChatBubbleCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD85991BBB41DF007F1176 /* ChatBubbleCellData.swift */; };
+		07AD859F1BBB41DF007F1176 /* ChatBubbleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859A1BBB41DF007F1176 /* ChatBubbleMessage.swift */; };
+		07AD85A01BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859B1BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift */; };
+		07AD85A11BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AD859C1BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib */; };
+		07BD368C1BBCF008008057D4 /* HYChenMeiZiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */; };
+		07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */; };
+		07BD36901BBCF023008057D4 /* HYXiaoMaiTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */; };
+		07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */; };
+		07C58A641BC09BAC00C13D7E /* ZMButtonAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A631BC09BAC00C13D7E /* ZMButtonAppDelegate.swift */; };
+		07C58A661BC09BB200C13D7E /* AMButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A651BC09BB200C13D7E /* AMButtonViewController.swift */; };
+		07C58A681BC09BB800C13D7E /* ZMaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A671BC09BB800C13D7E /* ZMaterialButton.swift */; };
+		07C79C551BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07C79C531BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodeld */; };
+		07E282401BBE7840003FB7A5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2823F1BBE7840003FB7A5 /* DataController.swift */; };
+		07E282431BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E282411BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift */; };
+		07E282441BBE8738003FB7A5 /* DiaryEntryMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E282421BBE8738003FB7A5 /* DiaryEntryMO.swift */; };
 		DB92245B7EC02BFB4D3F3341 /* Pods_TinyCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72E39C164D444626E6B32E9 /* Pods_TinyCal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -699,12 +699,13 @@
 			baseConfigurationReference = 494AA6291C5B85F12D29892A /* Pods-TinyCal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = TinyCal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyDiary;
 				PRODUCT_NAME = TinyDiary;
@@ -716,12 +717,13 @@
 			baseConfigurationReference = 0C5DE0B3E6BE28CD31A380DF /* Pods-TinyCal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = TinyCal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EH.TinyDiary;
 				PRODUCT_NAME = TinyDiary;

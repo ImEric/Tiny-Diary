@@ -37,8 +37,15 @@ public class PNLineChart: UIView{
         didSet{
 
             yLabelNum = CGFloat(yLabels.count)
-            let yStep:CGFloat = (yValueMax - yValueMin) / CGFloat(yLabelNum)
-            let yStepHeight:CGFloat  = chartCavanHeight! / CGFloat(yLabelNum)
+            if (yValueMax % 2 != 0){
+                yValueMax += 1
+            }
+            if (yValueMin % 2 != 0){
+                yValueMin += 1
+            }
+            
+            let yStep:CGFloat = (yValueMax - yValueMin) / 2
+            let yStepHeight:CGFloat  = chartCavanHeight! / 2
             
             var index:CGFloat = 0
 
@@ -46,7 +53,7 @@ public class PNLineChart: UIView{
             {
                 
                 
-                let labelY = chartCavanHeight - (index * yStepHeight)
+                let labelY = chartCavanHeight - (index * yStepHeight) + 10 //top offset
                 let label: PNChartLabel = PNChartLabel(frame: CGRect(x: 0.0, y: CGFloat(labelY), width: CGFloat(chartMargin + 5.0), height: CGFloat(yLabelHeight) ) )
                 label.textAlignment = NSTextAlignment.Right
                 label.text = NSString(format:yLabelFormat, Double(yValueMin + (yStep * index))) as String
@@ -113,8 +120,8 @@ public class PNLineChart: UIView{
             }
             
             // Min value for Y label
-            if yMax < 5 {
-                yMax = 5.0
+            if yMax < 4 {
+                yMax = 4.0
             }
             
             if yMin < 0{
@@ -126,7 +133,6 @@ public class PNLineChart: UIView{
 
             
             if showLabel {
-                print("show y label")
                 yLabels = yLabelsArray as NSArray
             }
             
@@ -199,7 +205,7 @@ public class PNLineChart: UIView{
         userInteractionEnabled = true
         
         chartCavanWidth = frame.size.width - (chartMargin * 2.0)
-        chartCavanHeight = frame.size.height - (chartMargin * 2.0)
+        chartCavanHeight = frame.size.height - (chartMargin * 2.0) - 10
     }
     
     public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -328,7 +334,7 @@ public class PNLineChart: UIView{
                 innerGrade = (yValue! - yValueMin) / (yValueMax - yValueMin)
                     
                 let x:CGFloat = 2.0 * chartMargin +  (CGFloat(i) * xLabelWidth)
-                let y:CGFloat = chartCavanHeight! - (innerGrade! * chartCavanHeight!) + (yLabelHeight / 2.0)
+                let y:CGFloat = chartCavanHeight! - (innerGrade! * chartCavanHeight!) + (yLabelHeight / 2.0) + 10// top offset
                     
                 // cycle style point
                 switch chartData.inflexionPointStyle{
@@ -488,10 +494,10 @@ public class PNLineChart: UIView{
                 }
                 
                 // draw y axis separator
-                let yStepHeight:CGFloat = chartCavanHeight! / CGFloat(yLabelNum)
-                for var i:Int = 0; i < xLabels.count; ++i {
+                let yStepHeight:CGFloat = chartCavanHeight! / 2
+                for var i:Int = 0; i < 3; ++i {
                     point = CGPointMake(chartMargin + yAsixOffset, (chartCavanHeight! - CGFloat(i) * yStepHeight + yLabelHeight/2.0
-                        ))
+                        ) + 10) // +10 is the top offset
                     CGContextMoveToPoint(ctx, point.x, point.y)
                     CGContextAddLineToPoint(ctx, point.x + 2, point.y)
                     CGContextStrokePath(ctx)
