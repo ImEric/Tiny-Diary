@@ -25,6 +25,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>iWaWa.ttf</string>
+		<string>FZMW.TTF</string>
 		<string>HelveticaNeue.ttc</string>
 		<string>DFPYun.ttc</string>
 		<string>HanziPen SC.ttf</string>
@@ -45,8 +46,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>

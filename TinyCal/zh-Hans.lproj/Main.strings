@@ -1,0 +1,87 @@
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "9sx-l9-jaT"; */
+"9sx-l9-jaT.title" = "个人";
+
+/* Class = "UILabel"; text = "erichuju@gmail.com"; ObjectID = "AXf-sq-Ahw"; */
+"AXf-sq-Ahw.text" = "erichuju@gmail.com";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "AYf-SU-IKJ"; */
+"AYf-SU-IKJ.title" = "个人";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Am9-JX-nEi"; */
+"Am9-JX-nEi.title" = "取消";
+
+/* Class = "UINavigationItem"; title = "Stats"; ObjectID = "CEx-5z-cRE"; */
+"CEx-5z-cRE.title" = "统计";
+
+/* Class = "UILabel"; text = "Eric Hu"; ObjectID = "DNO-0t-rn5"; */
+"DNO-0t-rn5.text" = "Eric Hu";
+
+/* Class = "UINavigationItem"; title = "Setting"; ObjectID = "EF3-ah-97Z"; */
+"EF3-ah-97Z.title" = "设定";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "FWi-QD-YGG"; */
+"FWi-QD-YGG.text" = "English";
+
+/* Class = "UILabel"; text = "Developer"; ObjectID = "HeP-oe-wbu"; */
+"HeP-oe-wbu.text" = "开发者";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "Otc-ad-hPU"; */
+"Otc-ad-hPU.text" = "关于";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TU5-qa-yXa"; */
+"TU5-qa-yXa.text" = "Label";
+
+/* Class = "UILabel"; text = "Contact Me"; ObjectID = "WBq-f0-G8U"; */
+"WBq-f0-G8U.text" = "联系我";
+
+/* Class = "UITabBarItem"; title = "Diary"; ObjectID = "Yid-83-dED"; */
+"Yid-83-dED.title" = "日记";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "b8Q-EC-uCM"; */
+"b8Q-EC-uCM.title" = "完成";
+
+/* Class = "UILabel"; text = "1.0"; ObjectID = "bG5-Mi-emS"; */
+"bG5-Mi-emS.text" = "1.0";
+
+/* Class = "UITabBarItem"; title = "Stats"; ObjectID = "bLg-ck-PFK"; */
+"bLg-ck-PFK.title" = "统计";
+
+/* Class = "UINavigationItem"; title = "Review"; ObjectID = "dUJ-Mk-FVp"; */
+"dUJ-Mk-FVp.title" = "反馈";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "dq4-HN-WQp"; */
+"dq4-HN-WQp.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "eNf-WC-6H6"; */
+"eNf-WC-6H6.title" = "返回";
+
+/* Class = "UINavigationItem"; title = "Diary"; ObjectID = "fQ9-Sx-FYk"; */
+"fQ9-Sx-FYk.title" = "日记";
+
+/* Class = "UITabBarItem"; title = "Calendar"; ObjectID = "gBb-TP-6wv"; */
+"gBb-TP-6wv.title" = "日历";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "jau-bt-rtB"; */
+"jau-bt-rtB.text" = "语言";
+
+/* Class = "UILabel"; text = "Setting"; ObjectID = "lJN-dW-Wtv"; */
+"lJN-dW-Wtv.text" = "设定";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "nRU-FT-2ke"; */
+"nRU-FT-2ke.title" = "关于";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pRF-VP-hVj"; */
+"pRF-VP-hVj.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "q9s-ok-dGa"; */
+"q9s-ok-dGa.title" = "返回";
+
+/* Class = "UILabel"; text = "Review"; ObjectID = "rv0-Aj-zVB"; */
+"rv0-Aj-zVB.text" = "反馈";
+
+/* Class = "UILabel"; text = "Version"; ObjectID = "vRK-lf-jJO"; */
+"vRK-lf-jJO.text" = "版本";
+
+/* Class = "UINavigationItem"; title = "Calendar"; ObjectID = "zgL-qI-sjL"; */
+"zgL-qI-sjL.title" = "日历";

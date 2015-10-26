@@ -23,8 +23,10 @@
 		075004091BC10F39004C5A93 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004021BC10F39004C5A93 /* RAMTransitionItemAnimation.swift */; };
 		0750040A1BC10F39004C5A93 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004031BC10F39004C5A93 /* RAMAnimatedTabBarController.swift */; };
 		0750040B1BC10F39004C5A93 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075004041BC10F39004C5A93 /* RAMItemAnimationProtocol.swift */; };
+		075BAC261BDE1047000161CA /* FZMW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 075BAC251BDE1047000161CA /* FZMW.TTF */; };
 		077E67181BC5AAF800EEEF87 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077E67171BC5AAF800EEEF87 /* StatsViewController.swift */; };
 		078755D71BB8739200C4DD6B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078755D61BB8739200C4DD6B /* CalendarViewController.swift */; };
+		0797A9A41BDDF301007CB6F6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0797A9A61BDDF301007CB6F6 /* Localizable.strings */; };
 		079CDD2C1BB7867E0007B7F9 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */; };
 		079CDD2E1BB786CE0007B7F9 /* WriteNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */; };
 		079CDD301BB860470007B7F9 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */; };
@@ -90,8 +92,16 @@
 		075004021BC10F39004C5A93 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
 		075004031BC10F39004C5A93 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
 		075004041BC10F39004C5A93 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		075BAC251BDE1047000161CA /* FZMW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZMW.TTF; sourceTree = "<group>"; };
 		077E67171BC5AAF800EEEF87 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		078755D61BB8739200C4DD6B /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0797A99E1BDD8C14007CB6F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		0797A99F1BDD8C14007CB6F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		0797A9A01BDD8C1B007CB6F6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		0797A9A11BDD8C1B007CB6F6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		0797A9A51BDDF301007CB6F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0797A9A71BDDF305007CB6F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0797A9A81BDDF308007CB6F6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		079CDD2B1BB7867E0007B7F9 /* DiaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		079CDD2D1BB786CE0007B7F9 /* WriteNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteNewViewController.swift; sourceTree = "<group>"; };
 		079CDD2F1BB860470007B7F9 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				073FAD351BB7536000DEF3BA /* Main.storyboard */,
+				0797A9A61BDDF301007CB6F6 /* Localizable.strings */,
 				07C5FBBA1BB89C7A00BE7A8A /* View Controllers */,
 				07DFC63C1BBF0F310072FEFA /* Supporting Document */,
 			);
@@ -275,6 +286,7 @@
 				07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */,
 				073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */,
 				07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */,
+				075BAC251BDE1047000161CA /* FZMW.TTF */,
 				07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */,
 				07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */,
 				07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */,
@@ -434,6 +446,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 073FAD251BB7536000DEF3BA;
 			productRefGroup = 073FAD2F1BB7536000DEF3BA /* Products */;
@@ -452,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0797A9A41BDDF301007CB6F6 /* Localizable.strings in Resources */,
 				07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */,
 				073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */,
 				07BD368C1BBCF008008057D4 /* HYChenMeiZiJ.ttf in Resources */,
@@ -460,6 +475,7 @@
 				073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */,
 				073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */,
 				07AD85A11BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib in Resources */,
+				075BAC261BDE1047000161CA /* FZMW.TTF in Resources */,
 				073BAFDA1BD8E18A006BF4DC /* HanziPen SC.ttf in Resources */,
 				07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */,
 				073BAFDC1BD8E461006BF4DC /* DFPYun.ttc in Resources */,
@@ -598,6 +614,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				073FAD361BB7536000DEF3BA /* Base */,
+				0797A99E1BDD8C14007CB6F6 /* zh-Hans */,
+				0797A9A01BDD8C1B007CB6F6 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -606,8 +624,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				073FAD3B1BB7536000DEF3BA /* Base */,
+				0797A99F1BDD8C14007CB6F6 /* zh-Hans */,
+				0797A9A11BDD8C1B007CB6F6 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0797A9A61BDDF301007CB6F6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0797A9A51BDDF301007CB6F6 /* en */,
+				0797A9A71BDDF305007CB6F6 /* zh-Hans */,
+				0797A9A81BDDF308007CB6F6 /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -616,7 +646,7 @@
 		073FAD541BB7536100DEF3BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -635,6 +665,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -649,7 +683,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -660,7 +694,7 @@
 		073FAD551BB7536100DEF3BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -679,6 +713,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -687,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

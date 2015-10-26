@@ -239,7 +239,8 @@ class RAMAnimatedTabBarController: UITabBarController {
 
                 
                 if let itemImage = item.image {
-                    createConstraints(icon, container: container, size: itemImage.size, yOffset: -5)
+                    let size = CGSizeMake(itemImage.size.width - 5, itemImage.size.height - 5)
+                    createConstraints(icon, container: container, size: size, yOffset: -5)
                 }
 
                 container.addSubview(textLabel)

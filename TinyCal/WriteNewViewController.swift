@@ -15,7 +15,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
     var emotionString: String = "Soso"//default
     var message: ChatBubbleMessage = ChatBubbleMessage(text: "", title: "", date: NSDate(), emotion: "")
     let emotionButton = UIButton()
-    
+    let fontName = NSLocalizedString("FONT", comment: "font name")
  
     
 
@@ -57,7 +57,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
             let title1:String
             if titleTextField.text == ""
             {
-                title1 = "DEAR DIARY:"
+                title1 = NSLocalizedString("WRITE_NEW_TITLE_IF_EMPTY", comment: "DEAR DIARY")
             }else{
                 title1 = titleTextField.text!
             }
@@ -106,11 +106,11 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
   
         
         //set title textfield
-        titleTextField.placeholder = "A SHORT TITLE HERE:"
+        titleTextField.placeholder = NSLocalizedString("WRITE_NEW_TITLE_TEXTFIELD_PLACEHOLDER", comment: "TITLE")
         titleTextField.textColor = UIColor.blackColor()
-        titleTextField.frame = CGRect(x: HORIZONTAL_SPACING + 70 , y: VERTICAL_SPACING + 3, width: frameWidth - 2 * HORIZONTAL_SPACING - 20, height: 30)
+        titleTextField.frame = CGRect(x: HORIZONTAL_SPACING + 70 , y: VERTICAL_SPACING + 3, width: frameWidth - 2 * HORIZONTAL_SPACING - 80, height: 30)
         titleTextField.textAlignment = NSTextAlignment.Left
-        titleTextField.font = UIFont(name: "FZMiaoWuS-GB", size:18.0)
+        titleTextField.font = UIFont(name: fontName, size:20.0)
         titleTextField.tintColor = UIColor.grayColor()
         titleTextField.borderStyle = UITextBorderStyle.None
 
@@ -118,7 +118,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
         //set date label
         dateLabel.text = getDate()
         dateLabel.frame = CGRect(x: HORIZONTAL_SPACING + 70 , y: VERTICAL_SPACING + TOP_OFFSET + 16, width: frameWidth - 2 * HORIZONTAL_SPACING - 20, height: 30)
-        dateLabel.font = UIFont(name: "HYChenMeiZiJ", size: 18.0)
+        dateLabel.font = UIFont(name: fontName, size: 20.0)
         dateLabel.textColor = UIColor.grayColor()
         self.view.addSubview(dateLabel)
         
@@ -133,7 +133,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
         
         //set textView
         let textFieldYPos: CGFloat =  divider.frame.maxY + 10
-        textView.text = "AND A SWEET STORY HERE:"
+        textView.text = NSLocalizedString("WRITE_NEW_DIARY_TEXTVIEW_PLACEHOLDER", comment: "DIARY")
         textView.textColor = UIColor.lightGrayColor()
         //textView.becomeFirstResponder()
         textView.selectedTextRange = textView.textRangeFromPosition(textView.beginningOfDocument, toPosition: textView.beginningOfDocument)
@@ -143,7 +143,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
         textView.textAlignment = NSTextAlignment.Left
         textView.tintColor = UIColor.grayColor()
         //textView.textColor = UIColor.blackColor()
-        textView.font = UIFont(name: "FZMiaoWuS-GB", size: 18.0)
+        textView.font = UIFont(name: fontName, size: 20.0)
         //textView. = NSLineBreakMode.ByWordWrapping
         
         if (textView.text == "") {
@@ -158,8 +158,8 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
         
         // set save button
         
-        saveButton.setTitle("SAVE", forState: .Normal)
-        saveButton.titleLabel!.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)
+        saveButton.setTitle(NSLocalizedString("WRITE_NEW_SAVE_BUTTON_TITLE", comment: "SAVE"), forState: .Normal)
+        saveButton.titleLabel!.font = UIFont(name: fontName, size: 20.0)
         saveButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         saveButton.frame = CGRect(x: (frameWidth - 60) / 2, y: frameHeight - 50, width: 60, height: 20)
         
@@ -294,10 +294,13 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,
         replacementString string: String) -> Bool
     {
-        let maxLength = 16
+        //let maxLength = 16
         let currentString: NSString = textField.text!
         let newString: NSString = currentString.stringByReplacingCharactersInRange(range, withString: string.uppercaseString)
-        return newString.length <= maxLength
+        let textSize:CGSize = newString.sizeWithAttributes([NSFontAttributeName: textField.font!])
+        return textSize.width < textField.bounds.size.width
+        
+        //return NewString.length <= maxLength
     }
     
     
@@ -310,14 +313,14 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
     
     func textViewDidEndEditing(textView: UITextView) {
         if (textView.text == "") {
-            textView.text = "AND A SWEET STORY HERE:"
+            textView.text = NSLocalizedString("WRITE_NEW_DIARY_TEXTVIEW_PLACEHOLDER", comment: "DIARY")
             textView.textColor = UIColor.lightGrayColor()
         }
         textView.resignFirstResponder()
     }
     
     func textViewDidBeginEditing(textView: UITextView){
-        if (textView.text == "AND A SWEET STORY HERE:"){
+        if (textView.text == NSLocalizedString("WRITE_NEW_DIARY_TEXTVIEW_PLACEHOLDER", comment: "DIARY")){
             textView.text = ""
             textView.textColor = UIColor.blackColor()
         }

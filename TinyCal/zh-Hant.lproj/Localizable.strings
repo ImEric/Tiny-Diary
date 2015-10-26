@@ -1,0 +1,17 @@
+/* 
+  multiLanguage.strings
+  TinyCal
+
+  Created by ERIC on 10/25/15.
+  Copyright © 2015 Eric Hu. All rights reserved.
+*/
+DELETE_POPUP_TEXT = "確認刪除?";
+DELETE_CONFIRM_BUTTON_TITLE = "刪除";
+DELETE_CANCEL_BUTTON_TITLE = "取消";
+WRITE_NEW_TITLE_TEXTFIELD_PLACEHOLDER = "一個精簡的標題:";
+WRITE_NEW_TITLE_IF_EMPTY = "親愛的日記君:";
+WRITE_NEW_DIARY_TEXTVIEW_PLACEHOLDER = "和一段真情的記述:";
+WRITE_NEW_SAVE_BUTTON_TITLE = "完成";
+STATS_EMOTION_BARCHART_HEADER = "心情統計圖";
+STATS_WEEKLY_LINECHART_HEADER = "本週日記數統計圖";
+FONT = "FZMM";

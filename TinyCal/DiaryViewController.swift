@@ -16,6 +16,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var ifCellRegistered = false
     var cellDetailedViewAdded = false
     var selectedIndexPath = NSIndexPath()
+    let fontName = NSLocalizedString("FONT", comment: "FONT NAME")
     
     let managedContext = DataController().managedObjectContext
 
@@ -349,10 +350,10 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         title.font = cell.titleLabel.font
-        message.font = UIFont(name: "FZMiaoWuS-GB", size: 18.0)!
-        month.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
-        date.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
-        year.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
+        message.font = UIFont(name: fontName, size: 18.0)!
+        month.font = UIFont(name: fontName, size: 17.0)!
+        date.font = UIFont(name: fontName, size: 17.0)!
+        year.font = UIFont(name: fontName, size: 17.0)!
         month.textAlignment = NSTextAlignment.Left
         date.textAlignment = NSTextAlignment.Left
         year.textAlignment = NSTextAlignment.Left
@@ -427,8 +428,8 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         //label and buttons
         promptLabel.frame = CGRect(x: 0, y: 8, width: popUpView.frame.width, height: 30)
-        promptLabel.text = "CONFIRM DELETING?"
-        promptLabel.font = UIFont(name: "FZMiaoWuS-GB", size: 20.0)!
+        promptLabel.text = NSLocalizedString("DELETE_POPUP_TEXT", comment: "CONFIRM DELETING?")
+        promptLabel.font = UIFont(name: fontName, size: 20.0)!
         promptLabel.textColor = UIColor.blackColor()
         promptLabel.textAlignment = NSTextAlignment.Center
         

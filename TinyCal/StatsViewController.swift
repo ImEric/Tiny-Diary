@@ -27,15 +27,16 @@ class StatsViewController: UIViewController,UIScrollViewDelegate {
     var sosoBarWidthRatio:Float = 0.0
     var dairyDailyCount:[CGFloat] = [0,0,0,0,0,0,0]
     var weeklyDate:[String] = ["","","","","","",""]
-    
+    let fontName = NSLocalizedString("FONT", comment: "font name")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDiaryData()
         updateEmotionCount()
         updateBarWidth()
-        updateEmotionStatsView()
         updateWeeklyCount()
+        updateEmotionStatsView()
+       
         //loadCharts()
         
         // Do any additional setup after loading the view.
@@ -45,8 +46,9 @@ class StatsViewController: UIViewController,UIScrollViewDelegate {
         loadDiaryData()
         updateEmotionCount()
         updateBarWidth()
-        updateEmotionStatsView()
         updateWeeklyCount()
+        updateEmotionStatsView()
+        
         //loadCharts()
         
         // Do any additional setup after loading the view.

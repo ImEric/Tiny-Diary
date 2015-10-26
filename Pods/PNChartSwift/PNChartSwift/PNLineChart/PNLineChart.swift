@@ -40,9 +40,8 @@ public class PNLineChart: UIView{
             if (yValueMax % 2 != 0){
                 yValueMax += 1
             }
-            if (yValueMin % 2 != 0){
-                yValueMin += 1
-            }
+            
+            yValueMin = 0
             
             let yStep:CGFloat = (yValueMax - yValueMin) / 2
             let yStepHeight:CGFloat  = chartCavanHeight! / 2

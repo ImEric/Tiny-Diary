@@ -30,7 +30,7 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
     var messages = [NSManagedObject]()
     var selectedIndexPath = NSIndexPath()
     var lastSelectedDate = NSDate()
-    
+    let fontName = NSLocalizedString("FONT", comment: "font name")
     // MARK: - Properties
     
     
@@ -80,13 +80,21 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
     containerView.frame = CGRect(x: 0, y: 100, width: frameView.frame.width - 0, height: 205)
     containerView.backgroundColor = UIColor.whiteColor()
     
+    
+    
+    
+    print(fontName)
+
+    
+    
+    
     monthLabelView.frame = CGRect(x: 0, y: 60, width: self.view.frame.width, height: 60)
     monthLabelView.image = UIImage(named: "monthLabelViewImage")?.stretchableImageWithLeftCapWidth(0, topCapHeight: 0)
     monthLabel.frame = CGRect(x: (frameView.frame.width - 100) / 2, y: 75, width: 100, height: 30)
     //monthLabel.textAlignment = NSTextAlignment.Center
     monthLabel.text = CVDate(date: NSDate()).globalDescription
     monthLabel.textColor = UIColor.whiteColor()
-    monthLabel.font = UIFont(name: "HYChenMeiZiJ", size: 22.0)!
+    monthLabel.font = UIFont(name: fontName, size: 22.0)!
     monthLabel.sizeToFit()
     monthLabel.center = monthLabelView.center
         
@@ -396,10 +404,10 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         
         
         title.font = cell.titleLabel.font
-        message.font = UIFont(name: "FZMiaoWuS-GB", size: 18.0)!
-        month.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
-        date.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
-        year.font = UIFont(name: "HYChenMeiZiJ", size: 17.0)!
+        message.font = UIFont(name: fontName, size: 18.0)!
+        month.font = UIFont(name: fontName, size: 17.0)!
+        date.font = UIFont(name: fontName, size: 17.0)!
+        year.font = UIFont(name: fontName, size: 17.0)!
         month.textAlignment = NSTextAlignment.Left
         date.textAlignment = NSTextAlignment.Left
         year.textAlignment = NSTextAlignment.Left
