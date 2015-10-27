@@ -82,6 +82,11 @@ class StatsViewController: UIViewController,UIScrollViewDelegate {
     
     //count diaries of each mood
     func updateEmotionCount(){
+        happyEmotionCount = 0
+        sadEmotionCount = 0
+        angryEmotionCount = 0
+        sosoEmotionCount = 0
+
         for message in messages{
             let emotion = message.valueForKey("emotion") as! String
             switch emotion
@@ -111,6 +116,7 @@ class StatsViewController: UIViewController,UIScrollViewDelegate {
             sadBarWidthRatio = Float(sadEmotionCount/getMaxCount())
             angryBarWidthRatio = Float(angryEmotionCount/getMaxCount())
             sosoBarWidthRatio = Float(sosoEmotionCount/getMaxCount())
+            print(happyBarWidthRatio)
         }
     }
     
