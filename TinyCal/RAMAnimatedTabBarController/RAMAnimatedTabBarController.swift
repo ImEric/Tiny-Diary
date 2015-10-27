@@ -151,6 +151,15 @@ class RAMAnimatedTabBarController: UITabBarController {
         visualEffectView.alpha = 0.9
         visualEffectView.tag = 100
         visualEffectView.frame = subView.bounds
+        // tap
+        let tapToDismissKeyboard = UITapGestureRecognizer(target: self, action: "tapToDismissKeyboard:")
+        tapToDismissKeyboard.numberOfTouchesRequired = 1
+        visualEffectView.addGestureRecognizer(tapToDismissKeyboard)
+        
+        //swipe
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: "swipeDownToDismissKeyboard:")
+        swipeDown.direction = UISwipeGestureRecognizerDirection.Down
+        visualEffectView.addGestureRecognizer(swipeDown)
         
         self.view.addSubview(visualEffectView)
 
@@ -196,8 +205,14 @@ class RAMAnimatedTabBarController: UITabBarController {
     }
     
 
-
+    func tapToDismissKeyboard(gesture:UIGestureRecognizer){
+        
+        self.view.endEditing(true)
+    }
     
+    func swipeDownToDismissKeyboard(gesture:UISwipeGestureRecognizer){
+        self.view.endEditing(true)
+    }
     
     func backButtonPressed(sender: UIButton!)
     {

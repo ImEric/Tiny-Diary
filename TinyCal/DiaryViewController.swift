@@ -423,7 +423,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let layer = popUpView.layer
         layer.shadowColor = UIColor.blackColor().CGColor
         layer.shadowOffset = CGSize(width: 0, height: 0)
-        layer.shadowOpacity = 0.5
+        layer.shadowOpacity = 0.3
         layer.shadowRadius = 5
         
         //label and buttons

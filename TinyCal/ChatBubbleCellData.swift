@@ -13,6 +13,7 @@ import UIKit
 class ChatBubbleCellData
 {
     let message: ChatBubbleMessage
+    let fontName = NSLocalizedString("FONT", comment: "font name")
     
     // Use Customized font later
     
@@ -57,9 +58,9 @@ class ChatBubbleCellData
         self.thFont = UIFont(name: "Helvetica", size: 10.0)!
         self.thLabelHeight = 20
         
-        self.textFont = UIFont(name: "FZMiaoWuS-GB", size: 17.0)!
+        self.textFont = UIFont(name: fontName, size: 17.0)!
         
-        self.titleFont = UIFont(name: "FZMiaoWuS-GB", size: 20.0)!
+        self.titleFont = UIFont(name: fontName, size: 20.0)!
         
         self.cellHeight = 100
       

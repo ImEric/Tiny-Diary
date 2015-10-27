@@ -21,6 +21,9 @@ class SettingTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //NSUserDefaults.standardUserDefaults().setObject(["de"], forKey:
+            //"AppleLanguages") NSUserDefaults.standardUserDefaults().synchronize()
     }
 
     override func didReceiveMemoryWarning() {
