@@ -265,6 +265,11 @@ extension CalenderViewController:  CVCalendarMenuViewDelegate {
         }
     }
     
+    func checkIfNoDiaryToday(){
+        if cellDataArray.count == 0{
+            
+        }
+    }
     
     
    

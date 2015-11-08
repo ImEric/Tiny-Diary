@@ -368,10 +368,12 @@ class StatsViewController: UIViewController,UIScrollViewDelegate {
         dayOfInspirationLabel.frame = CGRect(x: LEFT_MARGIN * 2, y: PADDING * 4 + BUTTON_WIDTH * 2, width: BAR_MAX_WIDTH, height: BAR_HEIGHT)
         longestStreakLabel.frame = CGRect(x: LEFT_MARGIN * 2, y: PADDING * 5 + BUTTON_WIDTH * 3, width: BAR_MAX_WIDTH, height: BAR_HEIGHT)
         
+        
         totalCountLabel.font = UIFont(name: fontName, size: 20)
         frequentWritingPeriodLabel.font = UIFont(name: fontName, size: 20)
         dayOfInspirationLabel.font = UIFont(name: fontName, size: 20)
         longestStreakLabel.font = UIFont(name: fontName, size: 20)
+        
         
         totalCountLabel.sizeToFit()
         frequentWritingPeriodLabel.sizeToFit()
@@ -536,30 +538,7 @@ class StatsViewController: UIViewController,UIScrollViewDelegate {
     }
     
     
-    
-    
-    //set the stats table view
-    
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 
 
 }

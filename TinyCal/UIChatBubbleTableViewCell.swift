@@ -129,7 +129,7 @@ class UIChatBubbleTableViewCell: UITableViewCell
            
             //self.titleLabelSize = titleLabel.frame.size
             
-            titleLabel.frame = CGRect(x: 80, y: 30, width: self.frame.width - 90, height: 30)
+            titleLabel.frame = CGRect(x: 80, y: 20, width: self.frame.width - 90, height: 30)
             titleLabel.text = cellData.message.title
             titleLabel.font = cellData.titleFont
             titleLabel.textAlignment = NSTextAlignment.Left
@@ -141,7 +141,7 @@ class UIChatBubbleTableViewCell: UITableViewCell
             
             //set message Label
             
-            messageLabel.frame = CGRect(x: 80, y: 55, width: self.frame.width - 90, height: 50)
+            messageLabel.frame = CGRect(x: 80, y: 45, width: self.frame.width - 90, height: 50)
             
             messageLabel.text = cellData.message.text
             messageLabel.font = cellData.textFont
@@ -156,12 +156,12 @@ class UIChatBubbleTableViewCell: UITableViewCell
            // let titleLabelSize = CGSize(width: self.frame.width - 90 - 20, height: CGFloat.max)
             
            
-            let bubbleBackgroundImageSize = CGSize(width: self.frame.width - 60 , height: 88)//max((cellData.titleLabelSize.height + imageHeightIncrease), 88))
+            let bubbleBackgroundImageSize = CGSize(width: self.frame.width - 60 , height: 80)//max((cellData.titleLabelSize.height + imageHeightIncrease), 88))
             
             bubbleImageView.frame = CGRect(origin: CGPoint(x: 60, y: 20), size: bubbleBackgroundImageSize)
             
             
-            bubbleImageView.image = UIImage(named: "messageBubble")?.stretchableImageWithLeftCapWidth(15, topCapHeight: 12)
+            bubbleImageView.image = UIImage(named: "bubble")
             
             
            
@@ -191,9 +191,9 @@ class UIChatBubbleTableViewCell: UITableViewCell
             
             //set divider image
             
-            divider.frame = CGRect(x: 75, y: 55, width: titleLabel.frame.width, height: 3)
+            divider.frame = CGRect(x: 75, y: 48, width: titleLabel.frame.width, height: 3)
             divider.image = UIImage(named: "monthLabelViewImage")
-            divider.alpha = 0.5
+            divider.alpha = 0.3
 
             
             // set the cell unselectable
