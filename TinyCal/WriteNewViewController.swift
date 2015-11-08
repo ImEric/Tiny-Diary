@@ -118,7 +118,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
         //set date label
         dateLabel.text = getDate()
         dateLabel.frame = CGRect(x: HORIZONTAL_SPACING + 70 , y: VERTICAL_SPACING + TOP_OFFSET + 16, width: frameWidth - 2 * HORIZONTAL_SPACING - 20, height: 30)
-        dateLabel.font = UIFont(name: fontName, size: 20.0)
+        dateLabel.font = UIFont(name: fontName, size: 18)
         dateLabel.textColor = UIColor.grayColor()
         self.view.addSubview(dateLabel)
         

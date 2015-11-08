@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070830D51BEF5638000B6286 /* Simplified.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 070830D31BEF5638000B6286 /* Simplified.ttf */; };
+		070830D61BEF5638000B6286 /* Traditional.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 070830D41BEF5638000B6286 /* Traditional.ttf */; };
+		070830DB1BEF5B69000B6286 /* CHS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 070830D91BEF5B69000B6286 /* CHS.ttf */; };
+		070830DC1BEF5B69000B6286 /* CHT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 070830DA1BEF5B69000B6286 /* CHT.ttf */; };
 		0734533F1BB8693A00BC08A4 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */; };
 		073BAFDA1BD8E18A006BF4DC /* HanziPen SC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */; };
 		073BAFDC1BD8E461006BF4DC /* DFPYun.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFDB1BD8E461006BF4DC /* DFPYun.ttc */; };
@@ -67,6 +71,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070830D31BEF5638000B6286 /* Simplified.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Simplified.ttf; sourceTree = "<group>"; };
+		070830D41BEF5638000B6286 /* Traditional.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Traditional.ttf; sourceTree = "<group>"; };
+		070830D91BEF5B69000B6286 /* CHS.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHS.ttf; sourceTree = "<group>"; };
+		070830DA1BEF5B69000B6286 /* CHT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHT.ttf; sourceTree = "<group>"; };
 		0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		07371B8D1BC3A20D007FC3EF /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
 		07371B8F1BC3A2CC007FC3EF /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
@@ -290,6 +298,10 @@
 				07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */,
 				07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */,
 				07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */,
+				070830D31BEF5638000B6286 /* Simplified.ttf */,
+				070830D41BEF5638000B6286 /* Traditional.ttf */,
+				070830D91BEF5B69000B6286 /* CHS.ttf */,
+				070830DA1BEF5B69000B6286 /* CHT.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -467,11 +479,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0797A9A41BDDF301007CB6F6 /* Localizable.strings in Resources */,
+				070830DB1BEF5B69000B6286 /* CHS.ttf in Resources */,
 				07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */,
+				070830D61BEF5638000B6286 /* Traditional.ttf in Resources */,
+				070830DC1BEF5B69000B6286 /* CHT.ttf in Resources */,
 				073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */,
 				07BD368C1BBCF008008057D4 /* HYChenMeiZiJ.ttf in Resources */,
 				074C4FF51BBCABF3009F1A82 /* xjlFont.ttf in Resources */,
 				07BD36901BBCF023008057D4 /* HYXiaoMaiTiJ.ttf in Resources */,
+				070830D51BEF5638000B6286 /* Simplified.ttf in Resources */,
 				073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */,
 				073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */,
 				07AD85A11BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib in Resources */,

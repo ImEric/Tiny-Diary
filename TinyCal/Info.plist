@@ -25,6 +25,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>iWaWa.ttf</string>
+		<string>Traditional.ttf</string>
+		<string>CHS.ttf</string>
+		<string>CHT.ttf</string>
+		<string>Simplified.ttf</string>
 		<string>FZMW.TTF</string>
 		<string>HelveticaNeue.ttc</string>
 		<string>DFPYun.ttc</string>

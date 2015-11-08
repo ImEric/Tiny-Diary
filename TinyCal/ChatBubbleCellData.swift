@@ -60,7 +60,7 @@ class ChatBubbleCellData
         
         self.textFont = UIFont(name: fontName, size: 17.0)!
         
-        self.titleFont = UIFont(name: fontName, size: 20.0)!
+        self.titleFont = UIFont(name: fontName, size: 18.0)!
         
         self.cellHeight = 100
       
