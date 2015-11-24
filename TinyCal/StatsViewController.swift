@@ -369,10 +369,10 @@ class StatsViewController: UIViewController,UIScrollViewDelegate {
         longestStreakLabel.frame = CGRect(x: LEFT_MARGIN * 2, y: PADDING * 5 + BUTTON_WIDTH * 3, width: BAR_MAX_WIDTH, height: BAR_HEIGHT)
         
         
-        totalCountLabel.font = UIFont(name: fontName, size: 20)
-        frequentWritingPeriodLabel.font = UIFont(name: fontName, size: 20)
-        dayOfInspirationLabel.font = UIFont(name: fontName, size: 20)
-        longestStreakLabel.font = UIFont(name: fontName, size: 20)
+        totalCountLabel.font = UIFont(name: fontName, size: 16)
+        frequentWritingPeriodLabel.font = UIFont(name: fontName, size: 16)
+        dayOfInspirationLabel.font = UIFont(name: fontName, size: 16)
+        longestStreakLabel.font = UIFont(name: fontName, size: 16)
         
         
         totalCountLabel.sizeToFit()

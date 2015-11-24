@@ -270,8 +270,6 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let emotionImage = UIImageView()
         let title = UILabel()
         let month = UILabel()
-        let year = UILabel()
-        let date = UILabel()
         let message = UITextView()
         let divider = UIImageView()
         let deleteButton = UIButton()
@@ -315,8 +313,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         title.frame = CGRect(x: 100, y: 35, width: detailCellView.frame.width - 60 - 40, height: 30)
         message.frame = CGRect(x: 40, y: 95, width: detailCellView.frame.width - 80, height: 40)
         month.frame = CGRect(x: 100, y: 60, width: 30, height: 20)
-        date.frame = CGRect(x: 150, y: 60, width: 30, height: 20)
-        year.frame = CGRect(x: 167, y: 60, width: 30, height: 20)
+
         
         //set divider image
         
@@ -337,10 +334,11 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         emotionImage.image = cell.emotionImageView.image
         title.text = cell.titleLabel.text
-        month.text = cell.monthLabel.text
+        month.text = cell.getDate()
+        
+        
         message.text = cell.messageInDetail
-        date.text = cell.dateLabel.text
-        year.text = ", \(cell.getYear())"
+
         
         
         //message.numberOfLines = 0
@@ -349,26 +347,23 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         
         
-        title.font = cell.titleLabel.font
-        message.font = UIFont(name: fontName, size: 18.0)!
+        title.font = UIFont(name: fontName, size: 18.0)!
+        message.font = UIFont(name: fontName, size: 16.0)!
         month.font = UIFont(name: fontName, size: 17.0)!
-        date.font = UIFont(name: fontName, size: 17.0)!
-        year.font = UIFont(name: fontName, size: 17.0)!
         month.textAlignment = NSTextAlignment.Left
-        date.textAlignment = NSTextAlignment.Left
-        year.textAlignment = NSTextAlignment.Left
-        message.sizeToFit()
+        
         month.sizeToFit()
-        year.sizeToFit()
+        message.sizeToFit()
+
         message.frame = CGRect(x: message.frame.origin.x, y: message.frame.origin.y, width: message.frame.width, height: min(message.frame.height, detailCellView.frame.height - message.frame.origin.y - 30))
+        
         message.showsVerticalScrollIndicator = false
         message.showsHorizontalScrollIndicator = false
         message.editable = false
         
         
+        
         month.textColor = UIColor.grayColor()
-        date.textColor = UIColor.grayColor()
-        year.textColor = UIColor.grayColor()
         
         
         
@@ -381,9 +376,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         detailCellView.addSubview(emotionImage)
         detailCellView.addSubview(title)
         detailCellView.addSubview(message)
-        detailCellView.addSubview(date)
         detailCellView.addSubview(month)
-        detailCellView.addSubview(year)
         detailCellView.addSubview(divider)
         detailCellView.addSubview(deleteButton)
         

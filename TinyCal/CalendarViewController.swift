@@ -81,20 +81,13 @@ class CalenderViewController: UIViewController, UITableViewDelegate, UITableView
     containerView.backgroundColor = UIColor.whiteColor()
     
     
-    
-    
-    print(fontName)
-
-    
-    
-    
     monthLabelView.frame = CGRect(x: 0, y: 60, width: self.view.frame.width, height: 60)
     monthLabelView.image = UIImage(named: "monthLabelViewImage")?.stretchableImageWithLeftCapWidth(0, topCapHeight: 0)
     monthLabel.frame = CGRect(x: (frameView.frame.width - 100) / 2, y: 75, width: 100, height: 30)
     //monthLabel.textAlignment = NSTextAlignment.Center
     monthLabel.text = CVDate(date: NSDate()).globalDescription
     monthLabel.textColor = UIColor.whiteColor()
-    monthLabel.font = UIFont(name: fontName, size: 22.0)!
+    monthLabel.font = UIFont(name: fontName, size: 18)!
     monthLabel.sizeToFit()
     monthLabel.center = monthLabelView.center
         

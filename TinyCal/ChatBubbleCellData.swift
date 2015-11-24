@@ -58,25 +58,12 @@ class ChatBubbleCellData
         self.thFont = UIFont(name: "Helvetica", size: 10.0)!
         self.thLabelHeight = 20
         
-        self.textFont = UIFont(name: fontName, size: 17.0)!
+        self.textFont = UIFont(name: fontName, size: 15.0)!
         
-        self.titleFont = UIFont(name: fontName, size: 18.0)!
+        self.titleFont = UIFont(name: fontName, size: 16.0)!
         
         self.cellHeight = 100
       
-        /*
-       let titleLabel = UILabel(frame: CGRectMake(90, 0, frameWidth - messageWidthConstrain, CGFloat.max))
-        
-        titleLabel.numberOfLines = 0
-        titleLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        titleLabel.font = titleFont
-        titleLabel.text = message.title
-        titleLabel.sizeToFit()
-        self.titleLabelSize = titleLabel.frame.size
-        
-       */
-       
-        //max((self.titleLabelSize.height + spacing), 100)
 
 
     }

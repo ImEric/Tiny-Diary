@@ -217,5 +217,16 @@ class UIChatBubbleTableViewCell: UITableViewCell
         return ("")
     }
     
+    func getDate() -> String{
+        if let cellData = data{
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "MMM dd, yyyy"
+            let date = dateFormatter.stringFromDate(cellData.message.date)
+            return date
+        }
+        return ("")
+        
+    }
+    
 }
 

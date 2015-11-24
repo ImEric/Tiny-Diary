@@ -12,14 +12,12 @@
 		070830DB1BEF5B69000B6286 /* CHS.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 070830D91BEF5B69000B6286 /* CHS.ttf */; };
 		070830DC1BEF5B69000B6286 /* CHT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 070830DA1BEF5B69000B6286 /* CHT.ttf */; };
 		0734533F1BB8693A00BC08A4 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */; };
-		073BAFDA1BD8E18A006BF4DC /* HanziPen SC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */; };
 		073BAFDC1BD8E461006BF4DC /* DFPYun.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 073BAFDB1BD8E461006BF4DC /* DFPYun.ttc */; };
 		073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD351BB7536000DEF3BA /* Main.storyboard */; };
 		073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD381BB7536000DEF3BA /* Assets.xcassets */; };
 		073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 073FAD3A1BB7536000DEF3BA /* LaunchScreen.storyboard */; };
 		073FAD471BB7536100DEF3BA /* TinyCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD461BB7536100DEF3BA /* TinyCalTests.swift */; };
 		073FAD521BB7536100DEF3BA /* TinyCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FAD511BB7536100DEF3BA /* TinyCalUITests.swift */; };
-		074C4FF51BBCABF3009F1A82 /* xjlFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */; };
 		075004051BC10F39004C5A93 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FA1BC10F39004C5A93 /* RAMBounceAnimation.swift */; };
 		075004061BC10F39004C5A93 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FC1BC10F39004C5A93 /* RAMFrameItemAnimation.swift */; };
 		075004071BC10F39004C5A93 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075003FE1BC10F39004C5A93 /* RAMFumeAnimation.swift */; };
@@ -39,9 +37,8 @@
 		07AD859F1BBB41DF007F1176 /* ChatBubbleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859A1BBB41DF007F1176 /* ChatBubbleMessage.swift */; };
 		07AD85A01BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AD859B1BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift */; };
 		07AD85A11BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AD859C1BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib */; };
+		07B0D5D31C04583800899215 /* Hanzipen.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 07B0D5D21C04583800899215 /* Hanzipen.ttc */; };
 		07BD368C1BBCF008008057D4 /* HYChenMeiZiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */; };
-		07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */; };
-		07BD36901BBCF023008057D4 /* HYXiaoMaiTiJ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */; };
 		07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */; };
 		07C58A641BC09BAC00C13D7E /* ZMButtonAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A631BC09BAC00C13D7E /* ZMButtonAppDelegate.swift */; };
 		07C58A661BC09BB200C13D7E /* AMButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C58A651BC09BB200C13D7E /* AMButtonViewController.swift */; };
@@ -78,10 +75,7 @@
 		0734533E1BB8693A00BC08A4 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		07371B8D1BC3A20D007FC3EF /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
 		07371B8F1BC3A2CC007FC3EF /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
-		073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HanziPen SC.ttf"; sourceTree = "<group>"; };
 		073BAFDB1BD8E461006BF4DC /* DFPYun.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = DFPYun.ttc; sourceTree = "<group>"; };
-		073BAFDD1BD8E5A5006BF4DC /* HelveticaNeue.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeue.ttc; sourceTree = "<group>"; };
-		073BAFDE1BD8EE4C006BF4DC /* iWaWa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iWaWa.ttf; sourceTree = "<group>"; };
 		073FAD2E1BB7536000DEF3BA /* TinyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		073FAD361BB7536000DEF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		073FAD381BB7536000DEF3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,15 +112,13 @@
 		07AD859A1BBB41DF007F1176 /* ChatBubbleMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleMessage.swift; sourceTree = "<group>"; };
 		07AD859B1BBB41DF007F1176 /* UIChatBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIChatBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		07AD859C1BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIChatBubbleTableViewCell.xib; sourceTree = "<group>"; };
+		07B0D5D21C04583800899215 /* Hanzipen.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hanzipen.ttc; sourceTree = "<group>"; };
 		07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYChenMeiZiJ.ttf; sourceTree = "<group>"; };
-		07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYPPTiJ.ttf; sourceTree = "<group>"; };
-		07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HYXiaoMaiTiJ.ttf; sourceTree = "<group>"; };
 		07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZMiaoWu.ttf; sourceTree = "<group>"; };
 		07C58A631BC09BAC00C13D7E /* ZMButtonAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMButtonAppDelegate.swift; sourceTree = "<group>"; };
 		07C58A651BC09BB200C13D7E /* AMButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMButtonViewController.swift; sourceTree = "<group>"; };
 		07C58A671BC09BB800C13D7E /* ZMaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZMaterialButton.swift; sourceTree = "<group>"; };
 		07C79C541BBC7CCA00DC4BF5 /* DiaryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryDataModel.xcdatamodel; sourceTree = "<group>"; };
-		07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xjlFont.ttf; sourceTree = "<group>"; };
 		07E2823F1BBE7840003FB7A5 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		07E282411BBE8738003FB7A5 /* DiaryEntryMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DiaryEntryMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		07E282421BBE8738003FB7A5 /* DiaryEntryMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryEntryMO.swift; sourceTree = "<group>"; };
@@ -288,16 +280,11 @@
 		07BD368A1BBCEFF4008057D4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				073BAFDD1BD8E5A5006BF4DC /* HelveticaNeue.ttc */,
 				073BAFDB1BD8E461006BF4DC /* DFPYun.ttc */,
-				073BAFDE1BD8EE4C006BF4DC /* iWaWa.ttf */,
-				07C79C561BBCA75F00DC4BF5 /* xjlFont.ttf */,
-				073BAFD91BD8E18A006BF4DC /* HanziPen SC.ttf */,
+				07B0D5D21C04583800899215 /* Hanzipen.ttc */,
 				07BD368B1BBCF008008057D4 /* HYChenMeiZiJ.ttf */,
 				075BAC251BDE1047000161CA /* FZMW.TTF */,
-				07BD368D1BBCF015008057D4 /* HYPPTiJ.ttf */,
 				07BD36911BBCF438008057D4 /* FZMiaoWu.ttf */,
-				07BD368F1BBCF023008057D4 /* HYXiaoMaiTiJ.ttf */,
 				070830D31BEF5638000B6286 /* Simplified.ttf */,
 				070830D41BEF5638000B6286 /* Traditional.ttf */,
 				070830D91BEF5B69000B6286 /* CHS.ttf */,
@@ -480,19 +467,16 @@
 			files = (
 				0797A9A41BDDF301007CB6F6 /* Localizable.strings in Resources */,
 				070830DB1BEF5B69000B6286 /* CHS.ttf in Resources */,
-				07BD368E1BBCF015008057D4 /* HYPPTiJ.ttf in Resources */,
+				07B0D5D31C04583800899215 /* Hanzipen.ttc in Resources */,
 				070830D61BEF5638000B6286 /* Traditional.ttf in Resources */,
 				070830DC1BEF5B69000B6286 /* CHT.ttf in Resources */,
 				073FAD3C1BB7536000DEF3BA /* LaunchScreen.storyboard in Resources */,
 				07BD368C1BBCF008008057D4 /* HYChenMeiZiJ.ttf in Resources */,
-				074C4FF51BBCABF3009F1A82 /* xjlFont.ttf in Resources */,
-				07BD36901BBCF023008057D4 /* HYXiaoMaiTiJ.ttf in Resources */,
 				070830D51BEF5638000B6286 /* Simplified.ttf in Resources */,
 				073FAD391BB7536000DEF3BA /* Assets.xcassets in Resources */,
 				073FAD371BB7536000DEF3BA /* Main.storyboard in Resources */,
 				07AD85A11BBB41DF007F1176 /* UIChatBubbleTableViewCell.xib in Resources */,
 				075BAC261BDE1047000161CA /* FZMW.TTF in Resources */,
-				073BAFDA1BD8E18A006BF4DC /* HanziPen SC.ttf in Resources */,
 				07BD36921BBCF438008057D4 /* FZMiaoWu.ttf in Resources */,
 				073BAFDC1BD8E461006BF4DC /* DFPYun.ttc in Resources */,
 			);

@@ -110,7 +110,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
         titleTextField.textColor = UIColor.blackColor()
         titleTextField.frame = CGRect(x: HORIZONTAL_SPACING + 70 , y: VERTICAL_SPACING + 3, width: frameWidth - 2 * HORIZONTAL_SPACING - 80, height: 30)
         titleTextField.textAlignment = NSTextAlignment.Left
-        titleTextField.font = UIFont(name: fontName, size:20.0)
+        titleTextField.font = UIFont(name: fontName, size:18.0)
         titleTextField.tintColor = UIColor.grayColor()
         titleTextField.borderStyle = UITextBorderStyle.None
 
@@ -143,7 +143,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
         textView.textAlignment = NSTextAlignment.Left
         textView.tintColor = UIColor.grayColor()
         //textView.textColor = UIColor.blackColor()
-        textView.font = UIFont(name: fontName, size: 20.0)
+        textView.font = UIFont(name: fontName, size: 18.0)
         //textView. = NSLineBreakMode.ByWordWrapping
         
         if (textView.text == "") {
@@ -159,7 +159,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
         // set save button
         
         saveButton.setTitle(NSLocalizedString("WRITE_NEW_SAVE_BUTTON_TITLE", comment: "SAVE"), forState: .Normal)
-        saveButton.titleLabel!.font = UIFont(name: fontName, size: 20.0)
+        saveButton.titleLabel!.font = UIFont(name: fontName, size: 18.0)
         saveButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         saveButton.frame = CGRect(x: (frameWidth - 60) / 2, y: frameHeight - 50, width: 60, height: 20)
         
