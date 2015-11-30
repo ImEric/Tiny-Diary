@@ -20,7 +20,7 @@ class ChatBubbleMessage
     init(text: String, title: String, date: NSDate, emotion: String)
     {
         self.date = date
-        self.title = title.uppercaseString
+        self.title = title
         self.text = text
         self.emotion = emotion
     }

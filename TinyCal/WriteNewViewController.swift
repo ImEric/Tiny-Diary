@@ -59,7 +59,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
             {
                 title1 = NSLocalizedString("WRITE_NEW_TITLE_IF_EMPTY", comment: "DEAR DIARY")
             }else{
-                title1 = titleTextField.text!
+                title1 = titleTextField.text!.uppercaseString
             }
             message = ChatBubbleMessage(text: textView.text!, title: title1, date: NSDate(), emotion: emotionString)
         }
@@ -296,7 +296,7 @@ class WriteNewViewController: UIViewController, UITextFieldDelegate, UITextViewD
     {
         //let maxLength = 16
         let currentString: NSString = textField.text!
-        let newString: NSString = currentString.stringByReplacingCharactersInRange(range, withString: string.uppercaseString)
+        let newString: NSString = currentString.stringByReplacingCharactersInRange(range, withString: string)
         let textSize:CGSize = newString.sizeWithAttributes([NSFontAttributeName: textField.font!])
         return textSize.width < textField.bounds.size.width
         

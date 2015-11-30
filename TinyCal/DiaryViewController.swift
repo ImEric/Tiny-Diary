@@ -310,7 +310,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         emotionImage.frame = CGRect(origin: CGPoint(x:  30, y:  30
             ), size: CGSize(width: 60, height: 60))
         
-        title.frame = CGRect(x: 100, y: 35, width: detailCellView.frame.width - 60 - 40, height: 30)
+        title.frame = CGRect(x: 100, y: 35, width: detailCellView.frame.width - 60 - 80, height: 30)
         message.frame = CGRect(x: 40, y: 95, width: detailCellView.frame.width - 80, height: 40)
         month.frame = CGRect(x: 100, y: 60, width: 30, height: 20)
 
@@ -347,9 +347,9 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         
         
-        title.font = UIFont(name: fontName, size: 18.0)!
+        title.font = UIFont(name: fontName, size: 16.0)!
         message.font = UIFont(name: fontName, size: 16.0)!
-        month.font = UIFont(name: fontName, size: 17.0)!
+        month.font = UIFont(name: fontName, size: 16.0)!
         month.textAlignment = NSTextAlignment.Left
         
         month.sizeToFit()
@@ -422,7 +422,7 @@ class DiaryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //label and buttons
         promptLabel.frame = CGRect(x: 0, y: 8, width: popUpView.frame.width, height: 30)
         promptLabel.text = NSLocalizedString("DELETE_POPUP_TEXT", comment: "CONFIRM DELETING?")
-        promptLabel.font = UIFont(name: fontName, size: 20.0)!
+        promptLabel.font = UIFont(name: fontName, size: 18.0)!
         promptLabel.textColor = UIColor.blackColor()
         promptLabel.textAlignment = NSTextAlignment.Center
         
